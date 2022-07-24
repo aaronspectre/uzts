@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>UZTS News</title>
+
+	{% load static %}
+	<link rel="icon" href="{% static 'img/logo.svg' %}">
+
+	<link rel="stylesheet" href="{% static 'style/general.css' %}">
+	<link rel="stylesheet" href="{% static 'style/news.css' %}">
+
+	<link href="https://kit-pro.fontawesome.com/releases/v6.0.0/css/pro.min.css" rel="stylesheet">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+	<script src="https://unpkg.com/@popperjs/core@2"></script>
+</head>
+<body>
+	<div class="main">
+		<div class="news-home" onload="justify()">
+			<div class="news-home-header">
+				<a href="{% url 'main:index' %}"><img src="{% static 'img/logo-rounded.svg' %}"></a>
+				<h1>News and Announcements</h1>
+				<span>Latest events and announcements from Uzbekistan Textile Industry</span>
+			</div>
+			<div class="news-tape">
+				<div class="latest-event event-card">
+					<div class="event-card-caption latest-event-caption">
+						{% if latest.announcement %}
+						<span><i class="far fa-bullhorn"></i>&ensp;<b>Announcement</b></span><br><br>
+						{% else %}
+						<span><b>{{latest.date|date:"F j, o"}}</b></span><br><br>
+						{% endif %}
+						<a href=""><b>{{latest.title}}</b></a>
+						<p>{{latest.content}}</p>
+					</div>
+					<img src="{{latest.preview.url}}">
+				</div>
+				{% for event in events %}
+					{% if event.announcement %}
+					<div class="event-card announcement-card">
+						<div class="event-card-caption">
+							<span><i class="far fa-bullhorn"></i>&ensp;<b>Announcement</b></span><br><br>
+							<a href=""><b>{{event.title}}</b></a>
+						</div>
+						<img src="{{event.preview}}">
+					</div>
+					{% else %}
+					<div class="event-card">
+						<div class="event-card-caption">
+							<span><b>{{event.date|date:"F j, o"}}</b></span><br><br>
+							<a href=""><b>{{event.title}}</b></a>
+						</div>
+						<img src="{{event.preview.url}}">
+					</div>
+					{% endif %}
+				{% endfor %}
+			</div>
+			<div class="news-pagination">
+				<ul>
+					<li><a href="">1</a></li>
+					<li><a href="">2</a></li>
+					<li><a href="">3</a></li>
+				</ul>
+			</div>
+			<section id="footer">
+				<div class="mail-subscribe">
+					<form class="mail-form">
+						<h3>Don't miss latest news in Textile Industry</h3>
+						<div class="form-group">
+							<input type="email" placeholder="Email">
+						</div>
+						<div class="form-group">
+							<a href=""><i class="fal fa-envelope"></i>&ensp;Subscribe</a>
+						</div>
+					</form>
+				</div>
+				<div class="footer-container">
+					<a href="{% url 'main:index' %}"><img src="{% static 'img/logo-white.svg' %}" alt="uzts"></a>
+					<div class="socials-container">
+						<a href="https://www.instagram.com/uzts.uz"><i class="fab fa-instagram-square"></i></a>
+						<a href="https://t.me/uztsuz"><i class="fab fa-telegram"></i></a>
+						<a href="https://www.facebook.com/uzts.uz"><i class="fab fa-facebook"></i></a>
+						<a href="https://www.youtube.com/channel/UCUBZc6CcYylKO6TyijZkKTw" style="padding: 1vh 1.3vh;"><i class="fab fa-youtube"></i></a>
+						<a href="https://t.me/certified_textile"><i class="fab fa-telegram"></i></a>
+					</div>
+					<p>© 2022 - Uzbekistan Textile and Garment Industry Association</p>
+				</div>
+			</section>
+		</div>
+		<nav id="navbar">
+			<div id="navbar-cover"></div>
+			<div class="side-menu-main side-menu">
+				<ul>
+					<li><a href="{% url 'main:index' %}">Home</a></li>
+					<li><a href="">Membership</a></li>
+					<li><a href="{% url 'events:news' %}">News</a></li>
+					<li><a href="javascript:void(0)" class="additional-menu-trigger" data-target="side-menu-about">About Us&emsp;<i class="fal fa-chevron-right"></i></a></li>
+					<li><a href="javascript:void(0)" class="additional-menu-trigger" data-target="side-menu-docs">Documents&emsp;<i class="fal fa-chevron-right"></i></a></li>
+					<li><a href="{% url 'main:contacts' %}">Contacts</a></li>
+				</ul>
+			</div>
+			<div class="side-menu-additional side-menu" id="side-menu-about">
+				<ul>
+					<li><a href="{% url 'main:team' %}">Our Team</a></li>
+					<li><a href="{% url 'main:about' %}">Industry</a></li>
+				</ul>
+			</div>
+			<div class="side-menu-additional side-menu" id="side-menu-docs">
+				<ul>
+					<li><a href="{% url 'main:gallery' %}">Gallery</a></li>
+					<li><a href="{% url 'main:library' %}">Library</a></li>
+				</ul>
+			</div>
+			<div class="bookmark">
+				<button id="side-menu-button">MENU</button>
+			</div>
+		</nav>
+	</div>
+</body>
+<script src="{% static 'script/news.js' %}"></script>
+<script> window.interdeal = { "sitekey": "90ba7c838621de6bb8b87cd606d8038c", "Position": "Right", "Menulang": "EN", "domains": { "js": "https://cdn.equalweb.com/", "acc": "https://access.equalweb.com/" }, "btnStyle": { "vPosition": [ "90%", null ], "scale": [ "0.4", "0.4" ], "color": { "main": "#000000", "second": "#ffffff" }, "icon": { "type": 11, "shape": "circle", "outline": true } } }; (function(doc, head, body){ var coreCall = doc.createElement('script'); coreCall.src = 'https://cdn.equalweb.com/core/4.3.7/accessibility.js'; coreCall.defer = true; coreCall.integrity = 'sha512-hGa5HZtFkT1M7+tUDtU/cbw6AG0ORz3oblztCoTZ/z2qPyr7dgwH3zoT8qpgj21MgcRsMFLD6NNKePGvVks3Ig=='; coreCall.crossOrigin = 'anonymous'; coreCall.setAttribute('data-cfasync', true ); body? body.appendChild(coreCall) : head.appendChild(coreCall); })(document, document.head, document.body); </script>
+</html>

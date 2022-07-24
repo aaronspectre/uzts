@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>UZTS | Team</title>
+
+	{% load static %}
+	<link rel="icon" href="{% static 'img/logo.svg' %}">
+
+	<link rel="stylesheet" href="{% static 'style/general.css' %}">
+	<link rel="stylesheet" href="{% static 'style/team.css' %}">
+
+	<link href="https://kit-pro.fontawesome.com/releases/v6.0.0/css/pro.min.css" rel="stylesheet">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+	<script src="https://unpkg.com/@popperjs/core@2"></script>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="main">
+		<div class="top-nav">
+			<a href="{% url 'main:index' %}"><img src="{% static 'img/brand.svg' %}" alt=""></a>
+		</div>
+		<div class="team-home">
+			<div class="home-image-container">
+				<img src="{% static 'img/team-card-1.png' %}">
+			</div>
+			<div class="home-image-text">
+				<h1>Xaydarov Ilhom Utkurovich</h1>
+				<span>Chairman of the Textile and Garment Industry Association “Uztextileprom”</span>
+				<p><i>Uzbekistan as having a long history in weaving artisanal textiles, or you might know our country as one that produces cotton but I would like further to introduce you to a modern Uzbekistan, with a state-of-the-art textile industry and a value chain that runs from the production of the fiber to manufacturing of the finished product. An industry that has grown several folds in the past few years to reach by the end of 2022 US $ 3,5 Billion in exports with a fully transparent manufacturing chain capable of converting 100% of our local production of fiber.</i></p>
+				<p><i>I look forward to seeing you in Uzbekistan and providing you with all the support you need to make this your new and preferred sourcing destination. Uztextileprom and myself stand as your partners to make your business more successful.</i></p>
+				<div class="home-image-text-caption">
+					<label><i class="fal fa-phone"></i>&ensp;(+99871) 202-22-44 (102)</label><br>
+					<label><i class="fal fa-calendar-days"></i>&ensp;Friday, 08:00 / 10:00</label><br>
+					<label><i class="fal fa-envelope"></i>&ensp;info@uzts.uz</label>
+				</div>
+				<div class="home-image-text-links">
+					<a href="">Biography</a>
+					<a href="">Message</a>
+				</div>
+			</div>
+		</div>
+		<div class="team-tripple">
+			<div class="team-tripple-header">
+				<h1>Vice-chairmans</h1>
+			</div>
+			<div class="team-tripple-cards">
+				<div class="team-card">
+					<img src="{% static 'img/team-card-1.png' %}">
+					<div class="team-card-caption">
+						<h2>Mirmukhsin Sultanov</h2>
+						<span>First Deputy Chairman of the Textile and Garment Industry Association “Uztextileprom”</span>
+						<div class="team-card-caption-details">
+							<label><i class="fal fa-phone"></i>&ensp;(+99871) 202-22-44 (111)</label><br>
+							<label><i class="fal fa-calendar-days"></i>&ensp;Wednesday, 15:00 / 17:00</label><br>
+							<label><i class="fal fa-envelope"></i>&ensp;info@uzts.uz</label>
+						</div>
+					</div>
+				</div>
+				<div class="team-card team-card-middle">
+					<img src="{% static 'img/team-card-1.png' %}">
+					<div class="team-card-caption">
+						<h2>Bakhtiyor Mukhammadsaidov</h2>
+						<span>Vice-chairman Association “Uztekstilprom”</span>
+						<div class="team-card-caption-details">
+							<label><i class="fal fa-phone"></i>&ensp;(+99871) 202-22-44 (111)</label><br>
+							<label><i class="fal fa-calendar-days"></i>&ensp;Wednesday, 15:00 / 17:00</label><br>
+							<label><i class="fal fa-envelope"></i>&ensp;info@uzts.uz</label>
+						</div>
+					</div>
+				</div>
+				<div class="team-card">
+					<img src="{% static 'img/team-card-1.png' %}">
+					<div class="team-card-caption">
+						<h2>Mukhammad Djumaniyozov</h2>
+						<span>Vice-chairman Association “Uztekstilprom”</span>
+						<div class="team-card-caption-details">
+							<label><i class="fal fa-phone"></i>&ensp;(+99871) 202-22-44 (103)</label><br>
+							<label><i class="fal fa-calendar-days"></i>&ensp;Monday, 09:00 / 11:00</label><br>
+							<label><i class="fal fa-envelope"></i>&ensp;info@uzts.uz</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="team-office">
+			<div class="team-tripple-header">
+				<h1>Central Office</h1>
+			</div>
+			<div class="team-office-cards">
+				<div class="team-card">
+					<img src="{% static 'img/team-card-1.png' %}">
+					<div class="team-card-caption">
+						<h2>Dilbar Mukhamedova</h2>
+						<span>Chairman’s Advisor of the Textile and Garment Industry Association “Uztextileprom”</span>
+						<div class="team-card-caption-office">
+							<label><i class="fal fa-phone"></i>&ensp;(+99871) 202 22 44 (115)</label>
+						</div>
+					</div>
+				</div>
+				<div class="team-card team-card-middle">
+					<img src="{% static 'img/team-card-1.png' %}">
+					<div class="team-card-caption">
+						<h2>Sanjar Tukhtaev</h2>
+						<span>Head of the Department for Monitoring Regional Investment Projects</span>
+						<div class="team-card-caption-office">
+							<label><i class="fal fa-phone"></i>&ensp;(+99871) 202 22 44 (120)</label><br>
+						</div>
+					</div>
+				</div>
+				<div class="team-card">
+					<img src="{% static 'img/team-card-1.png' %}">
+					<div class="team-card-caption">
+						<h2>Abdukhakim Abdurakhmanov</h2>
+						<span>Head of Information and Analytical Department</span>
+						<div class="team-card-caption-office">
+							<label><i class="fal fa-phone"></i>&ensp;(+99871) 202 22 44 (160)</label><br>
+						</div>
+					</div>
+				</div>
+				<div class="team-card team-card-edge">
+					<img src="{% static 'img/team-card-1.png' %}">
+					<div class="team-card-caption">
+						<h2>Sodik Bobokulov</h2>
+						<span>Head of the Department for the Integrated Development of the Textile Industry in the Regions</span>
+						<div class="team-card-caption-office">
+							<label><i class="fal fa-phone"></i>&ensp;(+99871) 202 22 44 (121)</label><br>
+						</div>
+					</div>
+				</div>
+
+				<div class="team-card">
+					<img src="{% static 'img/team-card-1.png' %}">
+					<div class="team-card-caption">
+						<h2>Zulaikho Valieva</h2>
+						<span>Chief accountant's assistant</span>
+						<div class="team-card-caption-office">
+							<label><i class="fal fa-phone"></i>&ensp;(+99871) 202 22 44 (126)</label>
+						</div>
+					</div>
+				</div>
+				<div class="team-card team-card-middle">
+					<img src="{% static 'img/team-card-1.png' %}">
+					<div class="team-card-caption">
+						<h2>Sardor Odinaev</h2>
+						<span>Head of Human Resources and Educational Institutions Department</span>
+						<div class="team-card-caption-office">
+							<label><i class="fal fa-phone"></i>&ensp;(+99871) 202 22 44 (147)</label><br>
+						</div>
+					</div>
+				</div>
+				<div class="team-card">
+					<img src="{% static 'img/team-card-1.png' %}">
+					<div class="team-card-caption">
+						<h2>Shahzoda Kuchkarova</h2>
+						<span>Head of the Department of Public and International Relations</span>
+						<div class="team-card-caption-office">
+							<label><i class="fal fa-phone"></i>&ensp;(+99871) 202 22 44 (137)</label><br>
+						</div>
+					</div>
+				</div>
+				<div class="team-card team-card-edge">
+					<img src="{% static 'img/team-card-1.png' %}">
+					<div class="team-card-caption">
+						<h2>Sherzojon Artikov</h2>
+						<span>Deputy Head of the Export Support Department</span>
+						<div class="team-card-caption-office">
+							<label><i class="fal fa-phone"></i>&ensp;(+99871) 202 22 44 (136)</label><br>
+						</div>
+					</div>
+				</div>
+
+				<div class="team-card">
+					<img src="{% static 'img/team-card-1.png' %}">
+					<div class="team-card-caption">
+						<h2>Abdugaffor Umaraliev</h2>
+						<span>Head of Financial and Economic Analysis Department</span>
+						<div class="team-card-caption-office">
+							<label><i class="fal fa-phone"></i>&ensp;(+99871) 202 22 44 (114)</label>
+						</div>
+					</div>
+				</div>
+				<div class="team-card team-card-middle">
+					<img src="{% static 'img/team-card-1.png' %}">
+					<div class="team-card-caption">
+						<h2>Muhammadjon Makhmudov</h2>
+						<span>Head of the Department for the Implementation of International Standards</span>
+						<div class="team-card-caption-office">
+							<label><i class="fal fa-phone"></i>&ensp;(+99871) 202 22 44 (182)</label><br>
+						</div>
+					</div>
+				</div>
+				<div class="team-card">
+					<img src="{% static 'img/team-card-1.png' %}">
+					<div class="team-card-caption">
+						<h2>Sherzodbek Akbarov</h2>
+						<span>Deputy Head of the Department for Expansion of Production of Finished Goods with High Value Added</span>
+						<div class="team-card-caption-office">
+							<label><i class="fal fa-phone"></i>&ensp;(+99871) 202 22 44 (140)</label><br>
+						</div>
+					</div>
+				</div>
+				<div class="team-card team-card-edge">
+					<img src="{% static 'img/team-card-1.png' %}">
+					<div class="team-card-caption">
+						<h2>Kamola Gulyamova</h2>
+						<span>Head of the department for the implementation of new design developments</span>
+						<div class="team-card-caption-office">
+							<label><i class="fal fa-phone"></i>&ensp;(+99871) 202 22 44 (241)</label><br>
+						</div>
+					</div>
+				</div>
+
+				<div class="team-card">
+					<img src="{% static 'img/team-card-1.png' %}">
+					<div class="team-card-caption">
+						<h2>Azizbek Yakubov</h2>
+						<span>Head of Claims Department</span>
+						<div class="team-card-caption-office">
+							<label><i class="fal fa-phone"></i>&ensp;(+99871) 202 22 44 (109)</label>
+						</div>
+					</div>
+				</div>
+				<div class="team-card team-card-middle">
+					<img src="{% static 'img/team-card-1.png' %}">
+					<div class="team-card-caption">
+						<h2>Nodir Murodov</h2>
+						<span>Head of Affairs Department</span>
+						<div class="team-card-caption-office">
+							<label><i class="fal fa-phone"></i>&ensp;(+99871) 202 22 44 (222)</label><br>
+						</div>
+					</div>
+				</div>
+				<div class="team-card">
+					<img src="{% static 'img/team-card-1.png' %}">
+					<div class="team-card-caption">
+						<h2>Fakhriddin Ruziev</h2>
+						<span>Head of ICT department</span>
+						<div class="team-card-caption-office">
+							<label><i class="fal fa-phone"></i>&ensp;(+99871) 202 22 44 (125)</label><br>
+						</div>
+					</div>
+				</div>
+				<div class="team-card team-card-edge">
+					<img src="{% static 'img/team-card-1.png' %}">
+					<div class="team-card-caption">
+						<h2>Rezida Gafarova</h2>
+						<span>Executive Control Department</span>
+						<div class="team-card-caption-office">
+							<label><i class="fal fa-phone"></i>&ensp;(+99871) 202 22 44 (237)</label><br>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+		<div id="footer">
+			<div class="footer-socials">
+				<a href="{% url 'main:index' %}"><img src="{% static 'img/brand.svg' %}"></a>
+				<ul class="footer-socials-menu">
+					<li><a href="https://www.youtube.com/channel/UCUBZc6CcYylKO6TyijZkKTw" style="padding: 1vh 1.3vh;"><i class="fab fa-youtube"></i></a></li>
+					<li><a href="https://www.instagram.com/uzts.uz"><i class="fab fa-instagram"></i></a></li>
+					<li><a href="https://t.me/uztsuz"><i class="fab fa-telegram"></i></a></li>
+					<li><a href="https://www.facebook.com/uzts.uz"><i class="fab fa-facebook"></i></a></li>
+					<li><a href="https://t.me/certified_textile"><i class="fab fa-telegram"></i></a></li>
+				</ul>
+				<p>© 2022 - Uzbekistan Textile and Garment Industry Association</p>
+			</div>
+			<div class="footer-links">
+				<ul class="footer-menu">
+					<li><a href="">Home</a></li>
+					<li><a href="">Membership</a></li>
+					<li><a href="">News</a></li>
+				</ul>
+				<ul class="footer-menu">
+					<li><a href="">Library</a></li>
+					<li><a href="">Gallery</a></li>
+					<li><a href="">Contacts</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

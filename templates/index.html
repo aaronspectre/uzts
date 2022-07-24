@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Uzbekistan Textile and Garment Industry Association</title>
+
+	{% load static %}
+	<link rel="icon" href="{% static 'img/logo.svg' %}">
+
+	<link rel="stylesheet" href="{% static 'style/general.css' %}">
+	<link rel="stylesheet" href="{% static 'style/style.css' %}">
+
+	<link href="https://kit-pro.fontawesome.com/releases/v6.0.0/css/pro.min.css" rel="stylesheet">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+	<script src="https://unpkg.com/@popperjs/core@2"></script>
+</head>
+<body>
+	<div id="main">
+		<div class="home-video-container">
+			<video id="home-video" src="{% static 'video/home.mov' %}" muted autoplay loop></video>
+		</div>
+		<nav id="navbar">
+			<div id="navbar-cover"></div>
+			<div class="side-menu-main side-menu">
+				<ul>
+					<li><a href="">Membership</a></li>
+					<li><a href="{% url 'events:news' %}">News</a></li>
+					<li><a href="javascript:void(0)" class="additional-menu-trigger" data-target="side-menu-about">About Us&emsp;<i class="fal fa-chevron-right"></i></a></li>
+					<li><a href="javascript:void(0)" class="additional-menu-trigger" data-target="side-menu-docs">Documents&emsp;<i class="fal fa-chevron-right"></i></a></li>
+					<li><a href="{% url 'main:contacts' %}">Contacts</a></li>
+				</ul>
+			</div>
+			<div class="side-menu-additional side-menu" id="side-menu-about">
+				<ul>
+					<li><a href="{% url 'main:team' %}">Our Team</a></li>
+					<li><a href="{% url 'main:about' %}">Industry</a></li>
+				</ul>
+			</div>
+			<div class="side-menu-additional side-menu" id="side-menu-docs">
+				<ul>
+					<li><a href="">Gallery</a></li>
+					<li><a href="">Library</a></li>
+				</ul>
+			</div>
+			<div class="bookmark">
+				<button id="side-menu-button">MENU</button>
+			</div>
+		</nav>
+		<div class="top-nav">
+			<a href=""><img src="{% static 'img/brand.svg' %}"></a>
+			<a href="" class="join-us-link">Join Us</a>
+		</div>
+		<div class="home">
+			<button><i class="fal fa-pause"></i></button>
+		</div>
+
+		<section id="about">
+			<div class="about-main">
+				<div class="about-text-container">
+					<h4><b>ABOUT US</b></h4>
+					<h2>Uzbekistan Textile Industry</h2>
+					<p>The range of our activities includes establishing and expanding relationships with other nations in the fields of textile and sewing production, organizing and holding forums, conferences, seminars, round tables, training sessions, and exhibitions with participation of international organizations, major brands and retailers, as well as foreign experts, specialists, and speakers for business representatives. Additionally, the association is working to expand the practice of introducing international standards at enterprises, and organizes training for their employees in the field of standardization and certification.</p><br>
+					<a href=""><i class="fal fa-bookmark"></i>&ensp;Read More</a>
+				</div>
+				<div class="model-container">
+					<model-viewer bounds="tight" enable-pan src="{% static 'model/cotton.glb' %}" ar ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral" shadow-intensity="1"></model-viewer>
+				</div>
+			</div>
+			<div class="about-cards">
+				<div class="about-card">
+					<i class="fal fa-reel"></i><br><br>
+					<span><a href="">Unified information portal textile and sewing-knitting enterprises</a></span>
+				</div>
+				<div class="about-card">
+					<i class="fal fa-mask-face"></i><br><br>
+					<span><a href="">Manufacturers of medical masks, medical gowns (overalls) and gauze</a></span>
+				</div>
+				<div class="about-card">
+					<i class="fal fa-farm"></i><br><br>
+					<span><a href="">Cotton Textile clusters</a></span>
+				</div>
+				<div class="about-card">
+					<i class="fal fa-industry-windows"></i><br><br>
+					<span><a href="">Database and interactive map of the textile and knitwear industry</a></span>
+				</div>
+			</div>
+		</section>
+		<section id="statistics">
+			<div class="statistics-container">
+				<div class="chart-container">
+					<img src="{% static 'img/chart.png' %}">
+				</div>
+				<div class="chart-text">
+					<h4><b>STATISTICS</b></h4>
+					<h2>Product Indicators</h2>
+					<p>World Bank October 2017 Report «Doing Business 2018» shows 13 points growth of Uzbekistan ranking within one year up to 74, and in 2020 to 69. Uzbekistan was in the top 10 countries within 2017-2019 for improving business environment, especially in business registration, obtaining of credit, economic growth, safety, etc.</p><br>
+					<a href=""><i class="fal fa-sack-dollar"></i>&ensp; Investments</a>
+					<a href=""><i class="fal fa-truck"></i>&ensp; Export</a>
+				</div>
+			</div>
+			<div class="stat-cards">
+				<div class="stat-card">
+					<strong>1989 +</strong><p></p>
+					<span>Enterprises - members of the association</span>
+				</div>
+				<div class="stat-card">
+					<strong>122</strong><p></p>
+					<span>Cotton-textile clusters</span>
+				</div>
+				<div class="stat-card">
+					<strong>4</strong><p></p>
+					<span>Educational institutions</span>
+				</div>
+				<div class="stat-card">
+					<strong>3.9 +</strong><p></p>
+					<span>Billion dollars of foreign investment</span>
+				</div>
+				<div class="stat-card">
+					<strong>378 +</strong><p></p>
+					<span>Thousand specialists and personnel</span>
+				</div>
+				<div class="stat-card">
+					<strong>3 +</strong><p></p>
+					<span>Billion dollars of export</span>
+				</div>
+			</div>
+			<div class="stat-cards">
+				<div class="stat-card">
+					<strong>1005 +</strong><p></p>
+					<span>Thousand tons of recycled cotton fiber</span>
+				</div>
+				<div class="stat-card">
+					<strong>862 +</strong><p></p>
+					<span>Thousand tons cotton yarn</span>
+				</div>
+				<div class="stat-card">
+					<strong>716 +</strong><p></p>
+					<span>Million square meters cotton fabrics</span>
+				</div>
+				<div class="stat-card">
+					<strong>204 +</strong><p></p>
+					<span>Thousand tons of knitted fabric</span>
+				</div>
+				<div class="stat-card">
+					<strong>2 +</strong><p></p>
+					<span>Billion pieces sewing knitwear</span>
+				</div>
+				<div class="stat-card">
+					<strong>458 +</strong><p></p>
+					<span>Million pairs of hosiery</span>
+				</div>
+			</div>
+		</section>
+		<section id="additional-statistics">
+			<div class="separator-container">
+				<div>
+					<h4>Want to see more statistic?<br><small>Visit website with advanced charts sorted by companies</small></h4>
+				</div>
+				<div>
+					<a href="https://uzts.kingdesignn.ru/" target="_blank" rel="noopener noreferrer"><i class="fal fa-chart-column"></i>&ensp;See More</a>
+				</div>
+			</div>
+		</section>
+		<section id="membership">
+			<div class="membership-container">
+				<div class="membership-text">
+					<h4><b>WE GROW WITH YOU</b></h4>
+					<h2>Membership</h2>
+					<p>World Bank October 2017 Report «Doing Business 2018» shows 13 points growth of Uzbekistan ranking within one year up to 74, and in 2020 to 69. Uzbekistan was in the top 10 countries within 2017-2019 for improving business environment, especially in business registration, obtaining of credit, economic growth, safety, etc.</p><br>
+					<a href=""><i class="fal fa-users"></i>&ensp;Join Us</a>
+					<a href=""><i class="fal fa-list-check"></i>&ensp;Benefits</a>
+				</div>
+				<div class="membership-image">
+					<img src="{% static 'img/membership.png' %}" alt="">
+				</div>
+			</div>
+		</section>
+		<section id="promotion">
+			<div class="promotion-container">
+				<div class="promotion-image">
+					<img src="{% static 'img/promotion.png' %}" alt="">
+				</div>
+				<div class="promotion-text">
+					<h4><b>SERVICES</b></h4>
+					<h2>Work with Us</h2>
+					<p>World Bank October 2017 Report «Doing Business 2018» shows 13 points growth of Uzbekistan ranking within one year up to 74, and in 2020 to 69. Uzbekistan was in the top 10 countries within 2017-2019 for improving business environment, especially in business registration, obtaining of credit, economic growth, safety, etc.</p><br>
+				</div>
+			</div>
+			<div class="promotion-sources">
+				<div class="promotion-source">
+					<div class="promotion-card">
+						<div class="promotion-card-header">
+							<i class="fal fa-rectangle-ad"></i>
+						</div>
+						<div class="promotion-card-body">
+							<h3>Promotion</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident nisi tenetur accusantium, soluta totam laboriosam reprehenderit consequatur architecto.</p>
+						</div>
+					</div>
+				</div>
+				<div class="promotion-source">
+					<div class="promotion-card">
+						<div class="promotion-card-header" style="background: #D3CEDF !important; color: #F2D7D9;">
+							<i class="fal fa-calendar-lines-pen"></i>
+						</div>
+						<div class="promotion-card-body">
+							<h3>Organizing Events</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident nisi tenetur accusantium, soluta totam laboriosam reprehenderit consequatur architecto.</p>
+						</div>
+					</div>
+				</div>
+				<div class="promotion-source">
+					<div class="promotion-card">
+						<div class="promotion-card-header">
+							<i class="fal fa-hand-holding-dollar"></i>
+						</div>
+						<div class="promotion-card-body">
+							<h3>Searching Investors</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident nisi tenetur accusantium, soluta totam laboriosam reprehenderit consequatur architecto.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="hotline">
+			<div class="separator-container hotline-container">
+				<div>
+					<h4>Still have questions?<br><small>Call-Center will help you to get used</small></h4>
+				</div>
+				<div>
+					<a href="tel:998712022244"><span><i class="fal fa-bolt"></i>&ensp;HOT LINE</span></a>
+				</div>
+			</div>
+		</section>
+		<section id="footer">
+			<div class="mail-subscribe">
+				<form class="mail-form">
+					<h3>Don't miss latest news in Textile Industry</h3>
+					<div class="form-group">
+						<input type="email" placeholder="Email">
+					</div>
+					<div class="form-group">
+						<a href=""><i class="fal fa-envelope"></i>&ensp;Subscribe</a>
+					</div>
+				</form>
+			</div>
+			<div class="footer-container">
+				<a href="{% url 'main:index' %}"><img src="{% static 'img/logo-white.svg' %}" alt="uzts"></a>
+				<div class="socials-container">
+					<a href="https://www.instagram.com/uzts.uz"><i class="fab fa-instagram-square"></i></a>
+					<a href="https://t.me/uztsuz"><i class="fab fa-telegram"></i></a>
+					<a href="https://www.facebook.com/uzts.uz"><i class="fab fa-facebook"></i></a>
+					<a href="https://www.youtube.com/channel/UCUBZc6CcYylKO6TyijZkKTw" style="padding: 1vh 1.3vh;"><i class="fab fa-youtube"></i></a>
+					<a href="https://t.me/certified_textile"><i class="fab fa-telegram"></i></a>
+				</div>
+				<p>© 2022 - Uzbekistan Textile and Garment Industry Association</p>
+			</div>
+		</section>
+	</div>
+</body>
+<script src="{% static 'script/home.js' %}"></script>
+<script> window.interdeal = { "sitekey": "90ba7c838621de6bb8b87cd606d8038c", "Position": "Right", "Menulang": "EN", "domains": { "js": "https://cdn.equalweb.com/", "acc": "https://access.equalweb.com/" }, "btnStyle": { "vPosition": [ "90%", null ], "scale": [ "0.4", "0.4" ], "color": { "main": "#000000", "second": "#ffffff" }, "icon": { "type": 11, "shape": "circle", "outline": true } } }; (function(doc, head, body){ var coreCall = doc.createElement('script'); coreCall.src = 'https://cdn.equalweb.com/core/4.3.7/accessibility.js'; coreCall.defer = true; coreCall.integrity = 'sha512-hGa5HZtFkT1M7+tUDtU/cbw6AG0ORz3oblztCoTZ/z2qPyr7dgwH3zoT8qpgj21MgcRsMFLD6NNKePGvVks3Ig=='; coreCall.crossOrigin = 'anonymous'; coreCall.setAttribute('data-cfasync', true ); body? body.appendChild(coreCall) : head.appendChild(coreCall); })(document, document.head, document.body); </script>
+</html>

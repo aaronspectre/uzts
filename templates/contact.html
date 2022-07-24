@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>UZTS | Contact Us</title>
+
+	{% load static %}
+	<link rel="icon" href="{% static 'img/logo.svg' %}">
+
+	<link rel="stylesheet" href="{% static 'style/general.css' %}">
+	<link rel="stylesheet" href="{% static 'style/contact.css' %}">
+
+	<link href="https://kit-pro.fontawesome.com/releases/v6.0.0/css/pro.min.css" rel="stylesheet">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+	<script src="https://unpkg.com/@popperjs/core@2"></script>
+</head>
+<body>
+	<div class="main">
+		<nav id="navbar">
+			<div id="navbar-cover"></div>
+			<div class="side-menu-main side-menu">
+				<ul>
+					<li><a href="{% url 'main:index' %}">Home</a></li>
+					<li><a href="">Membership</a></li>
+					<li><a href="{% url 'events:news' %}">News</a></li>
+					<li><a href="javascript:void(0)" class="additional-menu-trigger" data-target="side-menu-about">About Us&emsp;<i class="fal fa-chevron-right"></i></a></li>
+					<li><a href="javascript:void(0)" class="additional-menu-trigger" data-target="side-menu-docs">Documents&emsp;<i class="fal fa-chevron-right"></i></a></li>
+					<li><a href="{% url 'main:contacts' %}">Contacts</a></li>
+				</ul>
+			</div>
+			<div class="side-menu-additional side-menu" id="side-menu-about">
+				<ul>
+					<li><a href="">Our Team</a></li>
+					<li><a href="{% url 'main:about' %}">Industry</a></li>
+				</ul>
+			</div>
+			<div class="side-menu-additional side-menu" id="side-menu-docs">
+				<ul>
+					<li><a href="">Gallery</a></li>
+					<li><a href="">Library</a></li>
+				</ul>
+			</div>
+			<div class="bookmark">
+				<button id="side-menu-button">MENU</button>
+			</div>
+		</nav>
+		<div class="contact-container">
+			<div class="contact-container-left">
+				<form action="">
+					<h2>Contact Us</h2>
+					<div class="contact-group">
+						<input type="text" id="name" placeholder="Your Name">
+					</div>
+					<div class="contact-group">
+						<input type="email" id="email" placeholder="Your Email">
+					</div>
+					<div class="contact-group">
+						<textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+					</div>
+					<div class="contact-group">
+						<button type="submit">Send</button>
+					</div>
+				</form>
+				<div class="form-caption">
+					<div class="form-card">
+						<span><i class="fal fa-bus"></i><br><br>№ 47, 11; 92; 3а</span>
+					</div>
+					<div class="form-card">
+						<span><i class="fal fa-calendar-days"></i><br><br>Mondey - Friday</span>
+					</div>
+					<div class="form-card">
+						<span><i class="fal fa-clock"></i><br><br>9:00-12:00  13:00-18:00</span>
+					</div>
+					<div class="form-card">
+						<span><i class="fal fa-phone"></i><br><br><a href="tel:+998712022244">(+99871) 202-22-44</a></span>
+					</div>
+					<div class="form-card">
+						<span><i class="fal fa-fax"></i><br><br><a href="tel:+998712022244">(+99871) 202-22-44</a></span>
+					</div>
+					<div class="form-card">
+						<span><i class="fal fa-envelope"></i><br><br><a href="mailto:info@uzts.uz">info@uzts.uz</a></span>
+					</div>
+				</div>
+			</div>
+			<div class="map-container">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2997.814706654877!2d69.24785615896215!3d41.29113700023525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8bd2778d1ad1%3A0x22db3dfadccaae6c!2z0JDRgdGB0L7RhtC40LDRhtC40Y8gItCj0LfRgtC10LrRgdGC0LjQu9GM0L_RgNC-0LwiIC0gIk8nenRvJ3FpbWFjaGlsaWtzYW5vYXQiIFV5dXNobWFzaQ!5e0!3m2!1sen!2s!4v1658405086553!5m2!1sen!2s" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+		</div>
+		<section id="footer">
+			<div class="mail-subscribe">
+				<form class="mail-form">
+					<h3>Don't miss latest news in Textile Industry</h3>
+					<div class="form-group">
+						<input type="email" placeholder="Email">
+					</div>
+					<div class="form-group">
+						<a href=""><i class="fal fa-envelope"></i>&ensp;Subscribe</a>
+					</div>
+				</form>
+			</div>
+			<div class="footer-container">
+				<a href="/"><img src="{% static 'img/logo-white.svg' %}" alt="uzts"></a>
+				<div class="socials-container">
+					<a href="https://www.instagram.com/uzts.uz"><i class="fab fa-instagram-square"></i></a>
+					<a href="https://t.me/uztsuz"><i class="fab fa-telegram"></i></a>
+					<a href="https://www.facebook.com/uzts.uz"><i class="fab fa-facebook"></i></a>
+					<a href="https://www.youtube.com/channel/UCUBZc6CcYylKO6TyijZkKTw" style="padding: 1vh 1.3vh;"><i class="fab fa-youtube"></i></a>
+					<a href="https://t.me/certified_textile"><i class="fab fa-telegram"></i></a>
+				</div>
+				<p>© 2022 - Uzbekistan Textile and Garment Industry Association</p>
+			</div>
+		</section>
+	</div>
+</body>
+<script src="{% static 'script/news.js' %}"></script>
+<script> window.interdeal = { "sitekey": "90ba7c838621de6bb8b87cd606d8038c", "Position": "Right", "Menulang": "EN", "domains": { "js": "https://cdn.equalweb.com/", "acc": "https://access.equalweb.com/" }, "btnStyle": { "vPosition": [ "90%", null ], "scale": [ "0.4", "0.4" ], "color": { "main": "#000000", "second": "#ffffff" }, "icon": { "type": 11, "shape": "circle", "outline": true } } }; (function(doc, head, body){ var coreCall = doc.createElement('script'); coreCall.src = 'https://cdn.equalweb.com/core/4.3.7/accessibility.js'; coreCall.defer = true; coreCall.integrity = 'sha512-hGa5HZtFkT1M7+tUDtU/cbw6AG0ORz3oblztCoTZ/z2qPyr7dgwH3zoT8qpgj21MgcRsMFLD6NNKePGvVks3Ig=='; coreCall.crossOrigin = 'anonymous'; coreCall.setAttribute('data-cfasync', true ); body? body.appendChild(coreCall) : head.appendChild(coreCall); })(document, document.head, document.body); </script>
+</html>

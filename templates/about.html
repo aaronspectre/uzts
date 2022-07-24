@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>UZTS | About Us</title>
+
+	{% load static %}
+	<link rel="icon" href="{% static 'img/logo.svg' %}">
+
+	<link rel="stylesheet" href="{% static 'style/general.css' %}">
+	<link rel="stylesheet" href="{% static 'style/about.css' %}">
+
+	<link href="https://kit-pro.fontawesome.com/releases/v6.0.0/css/pro.min.css" rel="stylesheet">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+	<script src="https://unpkg.com/@popperjs/core@2"></script>
+</head>
+<body>
+	<div class="main">
+		<nav id="navbar">
+			<div id="navbar-cover"></div>
+			<div class="side-menu-main side-menu">
+				<ul>
+					<li><a href="{% url 'main:index' %}">Home</a></li>
+					<li><a href="">Membership</a></li>
+					<li><a href="{% url 'events:news' %}">News</a></li>
+					<li><a href="javascript:void(0)" class="additional-menu-trigger" data-target="side-menu-about">About Us&emsp;<i class="fal fa-chevron-right"></i></a></li>
+					<li><a href="javascript:void(0)" class="additional-menu-trigger" data-target="side-menu-docs">Documents&emsp;<i class="fal fa-chevron-right"></i></a></li>
+					<li><a href="{% url 'main:contacts' %}">Contacts</a></li>
+				</ul>
+			</div>
+			<div class="side-menu-additional side-menu" id="side-menu-about">
+				<ul>
+					<li><a href="{% url 'main:team' %}">Our Team</a></li>
+					<li><a href="{% url 'main:about' %}">Industry</a></li>
+				</ul>
+			</div>
+			<div class="side-menu-additional side-menu" id="side-menu-docs">
+				<ul>
+					<li><a href="">Gallery</a></li>
+					<li><a href="">Library</a></li>
+				</ul>
+			</div>
+			<div class="bookmark">
+				<button id="side-menu-button">MENU</button>
+			</div>
+		</nav>
+		<div class="about-container">
+			<img src="{% static 'img/about-us-bg.png' %}">
+		</div>
+		<div class="about-header">
+			<div class="about-header-caption">
+				<h1>About Us</h1>
+				<span>The Association of Textile and Clothing and Knitting Industry Enterprises of Uzbekistan “Uztekstilprom” was established by Decree of the President of the Republic of Uzbekistan dated December 14, 2017 No. UP-5285. In accordance with it, the volume and quality of textile products are increasing, and its range is also expanding. The best design developments are introduced into the production process based on the trends and directions of the modern fashion industry.</span><br><br><br><br>
+				<a href="{% url 'main:team' %}">Our Team</a>
+				<a href="">Join Us</a>
+			</div>
+		</div>
+		<div class="about-section">
+			<div class="about-society">
+				<h4>For Society</h4>
+				<p>An organization of top producers of textile, apparel, and knitwear products in Uzbekistan that is constantly growing, solving social problems, giving people a place to work, and creating new jobs. It is also recognized by the world's manufacturers of textiles and textile machinery and has a favorable professional and alluring reputation in the international market. Member enterprises whose goods are utilized on a daily basis by millions of families across the globe.</p>
+			</div>
+			<div class="image-container-society">
+				<img src="{% static 'img/about-society.png' %}">
+			</div>
+		</div>
+		<div class="about-section-clients">
+			<div class="image-container-clients">
+				<img src="{% static 'img/about-clients.png' %}">
+			</div>
+			<div class="about-clients">
+				<h4>For Clients</h4>
+				<p>An association of businesses that stay up with the times and only provide their clients with current, high-quality products; a partner that is consistently prepared to assist in the growth of your company while responsibly fulfilling its commitments.</p><br><br>
+				<a href=""><i class="fal fa-users"></i>&ensp;Membership</a>
+			</div>
+		</div>
+		<div class="about-section-cards">
+			<h4 align="center">A company</h4>
+		</div>
+		<div class="emp-cards">
+			<div class="emp-card">
+				<p>There everyone feels as though they are working toward a similar goal</p>
+			</div>
+			<div class="emp-card">
+				<p>That loves and cares for its employees</p>
+			</div>
+			<div class="emp-card">
+				<p>Where you have the chance to work with a group of the top experts in your industry</p>
+			</div>
+			<div class="emp-card">
+				<p>A fulfilling work that encourages professional and personal growth</p>
+			</div>
+		</div>
+		<section id="footer">
+			<div class="mail-subscribe">
+				<form class="mail-form">
+					<h3>Don't miss latest news in Textile Industry</h3>
+					<div class="form-group">
+						<input type="email" placeholder="Email">
+					</div>
+					<div class="form-group">
+						<a href=""><i class="fal fa-envelope"></i>&ensp;Subscribe</a>
+					</div>
+				</form>
+			</div>
+			<div class="footer-container">
+				<a href="{% url 'main:index' %}"><img src="{% static 'img/logo-white.svg' %}" alt="uzts"></a>
+				<div class="socials-container">
+					<a href="https://www.instagram.com/uzts.uz"><i class="fab fa-instagram-square"></i></a>
+					<a href="https://t.me/uztsuz"><i class="fab fa-telegram"></i></a>
+					<a href="https://www.facebook.com/uzts.uz"><i class="fab fa-facebook"></i></a>
+					<a href="https://www.youtube.com/channel/UCUBZc6CcYylKO6TyijZkKTw" style="padding: 1vh 1.3vh;"><i class="fab fa-youtube"></i></a>
+					<a href="https://t.me/certified_textile"><i class="fab fa-telegram"></i></a>
+				</div>
+				<p>© 2022 - Uzbekistan Textile and Garment Industry Association</p>
+			</div>
+		</section>
+	</div>
+</body>
+<script src="{% static 'script/news.js' %}"></script>
+<script src="{% static 'script/about.js' %}"></script>
+<script> window.interdeal = { "sitekey": "90ba7c838621de6bb8b87cd606d8038c", "Position": "Right", "Menulang": "EN", "domains": { "js": "https://cdn.equalweb.com/", "acc": "https://access.equalweb.com/" }, "btnStyle": { "vPosition": [ "90%", null ], "scale": [ "0.4", "0.4" ], "color": { "main": "#000000", "second": "#ffffff" }, "icon": { "type": 11, "shape": "circle", "outline": true } } }; (function(doc, head, body){ var coreCall = doc.createElement('script'); coreCall.src = 'https://cdn.equalweb.com/core/4.3.7/accessibility.js'; coreCall.defer = true; coreCall.integrity = 'sha512-hGa5HZtFkT1M7+tUDtU/cbw6AG0ORz3oblztCoTZ/z2qPyr7dgwH3zoT8qpgj21MgcRsMFLD6NNKePGvVks3Ig=='; coreCall.crossOrigin = 'anonymous'; coreCall.setAttribute('data-cfasync', true ); body? body.appendChild(coreCall) : head.appendChild(coreCall); })(document, document.head, document.body); </script>
+</html>
