@@ -8,8 +8,11 @@ body{
 	background: #06060a;
 	text-align: center;
 }
+.library-header-image img{
+	width: 10%;
+}
 .library-header{
-	padding-top: 4vh;
+	/*padding-top: 4vh;*/
 	font-size: 5vh;
 	margin-top: 0;
 	color: white;
@@ -41,6 +44,7 @@ body{
 .library-content-card img{
 	object-fit: cover;
 	width: 100%;
+	cursor: pointer;
 	height: 100%;
 }
 #footer{

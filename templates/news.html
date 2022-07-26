@@ -33,8 +33,8 @@
 						{% else %}
 						<span><b>{{latest.date|date:"F j, o"}}</b></span><br><br>
 						{% endif %}
-						<a href=""><b>{{latest.title}}</b></a>
-						<p>{{latest.content}}</p>
+						<a href="{% url 'events:view' latest.id %}"><b>{{latest.title}}</b></a>
+						<p>{{latest.spoiler}}</p>
 					</div>
 					<img src="{{latest.preview.url}}">
 				</div>
@@ -43,7 +43,7 @@
 					<div class="event-card announcement-card">
 						<div class="event-card-caption">
 							<span><i class="far fa-bullhorn"></i>&ensp;<b>Announcement</b></span><br><br>
-							<a href=""><b>{{event.title}}</b></a>
+							<a href="{% url 'events:view' event.id %}"><b>{{event.title}}</b></a>
 						</div>
 						<img src="{{event.preview}}">
 					</div>
@@ -51,7 +51,7 @@
 					<div class="event-card">
 						<div class="event-card-caption">
 							<span><b>{{event.date|date:"F j, o"}}</b></span><br><br>
-							<a href=""><b>{{event.title}}</b></a>
+							<a href="{% url 'events:view' event.id %}"><b>{{event.title}}</b></a>
 						</div>
 						<img src="{{event.preview.url}}">
 					</div>

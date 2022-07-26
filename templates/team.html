@@ -273,14 +273,14 @@
 			</div>
 			<div class="footer-links">
 				<ul class="footer-menu">
-					<li><a href="">Home</a></li>
-					<li><a href="">Membership</a></li>
-					<li><a href="">News</a></li>
+					<li><a href="{% url 'main:index' %}">Home</a></li>
+					<li><a href="{% url 'main:membership' %}">Membership</a></li>
+					<li><a href="{% url 'events:news' %}">News</a></li>
 				</ul>
 				<ul class="footer-menu">
-					<li><a href="">Library</a></li>
-					<li><a href="">Gallery</a></li>
-					<li><a href="">Contacts</a></li>
+					<li><a href="{% url 'main:gallery' %}">Gallery</a></li>
+					<li><a href="{% url 'main:library' %}">Library</a></li>
+					<li><a href="{% url 'main:contacts' %}">Contacts</a></li>
 				</ul>
 			</div>
 		</div>

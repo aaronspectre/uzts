@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>UZTS | Editor</title>
+
+	{% load static %}
+	<link rel="icon" href="{% static 'img/logo.svg' %}">
+
+	<link rel="stylesheet" href="{% static 'style/general.css' %}">
+	<link rel="stylesheet" href="{% static 'style/workshop.css' %}">
+
+	<link href="https://kit-pro.fontawesome.com/releases/v6.0.0/css/pro.min.css" rel="stylesheet">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+	<script src="https://unpkg.com/@popperjs/core@2"></script>
+</head>
+<body>
+	<div class="main">
+		<div class="panel">
+			<button onclick="addHeading()"><i class="fal fa-heading"></i>&ensp;Title</button>
+			<button onclick="addImage()"><i class="fal fa-image"></i>&ensp;Image</button>
+			<button onclick="addText()"><i class="fal fa-text"></i>&ensp;Text</button>
+			<!-- <button onclick="addHeading()"><i class="fal fa-link"></i>&ensp;Link</button> -->
+		</div>
+		<div class="navbar">
+			<a href="{% url 'main:index' %}"><img src="{% static 'img/logo.svg' %}"></a>
+		</div>
+		<div class="post">
+			<form action="{% url 'events:upload' %}" method="post" id="post-form" enctype="multipart/form-data">
+				{% csrf_token %}
+				<input type="hidden" id="sequence" name="sequence">
+
+				<div class="post-section">
+					<input type="text" placeholder="Give Title" name="main-title">
+				</div>
+				<div class="post-section">
+					<textarea name="spoiler" rows="10" placeholder="Preview Text"></textarea>
+				</div>
+				<div class="post-section">
+					<input type="file" placeholder="Preview Image" name="preview" accept="image/png, image/jpeg">
+				</div>
+
+				<button type="submit" class="upload-button">Upload</button>
+			</form>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="{% static 'script/workshop.js' %}"></script>
+</html>
