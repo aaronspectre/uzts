@@ -20,6 +20,21 @@
 .news-home-header img{
 	width: 5%;
 }
+.editor-link{
+	display: block;
+	width: 10%;
+	margin: auto;
+	margin-top: 3vh;
+	padding: 2vh 0;
+	border: 2px solid black;
+	text-decoration: none;
+	color: black;
+	border-radius: 1vh;
+}
+.editor-link:hover{
+	background: black;
+	color: white;
+}
 .news-tape{
 	width: 50%;
 	margin: auto;

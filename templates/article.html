@@ -58,7 +58,11 @@
 		</div>
 		{% endif %}
 		<div class="event-header">
+			{% if event.announcement %}
+			<h2><i class="fal fa-bullhorn"></i>&ensp;{{event.title}}</h2>
+			{% else %}
 			<h2>{{event.title}}</h2>
+			{% endif %}
 			<p>{{event.spoiler}}</p>
 		</div>
 

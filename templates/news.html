@@ -23,7 +23,10 @@
 			<div class="news-home-header">
 				<a href="{% url 'main:index' %}"><img src="{% static 'img/logo-rounded.svg' %}"></a>
 				<h1>News and Announcements</h1>
-				<span>Latest events and announcements from Uzbekistan Textile Industry</span>
+				<span>Latest events and announcements from Uzbekistan Textile Industry</span><br>
+				{% if request.user.is_authenticated %}
+				<a href="{% url 'events:editor' %}" class="editor-link"><i class="fal fa-pencil"></i>&ensp;Editor</a>
+				{% endif %}
 			</div>
 			<div class="news-tape">
 				<div class="latest-event event-card">
@@ -58,13 +61,13 @@
 					{% endif %}
 				{% endfor %}
 			</div>
-			<div class="news-pagination">
+			<!-- <div class="news-pagination">
 				<ul>
 					<li><a href="">1</a></li>
 					<li><a href="">2</a></li>
 					<li><a href="">3</a></li>
 				</ul>
-			</div>
+			</div> -->
 			<section id="footer">
 				<div class="mail-subscribe">
 					<form class="mail-form">

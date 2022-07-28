@@ -29,20 +29,26 @@
 			<a href="{% url 'main:index' %}"><img src="{% static 'img/logo.svg' %}"></a>
 		</div>
 		<div class="post">
-			<form action="{% url 'events:upload' %}" method="post" id="post-form" enctype="multipart/form-data">
+			<form action="{% url 'events:upload' %}" method="post" id="post-form" enctype="multipart/form-data" onsubmit="return validateForm()">
 				{% csrf_token %}
 				<input type="hidden" id="sequence" name="sequence">
 
 				<div class="post-section">
-					<input type="text" placeholder="Give Title" name="main-title">
+					<input type="text" placeholder="Give Title" name="main-title" required>
 				</div>
 				<div class="post-section">
-					<textarea name="spoiler" rows="10" placeholder="Preview Text"></textarea>
+					<textarea name="spoiler" rows="10" placeholder="Preview Text" required></textarea>
 				</div>
 				<div class="post-section">
-					<input type="file" placeholder="Preview Image" name="preview" accept="image/png, image/jpeg">
+					<input type="file" placeholder="Preview Image" name="preview" accept="image/png, image/jpeg" required>
 				</div>
 
+				<div class="post-section-top">
+					<input type="checkbox" id="announce" name="announce">
+					<label for="announce">&ensp;Announcement</label>
+					<input type="checkbox" id="cover" name="cover" checked>
+					<label for="cover">&ensp;Image Cover</label>
+				</div>
 				<button type="submit" class="upload-button">Upload</button>
 			</form>
 		</div>

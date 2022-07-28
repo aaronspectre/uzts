@@ -24,6 +24,8 @@ def upload(request):
 	event.title = request.POST['main-title']
 	event.spoiler = request.POST['spoiler']
 	event.preview = request.FILES['preview']
+	event.announcement = True if 'announce' in request.POST else False
+	event.image_cover = True if 'cover' in request.POST else False
 
 	content = Content()
 

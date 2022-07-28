@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>UZTS | Membership</title>
+
+	{% load static %}
+	<link rel="icon" href="{% static 'img/logo.svg' %}">
+
+	<link rel="stylesheet" href="{% static 'style/general.css' %}">
+	<link rel="stylesheet" href="{% static 'style/membership.css' %}">
+
+	<link href="https://kit-pro.fontawesome.com/releases/v6.0.0/css/pro.min.css" rel="stylesheet">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+	<script src="https://unpkg.com/@popperjs/core@2"></script>
+</head>
+<body>
+	<div class="main">
+		<nav id="navbar">
+			<div id="navbar-cover"></div>
+			<div class="side-menu-main side-menu">
+				<ul>
+					<li><a href="{% url 'main:index' %}">Home</a></li>
+					<li><a href="{% url 'main:membership' %}">Membership</a></li>
+					<li><a href="{% url 'events:news' %}">News</a></li>
+					<li><a href="javascript:void(0)" class="additional-menu-trigger" data-target="side-menu-about">About Us&emsp;<i class="fal fa-chevron-right"></i></a></li>
+					<li><a href="javascript:void(0)" class="additional-menu-trigger" data-target="side-menu-docs">Documents&emsp;<i class="fal fa-chevron-right"></i></a></li>
+					<li><a href="{% url 'main:contacts' %}">Contacts</a></li>
+				</ul>
+			</div>
+			<div class="side-menu-additional side-menu" id="side-menu-about">
+				<ul>
+					<li><a href="{% url 'main:team' %}">Our Team</a></li>
+					<li><a href="{% url 'main:about' %}">Industry</a></li>
+				</ul>
+			</div>
+			<div class="side-menu-additional side-menu" id="side-menu-docs">
+				<ul>
+					<li><a href="{% url 'main:gallery' %}">Gallery</a></li>
+					<li><a href="{% url 'main:library' %}">Library</a></li>
+				</ul>
+			</div>
+			<div class="bookmark">
+				<button id="side-menu-button">MENU</button>
+			</div>
+		</nav>
+		<div class="intro">
+			<div class="intro-image">
+				<img src="{% static 'img/membership-intro.png' %}" alt="Membership">
+			</div>
+			<div class="intro-header">
+				<h1>The Heart Of The Textile Industry</h1>
+				<p>Become the part of us and get instant karma</p>
+				<a href="">Apply</a>
+			</div>
+		</div>
+		<div class="overflow-container">
+			<div class="overflow-panel">
+				<h3 align="center">What Do We Offer</h3>
+				<div class="offer-cards">
+					<a href="">
+						<div class="offer-card">
+							<div class="offer-card-head">
+								<i class="fas fa-ad"></i>
+							</div>
+							<div class="offer-card-text">
+								<p><strong>Promotion</strong></p>
+								<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum perspiciatis animi molestiae nobis numquam laudantium voluptates odit totam dicta.</p>
+							</div>
+						</div>
+					</a>
+					<a href="">
+						<div class="offer-card">
+							<div class="offer-card-head">
+								<i class="fas fa-calendar-lines-pen"></i>
+							</div>
+							<div class="offer-card-text">
+								<p><strong>Organizing Events</strong></p>
+								<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum perspiciatis animi molestiae nobis numquam laudantium voluptates odit totam dicta.</p>
+							</div>
+						</div>
+					</a>
+					<a href="{% static 'file/Benefits.pdf' %}">
+						<div class="offer-card">
+							<div class="offer-card-head">
+								<i class="fas fa-hand-holding-dollar"></i>
+							</div>
+							<div class="offer-card-text">
+								<p><strong>Export Benefits</strong></p>
+								<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum perspiciatis animi molestiae nobis numquam laudantium voluptates odit totam dicta.</p>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="chess-container">
+			<h3>Additional Services</h3>
+			<div>
+				<strong>The Agency for Advertising and Marketing of Textile Products</strong>
+				<p>TPMA is a modern, dynamically developing company specializing in organizing and holding exhibition and exposition events, promoting domestic enterprises in the international arena, establishing and expanding trade and investment cooperation, presenting the production and export potential of a domestic enterprise, concluding relevant contracts with potential foreign partners.</p>
+				<span>TPMAs allow businesses to:</span>
+				<ul>
+					<li>introduce a new enterprise to the market;</li>
+					<li>to acquaint visitors of the exhibition with the range and range of services provided;</li>
+					<li>conduct a demonstration of new machinery and equipment;</li>
+					<li>ensure a positive perception of the company's products;</li>
+					<li>increase sales;</li>
+					<li>establish new business contacts, find partners, clients or sponsors;</li>
+					<li>conclude profitable contracts;</li>
+					<li>improve the image of the brand and the company as a whole.</li>
+				</ul>
+			</div>
+			<div>
+				<img src="{% static 'img/tpma.jpg' %}" alt="TPMA">
+			</div>
+		</div>
+		<div class="chess-container-alt">
+			<div>
+				<img src="{% static 'img/sharq.jpg' %}" alt="Sharq Liboslar">
+			</div>
+			<div>
+				<strong>LLC "Eastern Clothing Design Center"</strong>
+				<p>“Sharq liboslari Dizayn Markazi” LLC is one of the leading enterprises working in the development and production of fashionable clothes, operating under the Uztekstilprom Association.</p>
+				<span>The main tasks of Sharq liboslari Dizayn Markazi LLC are:</span>
+				<ul>
+					<li>introduction of advanced modeling of light industry products, taking into account the growing needs and requirements of the population;</li>
+					<li>study of the latest trends in world fashion;</li>
+					<li>conducting marketing research of external and internal product markets;</li>
+					<li>establishing cooperation with well-known world centers, studying their best practices;</li>
+					<li>development of the Uzbek fashion industry and support for local designers;</li>
+					<li>creation of seasonal collections of clothes of various assortments based on the national identity and mentality of the population;</li>
+					<li>implementation of consulting activities;</li>
+					<li>development of a description of the technical conditions of models;</li>
+					<li>development of patterns;</li>
+					<li>regular updating of the developed models taking into account market conditions, creation of competitive models;</li>
+					<li>organization of demonstrations of models by local and foreign fashion designers, conferences, exhibitions, methodical seminars and master classes.</li>
+				</ul>
+			</div>
+		</div>
+		<div class="export-benefits">
+			<h3 align="center">Export Benefits</h3>
+			<p>In order to expand the country's export potential, provide state support to exporting organizations, as well as stimulate an increase in the production of competitive export products, from January 1, 2019, legal entities with a share of exports in total revenue from the sale of goods (works, services) of more than 15%, including including through a commission agent (attorney), reduce the taxable base for:</p>
+			<div class="benefit-card">
+				<i class="far fa-circle-check"></i>
+				<span>Income tax of legal entities in terms of profit attributable to the volume of sales of goods (works, services) for export;</span>
+			</div>
+			<div class="benefit-card">
+				<i class="far fa-circle-check"></i>
+				<span>A single tax payment in terms of the volume of sales of goods (works, services) for export.</span>
+			</div>
+			<div class="benefit-card" style="grid-column: span 2;">
+				<i class="far fa-circle-check"></i>
+				<span>The benefits provided for in this paragraph do not apply to the export of commodities listed in the annex, as well as international transportation services (except for road transport).</span>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="{% static 'script/membership.js' %}"></script>
+<script> window.interdeal = { "sitekey": "90ba7c838621de6bb8b87cd606d8038c", "Position": "Right", "Menulang": "EN", "domains": { "js": "https://cdn.equalweb.com/", "acc": "https://access.equalweb.com/" }, "btnStyle": { "vPosition": [ "90%", null ], "scale": [ "0.4", "0.4" ], "color": { "main": "#000000", "second": "#ffffff" }, "icon": { "type": 11, "shape": "circle", "outline": true } } }; (function(doc, head, body){ var coreCall = doc.createElement('script'); coreCall.src = 'https://cdn.equalweb.com/core/4.3.7/accessibility.js'; coreCall.defer = true; coreCall.integrity = 'sha512-hGa5HZtFkT1M7+tUDtU/cbw6AG0ORz3oblztCoTZ/z2qPyr7dgwH3zoT8qpgj21MgcRsMFLD6NNKePGvVks3Ig=='; coreCall.crossOrigin = 'anonymous'; coreCall.setAttribute('data-cfasync', true ); body? body.appendChild(coreCall) : head.appendChild(coreCall); })(document, document.head, document.body); </script>
+</html>

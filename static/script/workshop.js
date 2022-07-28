@@ -32,6 +32,7 @@ function addHeading(){
 	node.classList.add('post-section-module')
 	heading.setAttribute('placeholder', 'Title')
 	heading.setAttribute('type', 'text')
+	heading.setAttribute('required', '')
 	heading.setAttribute('name', `heading-${sequence}`)
 	node.appendChild(heading)
 	node.appendChild(createButton())
@@ -43,9 +44,10 @@ function addHeading(){
 function addText(){
 	let textarea = document.createElement('textarea')
 	let node = document.createElement('div')
+	node.classList.add('post-section-module')
 	textarea.setAttribute('placeholder', 'Text')
 	textarea.setAttribute('rows', '10')
-	node.classList.add('post-section-module')
+	textarea.setAttribute('required', '')
 	textarea.setAttribute('name', `text-${sequence}`)
 	node.appendChild(textarea)
 	node.appendChild(createButton())
@@ -57,13 +59,27 @@ function addText(){
 function addImage(){
 	let image = document.createElement('input')
 	let node = document.createElement('div')
+	node.classList.add('post-section-module')
 	image.setAttribute('type', 'file')
 	image.setAttribute('accept', 'image/png, image/jpeg')
-	node.classList.add('post-section-module')
+	image.setAttribute('required', '')
 	image.setAttribute('name', `image-${sequence}`)
 	node.appendChild(image)
 	node.appendChild(createButton())
 	sequence ++;
 	form.appendChild(node)
 	editSequence()
+}
+
+
+
+
+function validateForm(){
+	if (sequence == 0){
+		alert('Add at least 2 fields')
+		return false
+	}
+	else{
+		return true
+	}
 }

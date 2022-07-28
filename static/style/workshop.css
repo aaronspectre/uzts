@@ -121,3 +121,15 @@
 	background: black;
 	color: white;
 }
+
+.post-section-top{
+	display: flex;
+	position: absolute;
+	top: 2vh;
+	right: 20vw;
+	padding: 2.5vh;
+}
+.post-section-top label{
+	margin-right: 2vw;
+	cursor: pointer;
+}
