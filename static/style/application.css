@@ -110,6 +110,10 @@ form{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 }
+.application-triple{
+	display: grid;
+	grid-template-columns: 5fr 5fr 1fr;
+}
 
 
 
