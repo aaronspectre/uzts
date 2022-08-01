@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>UZTS | Membership Application</title>
+
+	{% load static %}
+	<link rel="icon" href="{% static 'img/logo.svg' %}">
+
+	<link rel="stylesheet" href="{% static 'style/general.css' %}">
+	<link rel="stylesheet" href="{% static 'style/application.css' %}">
+
+	<link href="https://kit-pro.fontawesome.com/releases/v6.0.0/css/pro.min.css" rel="stylesheet">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+	<script src="https://unpkg.com/@popperjs/core@2"></script>
+</head>
+<body>
+	<div class="main">
+		<nav id="navbar">
+			<div id="navbar-cover"></div>
+			<div class="side-menu-main side-menu">
+				<ul>
+					<li><a href="{% url 'main:index' %}"><i class="far fa-home"></i>&ensp;Home</a></li>
+					<li><a href="{% url 'main:membership' %}"><i class="far fa-star"></i>&ensp;Membership</a></li>
+					<li><a href="{% url 'events:news' %}"><i class="far fa-newspaper"></i>&ensp;News</a></li>
+					<li><a href="javascript:void(0)" class="additional-menu-trigger" data-target="side-menu-about"><i class="far fa-building"></i>&ensp;About Us&emsp;<i class="fal fa-chevron-right"></i></a></li>
+					<li><a href="javascript:void(0)" class="additional-menu-trigger" data-target="side-menu-docs"><i class="far fa-books"></i>&ensp;Documents&emsp;<i class="fal fa-chevron-right"></i></a></li>
+					<li><a href="{% url 'main:contacts' %}"><i class="far fa-envelope"></i>&ensp;Contacts</a></li>
+				</ul>
+			</div>
+			<div class="side-menu-additional side-menu" id="side-menu-about">
+				<ul>
+					<li><a href="{% url 'main:team' %}"><i class="far fa-screen-users"></i>&ensp;Our Team</a></li>
+					<li><a href="{% url 'main:about' %}"><i class="far fa-industry-windows"></i>&ensp;Industry</a></li>
+				</ul>
+			</div>
+			<div class="side-menu-additional side-menu" id="side-menu-docs">
+				<ul>
+					<li><a href="{% url 'main:gallery' %}"><i class="far fa-rectangle-vertical-history"></i>&ensp;Gallery</a></li>
+					<li><a href="{% url 'main:library' %}"><i class="far fa-book-copy"></i>&ensp;Library</a></li>
+				</ul>
+			</div>
+			<div class="bookmark">
+				<button id="side-menu-button">MENU</button>
+			</div>
+		</nav>
+		<div class="form-container">
+			<h2>Application</h2>
+			<p></p>
+			<form action="" method="get" enctype="">
+				<div class="application-single">
+					<label for="org-name">Name of an individual entrepreneur or enterprise, indicating the legal form <font color="red">*</font></label>
+					<input type="text" name="orgn-name" id="org-name" placeholder="OOO 'Example'">
+				</div>
+				<div class="application-single">
+					<label for="org-name">Enterprise chairman <font color="red">*</font></label>
+					<input type="text" name="orgn-name" id="org-name" placeholder="Full Name">
+				</div>
+				<div class="application-double">
+					<div class="application-single">
+						<label for="org-name">Phone <font color="red">*</font></label>
+						<input type="phone" name="orgn-name" id="org-name" value="+998">
+					</div>
+					<div class="application-single">
+						<label for="org-name">Email</label>
+						<input type="email" name="orgn-name" id="org-name" placeholder="example@mail.org">
+					</div>
+				</div>
+				<div class="application-double">
+					<div class="application-single">
+						<label for="org-name">Date of registration in state bodies <font color="red">*</font></label>
+						<input type="date" name="orgn-name" id="org-name" value="+998">
+					</div>
+					<div class="application-single">
+						<label for="org-name">№ of state registration certificate</label>
+						<input type="text" name="orgn-name" id="org-name" placeholder="example@mail.org">
+					</div>
+				</div>
+				<div class="application-double">
+					<div class="application-single">
+						<label for="org-name">TIN <font color="red">*</font></label>
+						<input type="text" name="orgn-name" id="org-name">
+					</div>
+					<div class="application-single">
+						<label for="org-name">All-Union classifier "Sectors of the national economy" <font color="red">*</font></label>
+						<input type="text" name="orgn-name" id="org-name" placeholder="example@mail.org">
+					</div>
+				</div>
+				<div class="application-single">
+					<label for="org-name">Nationwide classifier of types of economic activity <font color="red">*</font></label>
+					<input type="text" name="orgn-name" id="org-name" placeholder="Full Name">
+				</div>
+				<div class="application-double">
+					<div class="application-single">
+						<label for="org-name">Charter capital (UZS) <font color="red">*</font></label>
+						<input type="number" name="orgn-name" id="org-name" placeholder="mln. uzs">
+					</div>
+					<div class="application-single">
+						<label for="org-name">Charter capital (USD) <font color="red">*</font></label>
+						<input type="number" name="orgn-name" id="org-name" placeholder="mln. usd">
+					</div>
+				</div>
+				<div class="application-double">
+					<div class="application-single">
+						<label for="org-name">Servicing bank <font color="red">*</font></label>
+						<input type="number" name="orgn-name" id="org-name">
+					</div>
+					<div class="application-single">
+						<label for="org-name">MFO bank code <font color="red">*</font></label>
+						<input type="number" name="orgn-name" id="org-name" placeholder="">
+					</div>
+				</div>
+				<div class="application-double">
+					<div class="application-single">
+						<label for="org-name">Founders <font color="red">*</font></label>
+						<input type="number" name="orgn-name" id="org-name">
+					</div>
+					<div class="application-single">
+						<label for="org-name">Share % <font color="red">*</font></label>
+						<input type="number" name="orgn-name" id="org-name" placeholder="">
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+<script src="{% static 'script/news.js' %}"></script>
+<script> window.interdeal = { "sitekey": "90ba7c838621de6bb8b87cd606d8038c", "Position": "Right", "Menulang": "EN", "domains": { "js": "https://cdn.equalweb.com/", "acc": "https://access.equalweb.com/" }, "btnStyle": { "vPosition": [ "90%", null ], "scale": [ "0.4", "0.4" ], "color": { "main": "#000000", "second": "#ffffff" }, "icon": { "type": 11, "shape": "circle", "outline": true } } }; (function(doc, head, body){ var coreCall = doc.createElement('script'); coreCall.src = 'https://cdn.equalweb.com/core/4.3.7/accessibility.js'; coreCall.defer = true; coreCall.integrity = 'sha512-hGa5HZtFkT1M7+tUDtU/cbw6AG0ORz3oblztCoTZ/z2qPyr7dgwH3zoT8qpgj21MgcRsMFLD6NNKePGvVks3Ig=='; coreCall.crossOrigin = 'anonymous'; coreCall.setAttribute('data-cfasync', true ); body? body.appendChild(coreCall) : head.appendChild(coreCall); })(document, document.head, document.body); </script>
+</html>

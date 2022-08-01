@@ -27,3 +27,7 @@ def gallery(request):
 
 def library(request):
 	return render(request, 'library.html')
+
+
+def application(request):
+	return render(request, 'application.html')

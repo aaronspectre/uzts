@@ -271,6 +271,31 @@
 	margin-right: 3vw;
 }
 
+.promote-apply{
+	padding: 10vh 10vw;
+	background: #004AAD;
+	color: white;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 5vw;
+	font-size: 2vh;
+}
+.promote-apply a{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	color: white;
+	text-decoration: none;
+	padding: 0 2vw;
+	border: 2px solid white;
+	border-radius: 1vh;
+}
+.promote-apply a:hover{
+	background: white;
+	color: #004AAD;
+}
+
 .useful-links{
 	padding: 10vh 5vw;
 	display: grid;

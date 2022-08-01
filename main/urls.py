@@ -5,10 +5,11 @@ app_name = 'main'
 
 urlpatterns = [
 	path('', views.index, name = 'index'),
-	path('membership', views.membership, name = 'membership'),
 	path('about-us', views.about, name = 'about'),
 	path('team', views.team, name = 'team'),
 	path('contacts', views.contacts, name = 'contacts'),
 	path('gallery', views.gallery, name = 'gallery'),
 	path('library', views.library, name = 'library'),
+	path('membership', views.membership, name = 'membership'),
+	path('membership/application', views.application, name = 'application'),
 ]
