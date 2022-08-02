@@ -82,6 +82,10 @@
 	margin: 0;
 	margin-left: 1vw;
 }
+.form-container small{
+	margin: 0;
+	margin-left: 1vw;
+}
 form{
 	margin-top: 5vh;
 	width: 100%;
@@ -99,10 +103,36 @@ form{
 	margin: 0 1vw;
 	margin-top: 1vh;
 }
+.application-single select{
+	padding: 2vh;
+	border: 2px solid black;
+	border-radius: 1vh;
+	background: white;
+	margin: 0 1vw;
+	margin-top: 1vh;
+}
+.submit-button{
+	margin: 0 1vw;
+	padding: 2vh;
+	border: 2px solid black;
+	background: black;
+	color: white;
+	cursor: pointer;
+	font-size: 2vh;
+	border-radius: 1vh;
+}
+.submit-button:hover{
+	background: white;
+	color: black;
+}
 .application-single label{
 	margin: 0 1vw;
 }
 .application-single input:focus{
+	outline: none;
+	border-color: #42adf5;
+}
+.application-single select:focus{
 	outline: none;
 	border-color: #42adf5;
 }
@@ -112,12 +142,81 @@ form{
 }
 .application-triple{
 	display: grid;
-	grid-template-columns: 5fr 5fr 1fr;
+	grid-template-columns: 7fr 7fr 1fr 1fr;
+}
+form h3{
+	margin: 0;
+	margin-left: 1vw;
+	margin-top: 3vh;
+	grid-column: span 3;
+}
+.application-triple button{
+	margin-right: 1vw;
+	flex-grow: 1;
+	border-radius: 1vh;
+	border: 2px solid black;
+	background: white;
+	cursor: pointer;
+}
+.application-triple button:hover{
+	border-color: #42adf5;
+}
+.application-triple span{
+	flex-grow: 1;
+}
+.application-headtrick span{
+	flex-grow: 1;
+}
+.application-headtrick{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+.remove-founder{
+	opacity: .5;
+}
+form hr{
+	margin: 5vh 1vw;
+	margin-bottom: 0;
+	opacity: .6;
 }
 
 
 
-
+/* INSTRUCTION */
+.instructions{
+	padding: 5vh 15vw;
+	line-height: 4vh;
+	font-size: 2vh;
+	text-align: justify;
+	background: whitesmoke;
+}
+.instruction-container{
+	background: white;
+	padding: 5vh 5vw;
+	border-radius: 1vh;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), 
+                0 2px 4px rgba(0,0,0,0.05), 
+                0 4px 8px rgba(0,0,0,0.05), 
+                0 8px 16px rgba(0,0,0,0.05),
+                0 16px 32px rgba(0,0,0,0.05), 
+                0 32px 64px rgba(0,0,0,0.05);
+}
+.instruction-container hr{
+	margin: 5vh 0;
+	opacity: .4;
+}
+.instruction-container ul{
+	margin-top: 0;
+}
+.instruction-container table{
+	margin-top: 2vh;
+	width: 100%;
+	border: 2px solid black;
+	font-size: 2vh;
+}
+.instruction-container tr{
+	border-bottom: 2px solid black;
+}
 
 
 #footer{

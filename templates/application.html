@@ -49,7 +49,7 @@
 		</nav>
 		<div class="form-container">
 			<h2>Application</h2>
-			<p></p>
+			<small><i>Fields with <font color="red">*</font> are required to fill</i></small>
 			<form action="" method="get" enctype="">
 				<div class="application-single">
 					<label for="org-name">Name of an individual entrepreneur or enterprise, indicating the legal form <font color="red">*</font></label>
@@ -61,75 +61,203 @@
 				</div>
 				<div class="application-double">
 					<div class="application-single">
-						<label for="org-name">Phone <font color="red">*</font></label>
+						<label for="">Phone <font color="red">*</font></label>
 						<input type="phone" name="orgn-name" id="org-name" value="+998">
 					</div>
 					<div class="application-single">
-						<label for="org-name">Email</label>
+						<label for="">Email <font color="red">*</font></label>
 						<input type="email" name="orgn-name" id="org-name" placeholder="example@mail.org">
 					</div>
 				</div>
 				<div class="application-double">
 					<div class="application-single">
-						<label for="org-name">Date of registration in state bodies <font color="red">*</font></label>
+						<label for="">Date of registration in state bodies <font color="red">*</font></label>
 						<input type="date" name="orgn-name" id="org-name" value="+998">
 					</div>
 					<div class="application-single">
-						<label for="org-name">№ of state registration certificate</label>
+						<label for="">№ of state registration certificate <font color="red">*</font></label>
 						<input type="text" name="orgn-name" id="org-name" placeholder="example@mail.org">
 					</div>
 				</div>
 				<div class="application-double">
 					<div class="application-single">
-						<label for="org-name">TIN <font color="red">*</font></label>
+						<label for="">TIN <font color="red">*</font></label>
 						<input type="text" name="orgn-name" id="org-name">
 					</div>
 					<div class="application-single">
-						<label for="org-name">All-Union classifier "Sectors of the national economy" <font color="red">*</font></label>
+						<label for="">All-Union classifier "Sectors of the national economy" <font color="red">*</font></label>
 						<input type="text" name="orgn-name" id="org-name" placeholder="example@mail.org">
 					</div>
 				</div>
 				<div class="application-single">
-					<label for="org-name">Nationwide classifier of types of economic activity <font color="red">*</font></label>
+					<label for="">Nationwide classifier of types of economic activity <font color="red">*</font></label>
 					<input type="text" name="orgn-name" id="org-name" placeholder="Full Name">
 				</div>
 				<div class="application-double">
 					<div class="application-single">
-						<label for="org-name">Charter capital (UZS) <font color="red">*</font></label>
+						<label for="">Charter capital (UZS) <font color="red">*</font></label>
 						<input type="number" name="orgn-name" id="org-name" placeholder="mln. uzs">
 					</div>
 					<div class="application-single">
-						<label for="org-name">Charter capital (USD) <font color="red">*</font></label>
-						<input type="number" name="orgn-name" id="org-name" placeholder="mln. usd">
+						<label for="">Charter capital (USD) <font color="red">*</font></label>
+						<input type="number" name="orgn-name" id="org-name" placeholder="thousand usd">
 					</div>
 				</div>
 				<div class="application-double">
 					<div class="application-single">
-						<label for="org-name">Servicing bank <font color="red">*</font></label>
-						<input type="number" name="orgn-name" id="org-name">
+						<label for="">Servicing bank <font color="red">*</font></label>
+						<select name="" id="">
+							<option value="Bank">Bank</option>
+							<option value="Bank">Bank</option>
+						</select>
 					</div>
 					<div class="application-single">
-						<label for="org-name">MFO bank code <font color="red">*</font></label>
+						<label for="">MFO bank code <font color="red">*</font></label>
 						<input type="number" name="orgn-name" id="org-name" placeholder="">
 					</div>
 				</div>
-				<div class="application-triple">
+				<h3>Founders <font color="red">*</font></h3>
+				<div id="founders">
+					<div class="application-triple">
+						<div class="application-single">
+							<label for="">Founders </label>
+							<input type="text" name="orgn-name" id="org-name" placeholder="Full Name">
+						</div>
+						<div class="application-single">
+							<label for="">Share %</label>
+							<input type="number" name="orgn-name" id="org-name" placeholder="0-100 %">
+						</div>
+						<div class="application-single">
+							<span></span>
+							<button onclick="add_founder(this)" type="button"><i class="far fa-plus"></i></button>
+						</div>
+						<div class="application-single">
+							<span></span>
+							<button onclick="remove_founder(this)" class="remove-founder" disabled type="button"><i class="far fa-minus"></i></button>
+						</div>
+					</div>
+				</div>
+				<hr>
+				<h3>Legal address</h3>
+				<div class="application-double">
 					<div class="application-single">
-						<label for="org-name">Founders <font color="red">*</font></label>
+						<label for="">City <font color="red">*</font></label>
+						<select name="" id="">
+							<option value="Bank">Bank</option>
+							<option value="Bank">Bank</option>
+						</select>
+					</div>
+					<div class="application-single">
+						<label for="">Region <font color="red">*</font></label>
+						<input type="text" name="orgn-name" id="org-name">
+					</div>
+				</div>
+				<div class="application-single">
+					<label for="">Zip code, street, house <font color="red">*</font></label>
+					<input type="text" name="orgn-name" id="org-name">
+				</div>
+				<div class="application-headtrick">
+					<div class="application-single">
+						<label for="">Phone</label>
+						<input type="phone" name="orgn-name" id="org-name">
+					</div>
+					<div class="application-single">
+						<label for="">Fax</label>
 						<input type="text" name="orgn-name" id="org-name">
 					</div>
 					<div class="application-single">
-						<label for="org-name">Share % <font color="red">*</font></label>
-						<input type="number" name="orgn-name" id="org-name" placeholder="">
+						<label for="">Web-Site</label>
+						<input type="text" name="orgn-name" id="org-name" placeholder="www.example.com">
+					</div>
+				</div>
+				<hr>
+				<h3>Production location address</h3>
+				<div class="application-double">
+					<div class="application-single">
+						<label for="">City <font color="red">*</font></label>
+						<select name="" id="">
+							<option value="Bank">Bank</option>
+							<option value="Bank">Bank</option>
+						</select>
 					</div>
 					<div class="application-single">
-						<button><i class="far fa-plus"></i></button>
+						<label for="">Region <font color="red">*</font></label>
+						<input type="text" name="orgn-name" id="org-name" placeholder="">
 					</div>
+				</div>
+				<div class="application-single">
+					<label for="">Zip code, street, house <font color="red">*</font></label>
+					<input type="text" name="orgn-name" id="org-name">
+				</div>
+				<hr>
+				<h3>Information about Production</h3>
+				<div class="application-single">
+					<label for="">Kind of activity <font color="red">*</font></label>
+					<select name="" id="">
+						<option value="Bank">Bank</option>
+						<option value="Bank">Bank</option>
+					</select>
+				</div>
+				<div class="application-double">
+					<div class="application-single">
+						<label for="">Additional</label>
+						<input type="text" name="orgn-name" id="org-name">
+					</div>
+					<div class="application-single">
+						<label for="">Manufactured products <font color="red">*</font></label>
+						<input type="text" name="orgn-name" id="org-name">
+					</div>
+				</div>
+				<div class="application-headtrick">
+					<div class="application-single">
+						<label for="">Annual volume</label>
+						<input type="text" name="orgn-name" id="org-name">
+					</div>
+					<div class="application-single">
+						<label for="">Production capacity <font color="red">*</font></label>
+						<input type="text" name="orgn-name" id="org-name">
+					</div>
+					<div class="application-single">
+						<label for="">Operating capacities <font color="red">*</font></label>
+						<input type="text" name="orgn-name" id="org-name">
+					</div>
+				</div>
+				<div class="application-double">
+					<div class="application-single">
+						<label for="">Amount of workers <font color="red">*</font></label>
+						<input type="text" name="orgn-name" id="org-name">
+					</div>
+					<div class="application-single">
+						<label for="">Manufacturing export <font color="red">*</font></label>
+						<input type="text" name="orgn-name" id="org-name">
+					</div>
+				</div>
+				<div class="application-headtrick">
+					<div class="application-single">
+						<label for="">Volume of products (services) for {% now "Y" %} (UZS) <font color="red">*</font></label>
+						<input type="text" name="orgn-name" id="org-name" placeholder="mln. uzs">
+					</div>
+					<div class="application-single">
+						<label for="">Volume of products (services) for {% now "Y" %} (USD) <font color="red">*</font></label>
+						<input type="text" name="orgn-name" id="org-name" placeholder="thousand usd">
+					</div>
+					<div class="application-single">
+						<label for="">Markets <font color="red">*</font></label>
+						<input type="text" name="orgn-name" id="org-name">
+					</div>
+				</div>
+				<div class="application-single">
+					<label for="">Charter <font color="red">*</font></label>
+					<input type="file" name="orgn-name" id="org-name">
+				</div>
+				<div class="application-single">
+					<button class="submit-button">Send</button>
 				</div>
 			</form>
 		</div>
 	</div>
 </body>
 <script src="{% static 'script/news.js' %}"></script>
+<script src="{% static 'script/application.js' %}"></script>
 <script> window.interdeal = { "sitekey": "90ba7c838621de6bb8b87cd606d8038c", "Position": "Right", "Menulang": "EN", "domains": { "js": "https://cdn.equalweb.com/", "acc": "https://access.equalweb.com/" }, "btnStyle": { "vPosition": [ "90%", null ], "scale": [ "0.4", "0.4" ], "color": { "main": "#000000", "second": "#ffffff" }, "icon": { "type": 11, "shape": "circle", "outline": true } } }; (function(doc, head, body){ var coreCall = doc.createElement('script'); coreCall.src = 'https://cdn.equalweb.com/core/4.3.7/accessibility.js'; coreCall.defer = true; coreCall.integrity = 'sha512-hGa5HZtFkT1M7+tUDtU/cbw6AG0ORz3oblztCoTZ/z2qPyr7dgwH3zoT8qpgj21MgcRsMFLD6NNKePGvVks3Ig=='; coreCall.crossOrigin = 'anonymous'; coreCall.setAttribute('data-cfasync', true ); body? body.appendChild(coreCall) : head.appendChild(coreCall); })(document, document.head, document.body); </script>
 </html>

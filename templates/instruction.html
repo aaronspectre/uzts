@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>UZTS | How To Become Member</title>
+
+	{% load static %}
+	<link rel="icon" href="{% static 'img/logo.svg' %}">
+
+	<link rel="stylesheet" href="{% static 'style/general.css' %}">
+	<link rel="stylesheet" href="{% static 'style/application.css' %}">
+
+	<link href="https://kit-pro.fontawesome.com/releases/v6.0.0/css/pro.min.css" rel="stylesheet">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+	<script src="https://unpkg.com/@popperjs/core@2"></script>
+</head>
+<body>
+	<div class="main">
+		<nav id="navbar">
+			<div id="navbar-cover"></div>
+			<div class="side-menu-main side-menu">
+				<ul>
+					<li><a href="{% url 'main:index' %}"><i class="far fa-home"></i>&ensp;Home</a></li>
+					<li><a href="{% url 'main:membership' %}"><i class="far fa-star"></i>&ensp;Membership</a></li>
+					<li><a href="{% url 'events:news' %}"><i class="far fa-newspaper"></i>&ensp;News</a></li>
+					<li><a href="javascript:void(0)" class="additional-menu-trigger" data-target="side-menu-about"><i class="far fa-building"></i>&ensp;About Us&emsp;<i class="fal fa-chevron-right"></i></a></li>
+					<li><a href="javascript:void(0)" class="additional-menu-trigger" data-target="side-menu-docs"><i class="far fa-books"></i>&ensp;Documents&emsp;<i class="fal fa-chevron-right"></i></a></li>
+					<li><a href="{% url 'main:contacts' %}"><i class="far fa-envelope"></i>&ensp;Contacts</a></li>
+				</ul>
+			</div>
+			<div class="side-menu-additional side-menu" id="side-menu-about">
+				<ul>
+					<li><a href="{% url 'main:team' %}"><i class="far fa-screen-users"></i>&ensp;Our Team</a></li>
+					<li><a href="{% url 'main:about' %}"><i class="far fa-industry-windows"></i>&ensp;Industry</a></li>
+				</ul>
+			</div>
+			<div class="side-menu-additional side-menu" id="side-menu-docs">
+				<ul>
+					<li><a href="{% url 'main:gallery' %}"><i class="far fa-rectangle-vertical-history"></i>&ensp;Gallery</a></li>
+					<li><a href="{% url 'main:library' %}"><i class="far fa-book-copy"></i>&ensp;Library</a></li>
+				</ul>
+			</div>
+			<div class="bookmark">
+				<button id="side-menu-button">MENU</button>
+			</div>
+		</nav>
+		<div class="instructions">
+			<div class="instruction-container">
+				<h1>How to become a member of the association</h1>
+				<p><i>Documents that must be submitted for admission of the enterprise to full members of the Association in accordance with paragraph 3 of the Procedure approved by the Minutes of the meeting of the Uztekstilprom Association dated April 19, 2019.</i></p>
+				<hr>
+				<b>List:</b>
+				<ul>
+					<li>Letter of application from the organization;</li>
+					<li>Enterprise passport in the form of a sample;</li>
+					<li>Certificate of state registration of the organization, a copy of the constituent documents (with all changes and additions);</li>
+					<li>A copy of the balance sheet for the last reporting period;</li>
+					<li>Detailed information about the installed equipment (in the form of an attached sample);</li>
+					<li>A copy of the decision or order on the appointment of the head of the organization, a certificate of employment;</li>
+					<li>A copy of the business plan for the production of the enterprise for at least one year;</li>
+					<li>Separate information on products imported by the organization on the basis of customs preferences (in the form of an attached sample);</li>
+					<li>Decision of the founder to join the association, written consent (minutes);</li>
+					<li>Production of photographic materials (6-10 pieces), products and the appearance of the building;</li>
+					<li>A copy of the lease agreement if the building is being used on a lease basis;</li>
+					<li>A copy of the cadastral document when the building belongs to the enterprise. (corresponding to 2-3 sheets).</li>
+				</ul>
+				<hr>
+				<h3>Memo</h3>
+				<ul style="list-style: roman inside;">
+					<li><u>The appeal is addressed to the Chairman of the Association "Uztekstilprom" - Khaydarov I.Y.</u></li>
+					<li><u>Constituent documents - certificate, articles of association and memorandum of association.</u></li>
+					<li><u>Balance - refers to the balance sheet approved by the State Tax Committee.</u></li>
+				</ul>
+				<span>Detailed information about the installed equipment should be presented in the form of a table. <br>Example:</span>
+				<table>
+					<tr>
+						<td>Name</td>
+						<td>Model</td>
+						<td>Production time</td>
+						<td>Producing country</td>
+						<td>Amount</td>
+						<td>Power</td>
+						<td>Technical condition</td>
+					</tr>
+					<tr>
+						<td>Sock Knitting Machine</td>
+						<td>BENTLEY KOMET</td>
+						<td>2011-year</td>
+						<td>England</td>
+						<td>3</td>
+						<td>15 pairs/hour</td>
+						<td>Working</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="{% static 'script/news.js' %}"></script>
+<script> window.interdeal = { "sitekey": "90ba7c838621de6bb8b87cd606d8038c", "Position": "Right", "Menulang": "EN", "domains": { "js": "https://cdn.equalweb.com/", "acc": "https://access.equalweb.com/" }, "btnStyle": { "vPosition": [ "90%", null ], "scale": [ "0.4", "0.4" ], "color": { "main": "#000000", "second": "#ffffff" }, "icon": { "type": 11, "shape": "circle", "outline": true } } }; (function(doc, head, body){ var coreCall = doc.createElement('script'); coreCall.src = 'https://cdn.equalweb.com/core/4.3.7/accessibility.js'; coreCall.defer = true; coreCall.integrity = 'sha512-hGa5HZtFkT1M7+tUDtU/cbw6AG0ORz3oblztCoTZ/z2qPyr7dgwH3zoT8qpgj21MgcRsMFLD6NNKePGvVks3Ig=='; coreCall.crossOrigin = 'anonymous'; coreCall.setAttribute('data-cfasync', true ); body? body.appendChild(coreCall) : head.appendChild(coreCall); })(document, document.head, document.body); </script>
+</html>

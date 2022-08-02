@@ -12,4 +12,5 @@ urlpatterns = [
 	path('library', views.library, name = 'library'),
 	path('membership', views.membership, name = 'membership'),
 	path('membership/application', views.application, name = 'application'),
+	path('membership/instruction', views.instruction, name = 'instruction'),
 ]

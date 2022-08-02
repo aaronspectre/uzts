@@ -31,3 +31,7 @@ def library(request):
 
 def application(request):
 	return render(request, 'application.html')
+
+
+def instruction(request):
+	return render(request, 'instruction.html')
