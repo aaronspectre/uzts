@@ -192,7 +192,7 @@ form hr{
 }
 .instruction-container{
 	background: white;
-	padding: 5vh 5vw;
+	padding: 10vh 5vw;
 	border-radius: 1vh;
 	box-shadow: 0 1px 2px rgba(0,0,0,0.05), 
                 0 2px 4px rgba(0,0,0,0.05), 
@@ -209,15 +209,19 @@ form hr{
 	margin-top: 0;
 }
 .instruction-container table{
+	text-align: center;
 	margin-top: 2vh;
 	width: 100%;
-	border: 2px solid black;
 	font-size: 2vh;
+	border-collapse: collapse;
 }
-.instruction-container tr{
-	border-bottom: 2px solid black;
+.one-line{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 }
-
+.one-line i{
+	text-align: right;
+}
 
 #footer{
 	background: #203239;
