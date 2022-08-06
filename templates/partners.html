@@ -3,20 +3,23 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>UZTS | Article</title>
+	<title>UZTS | Members & Partners</title>
 
 	{% load static %}
-	{% load content %}
 	<link rel="icon" href="{% static 'img/logo.svg' %}">
 
 	<link rel="stylesheet" href="{% static 'style/general.css' %}">
-	<link rel="stylesheet" href="{% static 'style/news.css' %}">
+	<link rel="stylesheet" href="{% static 'style/partners.css' %}">
 
 	<link href="https://kit-pro.fontawesome.com/releases/v6.0.0/css/pro.min.css" rel="stylesheet">
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 	<script src="https://unpkg.com/@popperjs/core@2"></script>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
 </head>
 <body>
 	<div class="main">
@@ -48,63 +51,64 @@
 				<button id="side-menu-button">MENU</button>
 			</div>
 		</nav>
-		{% if event.image_cover %}
-		<div class="event-image-container-cover">
-			<img src="{{event.preview.url}}">
+		<div class="top-nav">
+			<a href="{% url 'main:index' %}">Home</a>
+			<a href="">News</a>
+			<a href=""><img src="{% static 'img/logo-rounded.svg' %}" alt=""></a>
+			<a href="">About Us</a>
+			<a href="">Contacts</a>
 		</div>
-		{% else %}
-		<div class="event-image-container">
-			<img src="{{event.preview.url}}">
-		</div>
-		{% endif %}
-		<div class="event-header">
-			{% if event.announcement %}
-			<h2><i class="fal fa-bullhorn"></i>&ensp;{{event.title}}</h2>
-			{% else %}
-			<h2>{{event.title}}</h2>
-			{% endif %}
-			<p>{{event.spoiler}}</p>
-		</div>
-
-		<div class="event-content">
-			<pre>{{event.content | resetIndex}}</pre>
-			{% for element in event.content.sequence %}
-				{% if 'image' in element %}
-				<img src="{{event.content | getImage}}" alt="">
-				{% elif 'heading' in element %}
-				<h3>{{event.content | getHeading}}</h3>
-				{% elif 'text' in element %}
-				<p>{{event.content | getText}}</p>
-				{% endif %}
-			{% endfor %}
-		</div>
-
-
-		<section id="footer">
-			<div class="mail-subscribe">
-				<form class="mail-form" action="{% url 'main:distribution' %}" method="post">
-					{% csrf_token %}
-					<h3>Don't miss latest news in Textile Industry</h3>
-					<div class="form-group">
-						<input name="email" type="email" placeholder="Email">
-					</div>
-					<div class="form-group">
-						<a href=""><i class="fal fa-envelope"></i>&ensp;Subscribe</a>
-					</div>
-				</form>
+		<div class="partners-home">
+			<div class="partners-home-text">
+				<h1>Our Members and Partners</h1>
+				<p><small>TAKE YOUR PART IN DEVELOPING TASHKENT AS A REGIONAL FASHION INDUSTRY CAPITAL</small></p>
+				<a href=""><i class="far fa-user-plus"></i>&ensp;Become a Member</a>
 			</div>
-			<div class="footer-container">
-				<a href="{% url 'main:index' %}"><img src="{% static 'img/logo-white.svg' %}" alt="uzts"></a>
-				<div class="socials-container">
-					<a href="https://www.instagram.com/uzts.uz"><i class="fab fa-instagram-square"></i></a>
-					<a href="https://t.me/uztsuz"><i class="fab fa-telegram"></i></a>
-					<a href="https://www.facebook.com/uzts.uz"><i class="fab fa-facebook"></i></a>
-					<a href="https://www.youtube.com/channel/UCUBZc6CcYylKO6TyijZkKTw" style="padding: 1vh 1.3vh;"><i class="fab fa-youtube"></i></a>
-					<a href="https://t.me/certified_textile"><i class="fab fa-telegram"></i></a>
+			<div class="partners-cards">
+				<div class="partners-card">
+					<img src="{% static 'img/partner-1.png' %}" alt="OEKO-TEX">
 				</div>
-				<p>© 2022 - Uzbekistan Textile and Garment Industry Association</p>
+				<div class="partners-card">
+					<img src="{% static 'img/partner-2.png' %}" alt="ITMF">
+				</div>
+				<div class="partners-card">
+					<img src="{% static 'img/partner-3.png' %}" alt="BSCI">
+				</div>
+				<div class="partners-card">
+					<img src="{% static 'img/partner-4.png' %}" alt="ISO">
+				</div>
+				<div class="partners-card">
+					<img src="{% static 'img/partner-5.png' %}" alt="SGS">
+				</div>
+				<div class="partners-card">
+					<img src="{% static 'img/partner-6.png' %}" alt="UZTEXEXPO">
+				</div>
+				<div class="partners-card">
+					<img src="{% static 'img/partner-7.png' %}" alt="KOFOTI">
+				</div>
+				<div class="partners-card">
+					<img src="{% static 'img/partner-8.png' %}" alt="IFT">
+				</div>
+				<div class="partners-card">
+					<img src="{% static 'img/partner-9.png' %}" alt="GESAMTMASCHE">
+				</div>
+				<div class="partners-card">
+					<img src="{% static 'img/partner-10.png' %}" alt="giz">
+				</div>
+				<div class="partners-card">
+					<img src="{% static 'img/partner-11.png' %}" alt="VDMA">
+				</div>
+				<div class="partners-card">
+					<img src="{% static 'img/partner-12.png' %}" alt="CNTAC">
+				</div>
+				<div class="partners-card">
+					<img src="{% static 'img/partner-13.png' %}" alt="World Bank">
+				</div>
+				<div class="partners-card">
+					<img src="{% static 'img/partner-14.png' %}" alt="SEDEX">
+				</div>
 			</div>
-		</section>
+		</div>
 	</div>
 </body>
 <script src="{% static 'script/news.js' %}"></script>

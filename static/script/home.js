@@ -113,3 +113,26 @@ window.addEventListener('scroll', event => {
 		}
 	}
 })
+
+
+
+tape = document.getElementById('tape')
+shift = 0
+function slide(direction){
+	if(direction == 'right'){
+		if(shift == 50){
+			tape.style.transform = `translateX(0)`
+			shift = 0
+			return
+		}
+		shift += 25
+		tape.style.transform = `translateX(-${shift}%)`
+	}
+	else{
+		if (shift == 0){
+			return false
+		}
+		shift -= 25
+		tape.style.transform = `translateX(-${shift}%)`
+	}
+}

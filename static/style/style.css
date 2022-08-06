@@ -177,33 +177,87 @@
 	background: #004AAD;
 	color: white;
 }
-.about-cards{
+.about-slider-container{
 	margin-top: 10vh;
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	grid-column-gap: 2vw;
+	height: 70vh;
 	padding: 0 5vw;
 	padding-bottom: 10vh;
 }
-.about-card{
-	background: white;
-	padding: 6vh 2vh;
-	text-align: center;
-	border-radius: 2vh;
-	font-size: 2vh;
-	color: #2C3333;
-	line-height: 3vh;
+.about-slider{
+	height: 100%;
+	border: 1px solid black;
+	border-bottom: 6px solid black;
+	border-radius: 1vh;
+	overflow: hidden;
 }
-.about-card i{
+.slider-tape{
+	width: 400%;
+	height: 100%;
+	display: flex;
+	transition: 1s;
+}
+.slider-slide{
+	height: 100%;
+	width: 25%;
+	background: black;
+	position: relative;
+}
+.slider-controls{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 50%;
+	opacity: 0;
+}
+.slider-tape:hover .slider-controls{
+	opacity: 1;
+}
+.slider-controls button{
+	height: 100%;
+	border: none;
+	background: transparent;
+	padding: 0 4vw;
 	font-size: 4vh;
-	color: #90C8AC;
+	color: white;
+	cursor: pointer;
 }
-.about-card a{
+.slider-controls button:hover{
+	color: grey;
+}
+.slider-slide img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: 99999;
+}
+.slider-caption{
+	width: 40%;
+	height: 100%;
+	position: absolute;
+	margin: 0 30%;
+	color: white;
+}
+.slider-caption-text{
+	font-size: 2vh;
+	margin-top: 80vh;
+	text-align: center;
+	line-height: 3vh;
+	background: black;
+	padding: 2vh 2vw;
+	border-top-left-radius: 1vh;
+	border-top-right-radius: 1vh;
+}
+.slider-caption-text a{
+	color: white;
 	text-decoration: none;
-	color: #2C3333;
 }
-.about-card a:hover{
-	color: #90C8AC;
+.slider-caption-text a:hover{
+	opacity: .5;
+}
+.slider-caption:hover .slider-caption-text{
+	margin-top: 55vh;
 }
 
 #statistics{

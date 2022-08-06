@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="{% static 'style/general.css' %}">
 	<link rel="stylesheet" href="{% static 'style/style.css' %}">
 
-	<link href="https://kit-pro.fontawesome.com/releases/v6.0.0/css/pro.min.css" rel="stylesheet">
+	<link href="https://kit-pro.fontawesome.com/releases/v6.1.2/css/pro.min.css" rel="stylesheet">
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
@@ -69,22 +69,26 @@
 					<model-viewer bounds="tight" enable-pan src="{% static 'model/cotton.glb' %}" ar ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral" shadow-intensity="1"></model-viewer>
 				</div>
 			</div>
-			<div class="about-cards">
-				<div class="about-card">
-					<i class="fal fa-reel"></i><br><br>
-					<span><a href="">Unified information portal textile and sewing-knitting enterprises</a></span>
-				</div>
-				<div class="about-card">
-					<i class="fal fa-mask-face"></i><br><br>
-					<span><a href="">Manufacturers of medical masks, medical gowns (overalls) and gauze</a></span>
-				</div>
-				<div class="about-card">
-					<i class="fal fa-farm"></i><br><br>
-					<span><a href="">Cotton Textile clusters</a></span>
-				</div>
-				<div class="about-card">
-					<i class="fal fa-industry-windows"></i><br><br>
-					<span><a href="">Database and interactive map of the textile and knitwear industry</a></span>
+			<div class="about-slider-container">
+				<div class="about-slider">
+					<div class="about-slider">
+						<div class="slider-tape" id="tape">
+							{% for new in news %}
+								<div class="slider-slide">
+									<div class="slider-controls">
+										<button onclick="slide('left')" style="text-align: left;"><i class="far fa-chevron-left"></i></button>
+										<button onclick="slide('right')" style="text-align: right;"><i class="far fa-chevron-right"></i></button>
+									</div>
+									<div class="slider-caption">
+										<div class="slider-caption-text">
+											<a href="{% url 'events:view' new.id %}"><h4>{{new.title}}</h4></a>
+										</div>
+									</div>
+									<img src="{{new.preview.url}}" alt="{{new.title}}">
+								</div>
+							{% endfor %}
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -103,11 +107,11 @@
 			</div>
 			<div class="stat-cards">
 				<div class="stat-card">
-					<strong>1989 +</strong><p></p>
+					<strong>1997 +</strong><p></p>
 					<span>Enterprises - members of the association</span>
 				</div>
 				<div class="stat-card">
-					<strong>122</strong><p></p>
+					<strong>134</strong><p></p>
 					<span>Cotton-textile clusters</span>
 				</div>
 				<div class="stat-card">
@@ -115,11 +119,11 @@
 					<span>Educational institutions</span>
 				</div>
 				<div class="stat-card">
-					<strong>3.9 +</strong><p></p>
+					<strong>3 +</strong><p></p>
 					<span>Billion dollars of foreign investment</span>
 				</div>
 				<div class="stat-card">
-					<strong>378 +</strong><p></p>
+					<strong>411 +</strong><p></p>
 					<span>Thousand specialists and personnel</span>
 				</div>
 				<div class="stat-card">
@@ -129,27 +133,27 @@
 			</div>
 			<div class="stat-cards">
 				<div class="stat-card">
-					<strong>1005 +</strong><p></p>
+					<strong>1080 +</strong><p></p>
 					<span>Thousand tons of recycled cotton fiber</span>
 				</div>
 				<div class="stat-card">
-					<strong>862 +</strong><p></p>
+					<strong>905 +</strong><p></p>
 					<span>Thousand tons cotton yarn</span>
 				</div>
 				<div class="stat-card">
-					<strong>716 +</strong><p></p>
+					<strong>810 +</strong><p></p>
 					<span>Million square meters cotton fabrics</span>
 				</div>
 				<div class="stat-card">
-					<strong>204 +</strong><p></p>
+					<strong>240 +</strong><p></p>
 					<span>Thousand tons of knitted fabric</span>
 				</div>
 				<div class="stat-card">
-					<strong>2 +</strong><p></p>
+					<strong>2.3 +</strong><p></p>
 					<span>Billion pieces sewing knitwear</span>
 				</div>
 				<div class="stat-card">
-					<strong>458 +</strong><p></p>
+					<strong>460 +</strong><p></p>
 					<span>Million pairs of hosiery</span>
 				</div>
 			</div>
@@ -170,7 +174,7 @@
 					<h4><b>WE GROW WITH YOU</b></h4>
 					<h2>Membership</h2>
 					<p>As a member of the Uztekstilprom Association, the enterprise has the opportunity to receive assistance in finding and establishing contacts with foreign partners, in promoting their products, in obtaining visas, international certificates and standards, as well as in participating in international exhibitions on preferential terms.</p><br>
-					<a href="{% url 'main:application' %}"><i class="fal fa-users"></i>&ensp;Join Us</a>
+					<a href="{% url 'main:application' %}"><i class="fal fa-user-plus"></i>&ensp;Join Us</a>
 					<a href="{% url 'main:membership' %}"><i class="fal fa-list-check"></i>&ensp;Benefits</a>
 				</div>
 				<div class="membership-image">
@@ -187,7 +191,6 @@
 					<h4><b>SERVICES</b></h4>
 					<h2>Work with Us</h2>
 					<p>The Association, together with international organizations, conducts various trainings and seminars in the country and abroad for employees of enterprises, where they receive the latest information on innovative technologies in the industry, the requirements and proposals of foreign companies.</p><br>
-					<a href="{% url 'main:membership' %}">Membership</a>
 				</div>
 			</div>
 			<div class="promotion-sources">
@@ -216,7 +219,7 @@
 				<div class="promotion-source">
 					<div class="promotion-card">
 						<div class="promotion-card-header">
-							<i class="fal fa-hand-holding-dollar"></i>
+							<i class="fal fa-truck-container"></i>
 						</div>
 						<div class="promotion-card-body">
 							<h3>Export Benefits</h3>
@@ -238,10 +241,11 @@
 		</section>
 		<section id="footer">
 			<div class="mail-subscribe">
-				<form class="mail-form">
+				<form class="mail-form" action="{% url 'main:distribution' %}" method="post">
+					{% csrf_token %}
 					<h3>Don't miss latest news in Textile Industry</h3>
 					<div class="form-group">
-						<input type="email" placeholder="Email">
+						<input name="email" type="email" placeholder="Email">
 					</div>
 					<div class="form-group">
 						<a href=""><i class="fal fa-envelope"></i>&ensp;Subscribe</a>

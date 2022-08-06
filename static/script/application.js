@@ -23,8 +23,11 @@ function validate(){
 
 
 function add_founder(button){
-	container.appendChild(founder.cloneNode(true))
 	amount ++;
+	clone = founder.cloneNode(true)
+	clone.querySelector('.founder-name').setAttribute('name', `founder-${amount}`)
+	clone.querySelector('.founder-share').setAttribute('name', `share-${amount}`)
+	container.appendChild(clone)
 	validate()
 }
 

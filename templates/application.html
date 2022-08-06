@@ -50,82 +50,83 @@
 		<div class="form-container">
 			<h2>Application</h2>
 			<small><i>Fields with <font color="red">*</font> are required to fill</i></small>
-			<form action="" method="get" enctype="">
+			<form action="{% url 'main:apply' %}" method="post" enctype="multipart/form-data">
+				{% csrf_token %}
 				<div class="application-single">
-					<label for="org-name">Name of an individual entrepreneur or enterprise, indicating the legal form <font color="red">*</font></label>
-					<input type="text" name="orgn-name" id="org-name" placeholder="OOO 'Example'">
-				</div>
-				<div class="application-single">
-					<label for="org-name">Enterprise chairman <font color="red">*</font></label>
-					<input type="text" name="orgn-name" id="org-name" placeholder="Full Name">
-				</div>
-				<div class="application-double">
-					<div class="application-single">
-						<label for="">Phone <font color="red">*</font></label>
-						<input type="phone" name="orgn-name" id="org-name" value="+998">
-					</div>
-					<div class="application-single">
-						<label for="">Email <font color="red">*</font></label>
-						<input type="email" name="orgn-name" id="org-name" placeholder="example@mail.org">
-					</div>
-				</div>
-				<div class="application-double">
-					<div class="application-single">
-						<label for="">Date of registration in state bodies <font color="red">*</font></label>
-						<input type="date" name="orgn-name" id="org-name" value="+998">
-					</div>
-					<div class="application-single">
-						<label for="">№ of state registration certificate <font color="red">*</font></label>
-						<input type="text" name="orgn-name" id="org-name" placeholder="example@mail.org">
-					</div>
-				</div>
-				<div class="application-double">
-					<div class="application-single">
-						<label for="">TIN <font color="red">*</font></label>
-						<input type="text" name="orgn-name" id="org-name">
-					</div>
-					<div class="application-single">
-						<label for="">All-Union classifier "Sectors of the national economy" <font color="red">*</font></label>
-						<input type="text" name="orgn-name" id="org-name" placeholder="example@mail.org">
-					</div>
+					<label for="legal_name">Name of an individual entrepreneur or enterprise, indicating the legal form <font color="red">*</font></label>
+					<input required type="text" name="legal_name" id="legal_name" placeholder="OOO 'Example'">
 				</div>
 				<div class="application-single">
-					<label for="">Nationwide classifier of types of economic activity <font color="red">*</font></label>
-					<input type="text" name="orgn-name" id="org-name" placeholder="Full Name">
+					<label for="chairman">Enterprise chairman <font color="red">*</font></label>
+					<input required type="text" name="chairman" id="chairman" placeholder="Full Name">
 				</div>
 				<div class="application-double">
 					<div class="application-single">
-						<label for="">Charter capital (UZS) <font color="red">*</font></label>
-						<input type="number" name="orgn-name" id="org-name" placeholder="mln. uzs">
+						<label for="phone">Phone <font color="red">*</font></label>
+						<input required type="phone" name="phone" id="phone" value="+998">
 					</div>
 					<div class="application-single">
-						<label for="">Charter capital (USD) <font color="red">*</font></label>
-						<input type="number" name="orgn-name" id="org-name" placeholder="thousand usd">
+						<label for="email">Email <font color="red">*</font></label>
+						<input required type="email" name="email" id="email" placeholder="example@mail.org">
 					</div>
 				</div>
 				<div class="application-double">
 					<div class="application-single">
-						<label for="">Servicing bank <font color="red">*</font></label>
-						<select name="" id="">
+						<label for="register_date">Date of registration in state bodies <font color="red">*</font></label>
+						<input required type="date" name="register_date" id="register_date">
+					</div>
+					<div class="application-single">
+						<label for="certificate">№ of state registration certificate <font color="red">*</font></label>
+						<input required type="text" name="certificate" id="certificate" placeholder="">
+					</div>
+				</div>
+				<div class="application-double">
+					<div class="application-single">
+						<label for="tin">TIN <font color="red">*</font></label>
+						<input required type="text" name="tin" id="tin">
+					</div>
+					<div class="application-single">
+						<label for="acsne">All-Union classifier "Sectors of the national economy" <font color="red">*</font></label>
+						<input required type="text" name="acsne" id="acsne">
+					</div>
+				</div>
+				<div class="application-single">
+					<label for="activity">Nationwide classifier of types of economic activity <font color="red">*</font></label>
+					<input required type="text" name="activity" id="activity" placeholder="Full Name">
+				</div>
+				<div class="application-double">
+					<div class="application-single">
+						<label for="capital_uzs">Charter capital (UZS) <font color="red">*</font></label>
+						<input required type="number" name="capital_uzs" id="capital_uzs" placeholder="mln. uzs">
+					</div>
+					<div class="application-single">
+						<label for="capital_usd">Charter capital (USD) <font color="red">*</font></label>
+						<input required type="number" name="capital_usd" id="capital_usd" placeholder="thousand usd">
+					</div>
+				</div>
+				<div class="application-double">
+					<div class="application-single">
+						<label for="bank">Servicing bank <font color="red">*</font></label>
+						<select name="bank" id="bank">
 							<option value="Bank">Bank</option>
 							<option value="Bank">Bank</option>
 						</select>
 					</div>
 					<div class="application-single">
-						<label for="">MFO bank code <font color="red">*</font></label>
-						<input type="number" name="orgn-name" id="org-name" placeholder="">
+						<label for="mfo">MFO bank code <font color="red">*</font></label>
+						<input required type="number" name="mfo" id="mfo" placeholder="">
 					</div>
 				</div>
 				<h3>Founders <font color="red">*</font></h3>
 				<div id="founders">
 					<div class="application-triple">
 						<div class="application-single">
-							<label for="">Founders </label>
-							<input type="text" name="orgn-name" id="org-name" placeholder="Full Name">
+							<label>Founders </label>
+							<input required class="founder-name" type="text" name="founder-1" placeholder="Full Name">
 						</div>
 						<div class="application-single">
-							<label for="">Share %</label>
-							<input type="number" name="orgn-name" id="org-name" placeholder="0-100 %">
+							<label>Share %</label>
+							<input required class="founder-share" type="number" name="share-1" placeholder="0-100 %">
 						</div>
 						<div class="application-single">
 							<span></span>
@@ -141,114 +142,142 @@
 				<h3>Legal address</h3>
 				<div class="application-double">
 					<div class="application-single">
-						<label for="">City <font color="red">*</font></label>
-						<select name="" id="">
-							<option value="Bank">Bank</option>
-							<option value="Bank">Bank</option>
+						<label for="legal_address_city">City <font color="red">*</font></label>
+						<select name="legal_address_city" id="legal_address_city">
+							<option value="Tashkent">Tashkent</option>
+							<option value="Andijan">Andijan</option>
+							<option value="Bukhara">Bukhara</option>
+							<option value="Djizak">Djizak</option>
+							<option value="Kashkadarya">Kashkadarya</option>
+							<option value="Navoiy">Navoiy</option>
+							<option value="Namangan">Namangan</option>
+							<option value="Samarkand">Samarkand</option>
+							<option value="Surkhandarya">Surkhandarya</option>
+							<option value="Sirdarya">Sirdarya</option>
+							<option value="Tashkent region">Tashkent region</option>
+							<option value="Fergana">Fergana</option>
+							<option value="Kharezm">Kharezm</option>
+							<option value="Republic of Karakalpakstan">Republic of Karakalpakstan</option>
 						</select>
 					</div>
 					<div class="application-single">
-						<label for="">Region <font color="red">*</font></label>
-						<input type="text" name="orgn-name" id="org-name">
+						<label for="legal_address_region">Region <font color="red">*</font></label>
+						<input required type="text" name="legal_address_region" id="legal_address_region">
 					</div>
 				</div>
 				<div class="application-single">
-					<label for="">Zip code, street, house <font color="red">*</font></label>
-					<input type="text" name="orgn-name" id="org-name">
+					<label for="legal_address_details">Zip code, street, house <font color="red">*</font></label>
+					<input required type="text" name="legal_address_details" id="legal_address_details">
 				</div>
 				<div class="application-headtrick">
 					<div class="application-single">
-						<label for="">Phone</label>
-						<input type="phone" name="orgn-name" id="org-name">
+						<label for="legal_phone">Phone</label>
+						<input type="phone" name="legal_phone" id="legal_phone">
 					</div>
 					<div class="application-single">
-						<label for="">Fax</label>
-						<input type="text" name="orgn-name" id="org-name">
+						<label for="legal_fax">Fax</label>
+						<input type="text" name="legal_fax" id="legal_fax">
 					</div>
 					<div class="application-single">
-						<label for="">Web-Site</label>
-						<input type="text" name="orgn-name" id="org-name" placeholder="www.example.com">
+						<label for="legal_website">Web-Site</label>
+						<input type="text" name="legal_website" id="legal_website" placeholder="www.example.com">
 					</div>
 				</div>
 				<hr>
 				<h3>Production location address</h3>
 				<div class="application-double">
 					<div class="application-single">
-						<label for="">City <font color="red">*</font></label>
-						<select name="" id="">
-							<option value="Bank">Bank</option>
-							<option value="Bank">Bank</option>
+						<label for="production_address_city">City <font color="red">*</font></label>
+						<select name="production_address_city" id="production_address_city">
+							<option value="Tashkent">Tashkent</option>
+							<option value="Andijan">Andijan</option>
+							<option value="Bukhara">Bukhara</option>
+							<option value="Djizak">Djizak</option>
+							<option value="Kashkadarya">Kashkadarya</option>
+							<option value="Navoiy">Navoiy</option>
+							<option value="Namangan">Namangan</option>
+							<option value="Samarkand">Samarkand</option>
+							<option value="Surkhandarya">Surkhandarya</option>
+							<option value="Sirdarya">Sirdarya</option>
+							<option value="Tashkent region">Tashkent region</option>
+							<option value="Fergana">Fergana</option>
+							<option value="Kharezm">Kharezm</option>
+							<option value="Republic of Karakalpakstan">Republic of Karakalpakstan</option>
 						</select>
 					</div>
 					<div class="application-single">
-						<label for="">Region <font color="red">*</font></label>
-						<input type="text" name="orgn-name" id="org-name" placeholder="">
+						<label for="production_address_region">Region <font color="red">*</font></label>
+						<input required type="text" name="production_address_region" id="production_address_region">
 					</div>
 				</div>
 				<div class="application-single">
-					<label for="">Zip code, street, house <font color="red">*</font></label>
-					<input type="text" name="orgn-name" id="org-name">
+					<label for="production_address_details">Zip code, street, house <font color="red">*</font></label>
+					<input required type="text" name="production_address_details" id="production_address_details">
 				</div>
 				<hr>
 				<h3>Information about Production</h3>
 				<div class="application-single">
-					<label for="">Kind of activity <font color="red">*</font></label>
-					<select name="" id="">
-						<option value="Bank">Bank</option>
-						<option value="Bank">Bank</option>
+					<label for="production_activity">Kind of activity <font color="red">*</font></label>
+					<select name="production_activity" id="production_activity">
+						<option value="Spinning">Spinning</option>
+						<option value="Weaving">Weaving</option>
+						<option value="Sewing">Sewing</option>
+						<option value="Dyeing and finishing">Dyeing and finishing</option>
+						<option value="Textile haberdashery and accessories">Textile haberdashery and accessories</option>
+						<option value="Hosiery production">Hosiery production</option>
 					</select>
 				</div>
 				<div class="application-double">
 					<div class="application-single">
-						<label for="">Additional</label>
-						<input type="text" name="orgn-name" id="org-name">
+						<label for="production_activity_details">Additional</label>
+						<input type="text" name="production_activity_details" id="production_activity_details">
 					</div>
 					<div class="application-single">
-						<label for="">Manufactured products <font color="red">*</font></label>
-						<input type="text" name="orgn-name" id="org-name">
+						<label for="production_activity_products">Manufactured products <font color="red">*</font></label>
+						<input required type="text" name="production_activity_products" id="production_activity_products">
 					</div>
 				</div>
 				<div class="application-headtrick">
 					<div class="application-single">
-						<label for="">Annual volume</label>
-						<input type="text" name="orgn-name" id="org-name">
+						<label for="production_volume">Annual volume <font color="red">*</font></label>
+						<input required type="text" name="production_volume" id="production_volume">
 					</div>
 					<div class="application-single">
-						<label for="">Production capacity <font color="red">*</font></label>
-						<input type="text" name="orgn-name" id="org-name">
+						<label for="production_capacity">Production capacity <font color="red">*</font></label>
+						<input required type="text" name="production_capacity" id="production_capacity">
 					</div>
 					<div class="application-single">
-						<label for="">Operating capacities <font color="red">*</font></label>
-						<input type="text" name="orgn-name" id="org-name">
+						<label for="production_operating_capacity">Operating capacities <font color="red">*</font></label>
+						<input required type="text" name="production_operating_capacity" id="production_operating_capacity">
 					</div>
 				</div>
 				<div class="application-double">
 					<div class="application-single">
-						<label for="">Amount of workers <font color="red">*</font></label>
-						<input type="text" name="orgn-name" id="org-name">
+						<label for="production_workers_amount">Amount of workers <font color="red">*</font></label>
+						<input required type="number" name="production_workers_amount" id="production_workers_amount">
 					</div>
 					<div class="application-single">
-						<label for="">Manufacturing export <font color="red">*</font></label>
-						<input type="text" name="orgn-name" id="org-name">
+						<label for="production_export">Manufacturing export <font color="red">*</font></label>
+						<input required type="text" name="production_export" id="production_export">
 					</div>
 				</div>
 				<div class="application-headtrick">
 					<div class="application-single">
-						<label for="">Volume of products (services) for {% now "Y" %} (UZS) <font color="red">*</font></label>
-						<input type="text" name="orgn-name" id="org-name" placeholder="mln. uzs">
+						<label for="production_products_volume_uzs">Volume of products (services) for {% now "Y" %} (UZS) <font color="red">*</font></label>
+						<input required type="number" name="production_products_volume_uzs" id="production_products_volume_uzs" placeholder="mln. uzs">
 					</div>
 					<div class="application-single">
-						<label for="">Volume of products (services) for {% now "Y" %} (USD) <font color="red">*</font></label>
-						<input type="text" name="orgn-name" id="org-name" placeholder="thousand usd">
+						<label for="production_products_volume_usd">Volume of products (services) for {% now "Y" %} (USD) <font color="red">*</font></label>
+						<input required type="number" name="production_products_volume_usd" id="production_products_volume_usd" placeholder="thousand usd">
 					</div>
 					<div class="application-single">
-						<label for="">Markets <font color="red">*</font></label>
-						<input type="text" name="orgn-name" id="org-name">
+						<label for="production_markets">Markets <font color="red">*</font></label>
+						<input required type="text" name="production_markets" id="production_markets">
 					</div>
 				</div>
 				<div class="application-single">
-					<label for="">Charter <font color="red">*</font></label>
-					<input type="file" name="orgn-name" id="org-name">
+					<label for="charter">Charter <font color="red">*</font></label>
+					<input required type="file" name="charter" id="charter">
 				</div>
 				<div class="application-single">
 					<button class="submit-button">Send</button>

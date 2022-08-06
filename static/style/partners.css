@@ -1,0 +1,139 @@
+#navbar{
+	position: fixed;
+	z-index: 99999;
+	height: 100vh;
+}
+#navbar-cover{
+	background: black;
+	opacity: .3;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	display: none;
+}
+.bookmark{
+	width: 5vw;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	background: transparent;
+	justify-content: center;
+}
+.bookmark button{
+	background: transparent;
+	color: black;
+	width: 100%;
+	height: 100%;
+	border: none;
+	border-right: 2px solid black;
+	cursor: pointer;
+	z-index: 99999;
+	font-size: 2vh;
+}
+.bookmark button:hover{
+	color: #004AAD;
+}
+.bookmark button i{
+	font-size: 15px;
+}
+.side-menu{
+	background: white;
+	position: absolute;
+	width: 20vw;
+	height: 100%;
+	padding: 3vh 3vw;
+}
+.side-menu ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.side-menu li{
+	font-weight: bold;
+	margin-top: 3vh;
+	font-size: 3vh;
+}
+.side-menu li a{
+	text-decoration: none;
+	color: black;
+}
+.side-menu li a:hover{
+	color: #004AAD;
+}
+.side-menu-additional{
+	z-index: 80000;
+	transform: translateX(-27vw);
+	border-right: 1px solid #ebebeb;
+}
+.side-menu-main{
+	z-index: 90000;
+	border-left: 1px solid #ebebeb;
+	border-right: 1px solid #ebebeb;
+	transform: translateX(-27vw);
+}
+
+.main{
+	background: whitesmoke;
+}
+.top-nav{
+	padding: 2vh 5vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 2.5vh;
+}
+.top-nav a{
+	text-decoration: none;
+	color: black;
+	margin: 0 3vw;
+}
+.partners-home-text{
+	margin: auto;
+	width: 80%;
+	text-align: center;
+	padding-top: 10vh;
+	padding-bottom: 5vh;
+}
+.partners-home-text p{
+	margin: 5vh 0;
+}
+.partners-home-text a{
+	padding: 2vh 6vw;
+	text-decoration: none;
+	color: black;
+	border-radius: 1vh;
+	border: 2px solid black;
+	font-size: 2vh;
+}
+.partners-home-text a:hover{
+	background: black;
+	color: white;
+}
+.partners-cards{
+	padding: 10vh 10vw;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 6vw;
+}
+.partners-card{
+	width: 100%;
+	padding: 2vw;
+	background: transparent;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 1vh;
+	margin-top: 2vh;
+}
+.partners-card:hover{
+	box-shadow: 0 1px 2px rgba(0,0,0,0.07), 
+                0 2px 4px rgba(0,0,0,0.07), 
+                0 4px 8px rgba(0,0,0,0.07), 
+                0 8px 16px rgba(0,0,0,0.07),
+                0 16px 32px rgba(0,0,0,0.07), 
+                0 32px 64px rgba(0,0,0,0.07);
+}
+.partners-card img{
+	width: 100%;
+}
