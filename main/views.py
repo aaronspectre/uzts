@@ -48,8 +48,10 @@ def instruction(request):
 	return render(request, 'instruction.html')
 
 
-
 def distribution(request):
+	if request.POST['email'] == '':
+		return HttpResponseRedirect(reverse('main:index'))
+
 	email = Subscriber(email = request.POST['email'])
 	email.save()
 	return HttpResponseRedirect(reverse('main:index'))

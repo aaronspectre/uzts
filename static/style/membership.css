@@ -362,9 +362,11 @@
 .form-group input:focus{
 	outline: 2px solid grey;
 }
-.form-group a{
+.form-group button{
 	display: block;
 	margin-top: 2vh;
+	background: transparent;
+	font-size: 2vh;
 	width: 100%;
 	text-decoration: none;
 	color: #C4DFAA;
@@ -374,7 +376,7 @@
 	border-bottom: 5px solid #C4DFAA;
 	border-radius: 1vh;
 }
-.form-group a:hover{
+.form-group button:hover{
 	background: #C4DFAA;
 	color: #203239;
 }
