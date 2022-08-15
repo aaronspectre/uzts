@@ -1,0 +1,30 @@
+@font-face{
+	font-family: 'Quicksand';
+	src: url('../../font/Quicksand-Medium.ttf');
+}
+*{
+	font-family: 'Quicksand';
+	transition: .5s ease;
+}
+::selection{
+	color: white;
+	background: black;
+}
+
+body{
+	padding: 0 !important;
+	margin: 0 !important;
+}
+#main{
+	margin: 0;
+	padding: 0;
+}
+.soft-link{
+	text-decoration: none;
+	color: black;
+}
+.soft-link:hover{
+	color: black;
+	text-decoration: none;
+	opacity: .6;
+}

@@ -2,14 +2,19 @@ from django.shortcuts import render
 from django.urls import reverse
 from django.http import HttpResponseRedirect
 from main.models import Subscriber, Member
+from main import decorators
 from events.models import Event
 
 from django.core.mail import send_mail
 
 
+@decorators.detector
 def index(request):
 	news = Event.objects.all().order_by('-date')[:3]
-	return render(request, 'index.html', {'news': news})
+	if request.session['mobile']:
+		return render(request, 'mobile/index.html', {'event': news[0]})
+
+	return render(request, 'mobile/index.html', {'news': news, 'event': news[0]})
 
 
 def membership(request):

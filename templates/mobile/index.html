@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Uzbekistan Textile and Garment Industry Association</title>
+
+	{% load static %}
+	<link rel="icon" href="{% static 'img/logo.svg' %}">
+
+	<link rel="stylesheet" href="{% static 'style/mobile/general.css' %}">
+	<link rel="stylesheet" href="{% static 'style/mobile/style.css' %}">
+
+	<link href="https://kit-pro.fontawesome.com/releases/v6.1.2/css/pro.min.css" rel="stylesheet">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://unpkg.com/@popperjs/core@2"></script>
+</head>
+<body>
+	<div class="main">
+		<div id="transparent-cover"></div>
+		<nav id="navbar">
+			<div id="navbar-main">
+				<button onclick="show_menu(this)" id="menu-bars"><i class="fal fa-bars"></i></button>
+				<button onclick="hide_menu(this)" id="menu-xmark"><i class="fal fa-xmark"></i></button>
+				<a href="{% url 'main:index' %}"><img src="{% static 'img/logo.svg' %}" alt="logo"></a>
+				<a class="navbar-link" href="{% url 'main:membership' %}"><i class="fal fa-user-plus"></i></a>
+			</div>
+			<div id="menu">
+				<ul>
+					<li><a href="{% url 'main:membership' %}">Membership</a></li>
+					<li><a href="{% url 'events:news' %}">News</a></li>
+					<li><a href="{% url 'main:about' %}">About Us</a></li>
+					<li><a href="{% url 'main:gallery' %}">Gallery</a></li>
+					<li><a href="{% url 'main:contacts' %}" style="border: none !important;">Contacts</a></li>
+				</ul>
+			</div>
+		</nav>
+		<div id="home">
+			<div class="home-container">
+				<img src="{% static 'img/home.png' %}">
+				<div class="home-container-text">
+					<h1>Uzbekistan Textile and Garment Industry Association</h1>
+					<small><i><u>Become</u></i> one of us, <i><u>grow</u></i> with us.</small>
+					<div class="home-links">
+						<a href="{% url 'main:about' %}">About Us</a>
+						<a href="{% url 'main:membership' %}">Join Us</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section">
+			<div class="section-container">
+				<h2 class="section-header">ABOUT US</h2>
+				<img src="{% static 'img/gallery_25.jpg' %}" class="section-image">
+				<h4>Uzbekistan Textile Industry</h4>
+				<span>The range of our activities includes establishing and expanding relationships with other nations in the fields of textile and sewing production, organizing and holding forums, conferences, seminars, round tables, training sessions, and exhibitions with participation of international organizations, major brands and retailers, as well as foreign experts, specialists, and speakers for business representatives. Additionally, the association is working to expand the practice of introducing international standards at enterprises, and organizes training for their employees in the field of standardization and certification.</span>
+				<a href="{% url 'main:about' %}"><i class="fal fa-bookmark"></i>&ensp;Read More</a>
+			</div>
+		</div>
+		<div class="latest-event">
+			<img src="{{event.preview}}" alt="{{event.title}}">
+			<small>{{event.date | date:"d F"}}</small>
+			<a href="{% url 'events:view' event.id %}"><p>{{event.title}} &ensp;<i class="fal fa-circle-arrow-right"></i></p></a>
+		</div>
+		<div class="section">
+			<img class="section-bg" src="{% static 'img/stat.png' %}">
+			<h2 class="section-header">STATISTICS</h2>
+			<div class="section-statistics">
+				<div class="stat-card">
+					<strong>1997 +</strong><br>
+					<small>Enterprises - members of the association</small>
+				</div>
+				<div class="stat-card">
+					<strong>134</strong><br>
+					<small>Cotton-textile clusters</small>
+				</div>
+				<div class="stat-card">
+					<strong>4</strong><br>
+					<small>Educational institutions</small>
+				</div>
+				<div class="stat-card">
+					<strong>3 +</strong><br>
+					<small>Billion dollars of foreign investment</small>
+				</div>
+				<div class="stat-card">
+					<strong>411 +</strong><br>
+					<small>Thousand specialists and personnel</small>
+				</div>
+				<div class="stat-card">
+					<strong>3 +</strong><br>
+					<small>Billion dollars of export</small>
+				</div>
+				<div class="stat-card">
+					<strong>1080 +</strong><br>
+					<small>Thousand tons of recycled cotton fiber</small>
+				</div>
+				<div class="stat-card">
+					<strong>905 +</strong><br>
+					<small>Thousand tons cotton yarn</small>
+				</div>
+				<div class="stat-card">
+					<strong>810 +</strong><br>
+					<small>Million square meters cotton fabrics</small>
+				</div>
+				<div class="stat-card">
+					<strong>240 +</strong><br>
+					<small>Thousand tons of knitted fabric</small>
+				</div>
+				<div class="stat-card">
+					<strong>2.3 +</strong><br>
+					<small>Billion pieces sewing knitwear</small>
+				</div>
+				<div class="stat-card">
+					<strong>460 +</strong><br>
+					<small>Million pairs of hosiery</small>
+				</div>
+			</div>
+			<div class="section-links">
+				<a href="{% url 'main:partners' %}"><i class="fal fa-handshake"></i>&ensp;Partners</a>
+				<a href="https://uzts.kingdesignn.ru/" target="_blank" rel="noopener noreferrer"><i class="fal fa-chart-column"></i>&ensp;Advanced</a>
+			</div>
+		</div>
+		<div class="section">
+			<div class="section-container">
+				<h2 class="section-header">SERVICES</h2>
+				<img class="section-image" src="{% static 'img/gallery_23.jpg' %}">
+				<p>The Association, together with international organizations, conducts various trainings and seminars in the country and abroad for employees of enterprises, where they receive the latest information on innovative technologies in the industry, the requirements and proposals of foreign companies</p>
+			</div>
+			<div class="services-cards">
+				<a href="{% url 'main:membership' %}" class="services-card">
+					<div class="service-card">
+						<div class="service-card-head">
+							<i class="fal fa-truck-container"></i>
+						</div>
+						<div class="service-card-body">
+							<h5>Export Benefits</h5>
+						</div>
+					</div>
+				</a>
+				<a href="{% url 'main:membership' %}" class="services-card">
+					<div class="service-card">
+						<div class="service-card-head">
+							<i class="fal fa-calendar-lines-pen"></i>
+						</div>
+						<div class="service-card-body">
+							<h5>Organising Events</h5>
+						</div>
+					</div>
+				</a>
+				<div style="grid-column: span 2;">
+					<a href="{% url 'main:membership' %}" class="services-card">
+						<div class="service-card" style="margin: auto; width: 50%;">
+							<div class="service-card-head">
+								<i class="fal fa-rectangle-ad"></i>
+							</div>
+							<div class="service-card-body">
+								<h5>Promotion</h5>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="section">
+			<div class="section-container">
+				<h4 align="center">Still have questions?<br><small>Call-Center will help you to get used</small></h4>
+				<a href="tel:+998712022244">+998 71 202-22-44 (109)</a>
+			</div>
+		</div>
+		<div class="section">
+			<div class="section-container">
+				<h2 class="section-header">MEMBERSHIP</h2>
+				<img class="section-image" src="{% static 'img/gallery_17.jpg' %}">
+				<p>The Association, together with international organizations, conducts various trainings and seminars in the country and abroad for employees of enterprises, where they receive the latest information on innovative technologies in the industry, the requirements and proposals of foreign companies</p>
+			</div>
+			<div class="section-links">
+				<a href="{% url 'main:application' %}"><i class="fal fa-user-plus"></i>&ensp;Join Us</a>
+				<a href="{% url 'main:membership' %}" target="_blank" rel="noopener noreferrer"><i class="fal fa-list-check"></i>&ensp;Benefits</a>
+			</div>
+		</div>
+		<div class="section">
+			<form action="" method="post" class="subscribe-form">
+				<input type="email" placeholder="Email" name="email">
+				<button>Subscribe</button>
+			</form>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="{% static 'script/mobile/script.js' %}"></script>
+</html>
