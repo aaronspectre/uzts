@@ -14,7 +14,7 @@ def index(request):
 	if request.session['mobile']:
 		return render(request, 'mobile/index.html', {'event': news[0]})
 
-	return render(request, 'mobile/index.html', {'news': news, 'event': news[0]})
+	return render(request, 'index.html', {'news': news})
 
 
 def membership(request):
