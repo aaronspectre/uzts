@@ -96,9 +96,9 @@
 }
 .partners-home-text{
 	margin: auto;
-	width: 80%;
 	padding-top: 10vh;
 	padding-bottom: 5vh;
+	text-align: center;
 }
 .partners-home-text p{
 	margin: 5vh 0;

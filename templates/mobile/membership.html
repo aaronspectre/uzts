@@ -1,0 +1,105 @@
+{% extends 'mobile/index.html' %}
+
+{% block title %}UZTS | Membership{% endblock %}
+
+{% load static %}
+
+
+{% block content %}
+	<div class="membership-home">
+		<div class="membership-image-container">
+			<img src="{% static 'img/membership-intro.png' %}">
+		</div>
+		<div class="membership-home-text">
+			<h1>The Heart Of The Textile Industry</h1>
+			<p><small>Become the part of us and get significant benefits</small></p>
+			<a href="{% url 'main:application' %}">APPLY NOW</a>
+		</div>
+	</div>
+	<div class="offer-cards">
+		<h4 class="section-header">What Do We Offer</h4>
+
+		<div class="swiper">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<div class="offer-card">
+						<i class="fat fa-rectangle-ad"></i><br>
+						<h4>Promotion</h4><br>
+						<small>For promotion services for member-companies (with some discounts) and others you can offer the creation and support of web-sites, SMM services in the Facebook, Instagram, Telegram, Youtube, filming some events, videos, advertisement.</small>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="offer-card">
+						<i class="fat fa-rectangle-ad"></i><br>
+						<h4>Promotion</h4><br>
+						<small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam nostrum corrupti iusto impedit accusantium tempora iure consequatur minus delectus sed nesciunt perferendis, ex autem aperiam dolore, voluptas fugiat, molestias. Omnis?</small>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="offer-card">
+						<i class="fat fa-rectangle-ad"></i><br>
+						<h4>Promotion</h4><br>
+						<small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam nostrum corrupti iusto impedit accusantium tempora iure consequatur minus delectus sed nesciunt perferendis, ex autem aperiam dolore, voluptas fugiat, molestias. Omnis?</small>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+	</div>
+
+	<div class="export-benefits">
+		<div class="section-container">
+			<h4 class="section-header">Export Benefits</h4>
+			<p>In order to expand the country's export potential, provide state support to exporting organizations, as well as stimulate an increase in the production of competitive export products, from January 1, 2019, legal entities with a share of exports in total revenue from the sale of goods (works, services) of more than 15%, including including through a commission agent (attorney), reduce the taxable base for:</p>
+			<div class="benefit-cards">
+				<div class="benefit-card">
+					<i class="fat fa-circle-check"></i>
+					<p>Income tax of legal entities in terms of profit attributable to the volume of sales of goods (works, services) for export;</p>
+				</div>
+				<div class="benefit-card">
+					<i class="fat fa-circle-check"></i>
+					<p>A single tax payment in terms of the volume of sales of goods (works, services) for export;</p>
+				</div>
+				<div class="benefit-card">
+					<i class="fat fa-circle-check"></i>
+					<p>The benefits provided for in this paragraph do not apply to the export of commodities listed in the annex, as well as international transportation services (except for road transport).</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="apply-now">	
+		<h3><i><u>Become</u></i> one of us, <i><u>grow</u></i> with us.</h3>
+		<a href="{% url 'main:application' %}"><i class="fal fa-star"></i>&ensp;APPLY NOW</a>
+	</div>
+
+	<div class="instructions">
+		<div class="instruction-card">
+			<div class="instruction-card-head">
+				<i class="fat fa-memo-circle-info"></i>
+				<span>How to Become Member</span>
+			</div>
+			<a href="{% url 'main:instruction' %}"><i class="fal fa-memo"></i>&ensp;Instructions</a>
+		</div>
+		<div class="instruction-card">
+			<div class="instruction-card-head">
+				<i class="fat fa-list"></i>
+				<span>List of enterprises in the Association</span>
+			</div>
+			<a href="{% url 'main:instruction' %}"><i class="fal fa-bookmark"></i>&ensp;Open List</a>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		const swiper = new Swiper('.swiper', {
+			direction: 'horizontal',
+			loop: false,
+			pagination: {
+				el: '.swiper-pagination',
+			},
+			scrollbar: {
+				el: '.swiper-scrollbar',
+			},
+		});
+	</script>
+{% endblock %}

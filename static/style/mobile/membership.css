@@ -1,0 +1,149 @@
+.membership-home{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.membership-image-container{
+	width: 100%;
+	height: 100%;
+	background: black;
+	position: absolute;
+}
+.membership-image-container img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: .5;
+}
+.membership-home-text{
+	padding: 0 6vw;
+	height: 100%;
+	text-align: center;
+	position: relative;
+	z-index: 66666;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	text-shadow: 0 0 2px black;
+	font-size: 2vh;
+}
+.membership-home-text h1{
+	margin-bottom: 0;
+}
+.membership-home-text a{
+	text-decoration: none;
+	color: black;
+	text-shadow: none;
+	padding: 2vh 7vh;
+	background: white;
+	box-shadow: 0 0 2px black;
+	border-radius: 1vh;
+}
+.offer-cards{
+	background: white;
+	padding: 3vh 0;
+	width: 100%;
+	border-radius: 3vh;
+	position: absolute;
+	top: 80vh;
+}
+.swiper{
+	width: 100%;
+	height: auto;
+	margin-top: 5vh;
+}
+.swiper-wrapper{
+	padding-bottom: 7vh;
+}
+.offer-card{
+	width: 50%;
+	border-radius: 1vh;
+	border: 1px solid black;
+	margin: auto;
+	padding: 2vh 4vw;
+	font-size: 2vh;
+	display: flex;
+	flex-direction: column;
+	line-height: 3vh;
+	text-align: justify;
+}
+.offer-card i{
+	font-size: 5vh;
+	text-align: center;
+	padding: 7vh 0;
+}
+
+.export-benefits{
+	margin-top: 70vh;
+}
+.benefit-cards{
+	display: grid;
+	grid-template-columns: 1fr;
+}
+.benefit-card{
+	padding: 2vh 4vw;
+	border-radius: 1vh;
+	border: 1px solid black;
+	margin-top: 2vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.benefit-card i{
+	font-size: 6vh;
+	padding-right: 5vw;
+}
+.apply-now{
+	margin-top: 5vh;
+	padding: 2vh 6vw;
+	text-align: center;
+	background: #128CDB;
+	color: white;
+	display: flex;
+	flex-direction: column;
+}
+.apply-now a{
+	padding: 2vh;
+	text-decoration: none;
+	color: white;
+	border-radius: 1vh;
+	border: 1px solid white;
+}
+.instructions{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 5vw;
+	margin-top: 5vh;
+	padding: 0 6vw;
+	font-size: 2vh;
+	padding-bottom: 5vh;
+}
+.instruction-card{
+	border-radius: 1vh;
+	border: 1px solid black;
+	padding: 2vh 4vw;
+	display: flex;
+	flex-direction: column;
+	gap: 2vh;
+}
+.instruction-card-head{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.5vh;
+}
+.instruction-card-head i{
+	padding-right: 3vw;
+	font-size: 5vh;
+}
+.instruction-card a{
+	padding: 2vh 0;
+	text-decoration: none;
+	color: black;
+	border-radius: 1vh;
+	border: 1px solid black;
+	text-align: center;
+	font-size: 1.5vh;
+}

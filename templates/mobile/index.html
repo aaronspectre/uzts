@@ -3,18 +3,21 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Uzbekistan Textile and Garment Industry Association</title>
+	<title>{% block title %}Uzbekistan Textile and Garment Industry Association{% endblock %}</title>
 
 	{% load static %}
 	<link rel="icon" href="{% static 'img/logo.svg' %}">
 
 	<link rel="stylesheet" href="{% static 'style/mobile/general.css' %}">
 	<link rel="stylesheet" href="{% static 'style/mobile/style.css' %}">
+	<link rel="stylesheet" href="{% static 'style/mobile/membership.css' %}">
 
 	<link href="https://kit-pro.fontawesome.com/releases/v6.1.2/css/pro.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="https://unpkg.com/@popperjs/core@2"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
 </head>
 <body>
 	<div class="main">
@@ -36,6 +39,7 @@
 				</ul>
 			</div>
 		</nav>
+		{% block content %}
 		<div id="home">
 			<div class="home-container">
 				<img src="{% static 'img/home.png' %}">
@@ -183,11 +187,12 @@
 			<div class="section-container">
 				<h4 style="margin: 0; margin-bottom: 1vh;">Don't miss latest news in Textile Industry</h4>
 			</div>
-			<form action="" method="post" class="subscribe-form">
+			<form action="{% url 'main:distribution' %}" method="post" class="subscribe-form">
 				<input type="email" placeholder="Email" name="email">
 				<button>Subscribe</button>
 			</form>
 		</div>
+		{% endblock %}
 		<div class="footer">
 			<img src="{% static 'img/brand.svg' %}" alt="UZTS">
 			<div class="footer-socials">

@@ -17,7 +17,10 @@ def index(request):
 	return render(request, 'index.html', {'news': news})
 
 
+@decorators.detector
 def membership(request):
+	if request.session['mobile']:
+		return render(request, 'mobile/membership.html')
 	return render(request, 'membership.html')
 
 
