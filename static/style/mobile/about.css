@@ -30,3 +30,39 @@
 	object-fit: cover;
 	opacity: .5;
 }
+.about-home-links{
+	margin-top: 4vh;
+	display: flex;
+	gap: 4vw;
+}
+.about-home-links a{
+	text-decoration: none;
+	text-align: center;
+	width: 100%;
+	padding: 2vh 0;
+	color: white;
+	border: 1px solid white;
+	border-radius: 1vh;
+}
+.mt-5{
+	margin-top: 10vh;
+}
+
+.company-cards{
+	margin-top: 5vh;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 4vw;
+	grid-row-gap: 4vw;
+	padding-bottom: 5vh;
+}
+.company-card{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2vh;
+	background: whitesmoke;
+	border-radius: 1vh;
+	padding: 2vh;
+	text-align: center;
+}

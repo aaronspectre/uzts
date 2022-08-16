@@ -110,6 +110,7 @@
 	color: white;
 	border-radius: 1vh;
 	border: 1px solid white;
+	border-bottom: 4px solid whitesmoke;
 }
 .instructions{
 	display: grid;
@@ -144,6 +145,7 @@
 	color: black;
 	border-radius: 1vh;
 	border: 1px solid black;
+	border-bottom: 4px solid #1b1b1b;
 	text-align: center;
 	font-size: 1.5vh;
 }
@@ -222,5 +224,5 @@
 	overflow: scroll;
 }
 .table-container tr:nth-child(even){
-	background: lightblue;
+	background: white;
 }
