@@ -24,35 +24,59 @@ def membership(request):
 	return render(request, 'membership.html')
 
 
+@decorators.detector
 def partners(request):
+	if request.session['mobile']:
+		return render(request, 'mobile/partners.html')
 	return render(request, 'partners.html')
 
 
+@decorators.detector
 def about(request):
+	if request.session['mobile']:
+		return render(request, 'mobile/about.html')
 	return render(request, 'about.html')
 
 
+@decorators.detector
 def team(request):
+	if request.session['mobile']:
+		return render(request, 'mobile/team.html')
 	return render(request, 'team.html')
 
 
+@decorators.detector
 def contacts(request):
+	if request.session['mobile']:
+		return render(request, 'mobile/contact.html')
 	return render(request, 'contact.html')
 
 
+@decorators.detector
 def gallery(request):
+	if request.session['mobile']:
+		return render(request, 'mobile/gallery.html')
 	return render(request, 'gallery.html')
 
 
+@decorators.detector
 def library(request):
+	if request.session['mobile']:
+		return render(request, 'mobile/library.html')
 	return render(request, 'library.html')
 
 
+@decorators.detector
 def application(request):
+	if request.session['mobile']:
+		return render(request, 'mobile/application.html')
 	return render(request, 'application.html')
 
 
+@decorators.detector
 def instruction(request):
+	if request.session['mobile']:
+		return render(request, 'mobile/instruction.html')
 	return render(request, 'instruction.html')
 
 

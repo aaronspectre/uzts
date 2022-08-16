@@ -1,0 +1,20 @@
+{% extends 'mobile/index.html' %}
+
+{% block title %}{% endblock %}
+{% load static %}
+
+{% block content %}
+	<div class="about-home">
+		<div class="about-home-image">
+			<img src="{% static 'img/about-us-bg-mobile.png' %}">
+		</div>
+		<div class="about-home-text">
+			<h1>About Us</h1>
+			<span>The Association of Textile and Clothing and Knitting Industry Enterprises of Uzbekistan “Uztekstilprom” was established by Decree of the President of the Republic of Uzbekistan dated December 14, 2017 No. UP-5285. In accordance with it, the volume and quality of textile products are increasing, and its range is also expanding. The best design developments are introduced into the production process based on the trends and directions of the modern fashion industry</span>
+			<div class="about-home-links">
+				<a href="{% url 'main:team' %}"><i class="fal fa-"></i></a>
+				<a href="{% url 'main:membership' %}"></a>
+			</div>
+		</div>
+	</div>
+{% endblock %}
