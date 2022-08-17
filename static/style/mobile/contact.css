@@ -1,0 +1,76 @@
+.contact-home{
+	width: 100vw;
+	padding-bottom: 5vh;
+}
+.contact-home h1{
+	margin-top: 0;
+}
+.contact-form{
+	padding: 0 6vw;
+	display: flex;
+	flex-direction: column;
+	padding-top: 20vh;
+}
+.contact-form input{
+	padding: 2vh 2vw;
+	margin-top: 2vh;
+	border-radius: 1vh;
+	font-size: 1.5vh;
+	border: 1px solid lightgrey;
+}
+.contact-form textarea{
+	font-size: 1.5vh;
+	padding: 2vh 2vw;
+	margin-top: 2vh;
+	border-radius: 1vh;
+	border: 1px solid lightgrey;
+}
+.contact-form button{
+	font-size: 1.5vh;
+	padding: 2vh 0;
+	margin-top: 2vh;
+	border-radius: 1vh;
+	background: black;
+	color: white;
+	border: 1px solid black;
+	border-bottom: 4px solid grey;
+}
+
+.contact-map{
+	padding: 0 6vw;
+	border-radius: 1vh;
+	overflow: hidden;
+	padding-bottom: 5vh;
+}
+.contact-map iframe{
+	width: 100%;
+	border-radius: 1vh;
+}
+
+.info-cards{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 4vw;
+	grid-row-gap: 4vw;
+	padding: 0 6vw;
+	padding-bottom: 5vh;
+}
+.info-card{
+	padding: 6vh 4vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: whitesmoke;
+	border-radius: 1vh;
+	text-align: center;
+}
+.info-card i{
+	font-size: 4vh;
+	padding-bottom: 2vh;
+	color: #128CDB;
+}
+.info-card a{
+	text-decoration: none;
+	color: black;
+}

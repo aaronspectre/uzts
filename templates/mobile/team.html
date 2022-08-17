@@ -1,0 +1,89 @@
+{% extends 'mobile/index.html' %}
+
+{% block title %}UZTS | Our Team{% endblock %}
+{% load static %}
+
+{% block content %}
+	<div class="team-home">
+		<div class="team-home-main">
+			<img src="{% static 'img/team-card-mobile-1.png' %}" alt="Xaydarov Ilhom Utkurovich">
+			<h2>Xaydarov Ilhom Utkurovich</h2>
+			<span>Chairman of the Textile and Garment Industry Association “Uztextileprom”</span><br><br>
+			<small><i>Uzbekistan as having a long history in weaving artisanal textiles, or you might know our country as one that produces cotton but I would like further to introduce you to a modern Uzbekistan, with a state-of-the-art textile industry and a value chain that runs from the production of the fiber to manufacturing of the finished product. An industry that has grown several folds in the past few years to reach by the end of 2022 US $ 3,5 Billion in exports with a fully transparent manufacturing chain capable of converting 100% of our local production of fiber.<br><br>I look forward to seeing you in Uzbekistan and providing you with all the support you need to make this your new and preferred sourcing destination. Uztextileprom and myself stand as your partners to make your business more successful.</i></small>
+			<div class="team-home-main-credentials">
+				<p><i class="fal fa-phone"></i>&ensp;(+99871) 202-22-44 (102)</p>
+				<p><i class="fal fa-calendar-days"></i>&ensp;Friday, 08:00 / 10:00</p>
+				<p><i class="fal fa-envelope"></i>&ensp;info@uzts.uz</p>
+			</div>
+		</div>
+	</div>
+	<div class="section">
+		<h3 class="section-header">Vice-chairmen</h3>
+		<div class="swiper">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<div class="team-card">
+						<div class="team-card-head">
+							<img src="{% static 'img/chairman-1.png' %}">
+						</div>
+						<div class="team-card-body">
+							<h4>Mirmukhsin Sultanov</h4>
+							<span>First Deputy Chairman of the Textile and Garment Industry Association “Uztextileprom”</span>
+							<div class="team-card-credentials">
+								<small><i class="fal fa-phone"></i>&ensp;(+99871) 202-22-44 (111)</small><br>
+								<small><i class="fal fa-calendar-days"></i>&ensp;Wednesday, 15:00 / 17:00</small><br>
+								<small><i class="fal fa-envelope"></i>&ensp;info@uzts.uz</small>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="team-card">
+						<div class="team-card-head">
+							<img src="{% static 'img/chairman-1.png' %}">
+						</div>
+						<div class="team-card-body">
+							<h4>Bakhtiyor Mukhammadsaidov</h4>
+							<span>Vice-chairman Association “Uztekstilprom”</span>
+							<div class="team-card-credentials">
+								<small><i class="fal fa-phone"></i>&ensp;(+99871) 202-22-44 (111)</small><br>
+								<small><i class="fal fa-calendar-days"></i>&ensp;Wednesday, 15:00 / 17:00</small><br>
+								<small><i class="fal fa-envelope"></i>&ensp;info@uzts.uz</small>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="team-card">
+						<div class="team-card-head">
+							<img src="{% static 'img/chairman-1.png' %}">
+						</div>
+						<div class="team-card-body">
+							<h4>Mukhammad Djumaniyozov</h4>
+							<span>Vice-chairman Association “Uztekstilprom”</span>
+							<div class="team-card-credentials">
+								<small><i class="fal fa-phone"></i>&ensp;(+99871) 202-22-44 (103)</small><br>
+								<small><i class="fal fa-calendar-days"></i>&ensp;Wednesday, 09:00 / 11:00</small><br>
+								<small><i class="fal fa-envelope"></i>&ensp;info@uzts.uz</small>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		const swiper = new Swiper('.swiper', {
+			direction: 'horizontal',
+			loop: false,
+			pagination: {
+				el: '.swiper-pagination',
+			},
+			scrollbar: {
+				el: '.swiper-scrollbar',
+			},
+		});
+	</script>
+{% endblock %}

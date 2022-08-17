@@ -1,0 +1,48 @@
+{% extends 'mobile/index.html' %}
+
+
+{% block title %}UZTS | Contact Us{% endblock %}
+{% load static %}
+
+
+{% block content %}
+	<div class="contact-home">
+		<form action="{% url 'main:mail' %}" class="contact-form">
+			<h1>Contact Us</h1>
+			<input type="text" name="name" placeholder="Name">
+			<input type="email" name="email" placeholder="Email">
+			<textarea name="message" rows="10" placeholder="Message"></textarea>
+			<button type="button">Send</button>
+		</form>
+	</div>
+	<div class="contact-map">
+		<h3 class="section-header">Location</h3>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2997.814706654877!2d69.24785615896215!3d41.29113700023525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8bd2778d1ad1%3A0x22db3dfadccaae6c!2z0JDRgdGB0L7RhtC40LDRhtC40Y8gItCj0LfRgtC10LrRgdGC0LjQu9GM0L_RgNC-0LwiIC0gIk8nenRvJ3FpbWFjaGlsaWtzYW5vYXQiIFV5dXNobWFzaQ!5e0!3m2!1sen!2s!4v1658405086553!5m2!1sen!2s" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+	</div>
+	<div class="info-cards">
+		<div class="info-card">
+			<i class="fal fa-bus"></i>
+			<span>№ 47, 11; 92; 3а</span>
+		</div>
+		<div class="info-card">
+			<i class="fal fa-calendar-days"></i>
+			<span>Monday - Friday</span>
+		</div>
+		<div class="info-card">
+			<i class="fal fa-clock"></i>
+			<span>9:00-12:00<br>13:00-18:00</span>
+		</div>
+		<div class="info-card">
+			<i class="fal fa-phone"></i>
+			<span><a href="tel:+998712022244">(+99871) 202-22-44</a></span>
+		</div>
+		<div class="info-card">
+			<i class="fal fa-fax"></i>
+			<span><a href="tel:+998712022244">(+99871) 202-22-44</a></span>
+		</div>
+		<div class="info-card">
+			<i class="fal fa-envelope"></i>
+			<span><a href="mailto:info@uzts.uz">info@uzts.uz</a></span>
+		</div>
+	</div>
+{% endblock %}
