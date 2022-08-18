@@ -1,21 +1,31 @@
 from django.shortcuts import render
+from django.urls import reverse
+from django.http import HttpResponseRedirect
 from events.models import Event, Content, ContentImage
+from main import decorators
 
 
 
+@decorators.detector
 def news(request):
 	latest = Event.objects.all().order_by('-date')[0]
 	events = Event.objects.all().order_by('-date')[1:]
-	print(events)
+	if request.session['mobile']:
+		return render(request, 'mobile/news.html', {'events': events, 'latest': latest})
 	return render(request, 'news.html', {'events': events, 'latest': latest})
 
 
+@decorators.wrapper
 def event(request, id):
 	event = Event.objects.get(pk = id)
+	if request.session['mobile']:
+		return render(request, 'mobile/article.html', {'event': event})
 	return render(request, 'article.html', {'event': event})
 
 
 def editor(request):
+	if request.session['mobile']:
+		return HttpResponseRedirect(reverse('main:index'))
 	return render(request, 'editor.html')
 
 

@@ -1,0 +1,142 @@
+/* INSTRUCTION */
+.instruction-home{
+	line-height: 4vh;
+	font-size: 1.5vh;
+	text-align: justify;
+	padding: 0 6vw;
+	padding-top: 15vh;
+}
+.instruction-container hr{
+	margin: 5vh 0;
+	opacity: .4;
+}
+.instruction-container ul{
+	margin-top: 0;
+}
+.instruction-container table{
+	text-align: center;
+	margin-top: 2vh;
+	width: 100%;
+	font-size: 1.2vh;
+	border-collapse: collapse;
+}
+.one-line{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+.one-line i{
+	text-align: right;
+}
+
+
+/* APPLICATION */
+.application-container{
+	padding: 15vh 6vw 5vh 5vw;
+	background: whitesmoke;
+	font-size: 1.2vh;
+}
+.application-container h2{
+	margin: 0;
+	margin-left: 1vw;
+}
+.application-container small{
+	margin: 0;
+	margin-left: 1vw;
+}
+.application-container form{
+	margin-top: 5vh;
+	width: 100%;
+}
+.application-container form h3{
+	margin: 0;
+	margin-left: 1vw;
+	margin-top: 3vh;
+	grid-column: span 3;
+}
+.application-container form hr{
+	margin: 5vh 1vw;
+	margin-bottom: 0;
+	opacity: .6;
+}
+.application-single{
+	display: flex;
+	flex-direction: column;
+	margin-top: 3vh;
+}
+.application-single input{
+	padding: 2vh;
+	border: 2px solid black;
+	border-radius: 1vh;
+	background: white;
+	margin: 0 1vw;
+	margin-top: 1vh;
+	font-size: 1.2vh;
+}
+.application-single select{
+	padding: 2vh;
+	border: 2px solid black;
+	border-radius: 1vh;
+	background: white;
+	margin: 0 1vw;
+	margin-top: 1vh;
+	font-size: 1.2vh;
+}
+.submit-button{
+	margin: 0 1vw;
+	padding: 2vh;
+	border: 2px solid black;
+	background: black;
+	color: white;
+	cursor: pointer;
+	font-size: 2vh;
+	border-radius: 1vh;
+}
+.submit-button:hover{
+	background: white;
+	color: black;
+}
+.application-single label{
+	margin: 0 1vw;
+}
+.application-single input:focus{
+	outline: none;
+	border-color: #42adf5;
+}
+.application-single select:focus{
+	outline: none;
+	border-color: #42adf5;
+}
+.application-founder{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.application-founder button{
+	margin-right: 1vw;
+	flex-grow: 1;
+	border-radius: 1vh;
+	border: 2px solid black;
+	background: white;
+	cursor: pointer;
+}
+.application-founder button:hover{
+	border-color: #42adf5;
+}
+.application-founder span{
+	flex-grow: 1;
+}
+.application-founder-single{
+	display: flex;
+	flex-direction: column;
+}
+.application-founder-single input{
+	padding: 2vh 2vw;
+	border: 2px solid black;
+	border-radius: 1vh;
+	background: white;
+	margin: 0 1vw;
+	margin-top: 1vh;
+	font-size: 1vh;
+}
+.remove-founder{
+	opacity: .5;
+}

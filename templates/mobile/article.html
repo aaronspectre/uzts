@@ -1,0 +1,41 @@
+{% extends 'mobile/index.html' %}
+
+{% block title %}UZTS | News{% endblock %}
+{% load content %}
+
+{% block content %}
+	<div class="article-container">
+		{% if event.image_cover %}
+		<div class="article-image-cover">
+			<img src="{{event.preview.url}}">
+		</div>
+		{% else %}
+		<div class="article-image">
+			<img src="{{event.preview.url}}">
+		</div>
+		{% endif %}
+		<div class="article-content">
+			<div class="article-section">
+				{% if event.announcement %}
+				<h2><i class="fal fa-bullhorn"></i>&ensp;{{event.title}}</h2>
+				{% else %}
+				<h2>{{event.title}}</h2>
+				{% endif %}
+				<p>{{event.spoiler}}</p>
+			</div>
+			<div class="article-section">
+				<pre>{{event.content | resetIndex}}</pre>
+				{% for element in event.content.sequence %}
+					{% if 'image' in element %}
+					<img src="{{event.content | getImage}}">
+					{% elif 'heading' in element %}
+					<h3>{{event.content | getHeading}}</h3>
+					{% elif 'text' in element %}
+					<p>{{event.content | getText}}</p>
+					{% endif %}
+				{% endfor %}
+			</div>
+		</div>
+
+	</div>
+{% endblock %}

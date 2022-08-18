@@ -1,0 +1,40 @@
+.documents-container{
+	background: #1b1b1b;
+	color: white;
+}
+.documents-home{
+	padding-top: 15vh;
+	padding-bottom: 10vh;
+	text-align: center;
+}
+.documents-home h3{
+	margin-top: 0;
+}
+.documents-home h3::after{
+	content: '';
+	display: block;
+	background: white;
+	height: 1vw;
+	margin: auto;
+	width: 20%;
+	margin-top: 1vh;
+	border-radius: 1vh;
+}
+.documents-image-tape{
+	padding: 0 6vw;
+	display: flex;
+}
+.image-tape{
+	width: 50%;
+}
+.image-tape img{
+	width: 100%;
+	margin-top: 2vw;
+	border-radius: 1vh;
+}
+.pl-1{
+	padding-left: 1vw;
+}
+.pr-1{
+	padding-right: 1vw;
+}

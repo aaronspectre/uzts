@@ -48,6 +48,9 @@
 	transform: translateY(-120%);
 	z-index: 88888;
 	visibility: hidden;
+	position: absolute;
+	top: 8vh;
+	left: 0;
 }
 .visible-menu{
 	visibility: visible !important;
@@ -76,6 +79,7 @@
 	width: 100%;
 	padding: 2vh 0;
 	border-bottom: 1px solid lightgray;
+	background: white;
 }
 
 

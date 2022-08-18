@@ -1,0 +1,39 @@
+{% extends 'mobile/index.html' %}
+
+{% block title %}UZTS | News{% endblock %}
+
+{% block content %}
+	<div class="news-container">
+		<div class="news-home">
+			<h2>News and Announcements</h2>
+			<small>Latest events and announcements from Uzbekistan Textile Industry</small>
+		</div>
+		<div class="news-tape">
+			<div class="news-card news-card-latest">
+				<div class="news-card-body">
+					{% if latest.announcement %}
+					<small><i class="far fa-bullhorn"></i>&ensp;<b>Announcement</b></small><br><br>
+					{% else %}
+					<small><b>{{latest.date | date:"F j, o"}}</b></small><br><br>
+					{% endif %}
+					<strong><a href="{% url 'events:view' latest.id %}">{{latest.title}}</a></strong>
+					<p>{{latest.spoiler}}</p>
+				</div>
+				<img src="{{latest.preview.url}}" alt="{{latest.title}}">
+			</div>
+			{% for event in events %}
+				<div class="news-card">
+					<div class="news-card-body">
+						{% if event.announcement %}
+						<small><i class="far fa-bullhorn"></i>&ensp;<b>Announcement</b></small><br><br>
+						{% else %}
+						<small><b>{{event.date | date:"F j, o"}}</b></small><br><br>
+						{% endif %}
+						<strong><a href="{% url 'events:view' event.id %}">{{event.title}}</a></strong>
+					</div>
+					<img src="{{event.preview.url}}" alt="{{event.title}}">
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+{% endblock %}

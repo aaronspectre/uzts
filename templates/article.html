@@ -70,7 +70,7 @@
 			<pre>{{event.content | resetIndex}}</pre>
 			{% for element in event.content.sequence %}
 				{% if 'image' in element %}
-				<img src="{{event.content | getImage}}" alt="">
+				<img src="{{event.content | getImage}}">
 				{% elif 'heading' in element %}
 				<h3>{{event.content | getHeading}}</h3>
 				{% elif 'text' in element %}
