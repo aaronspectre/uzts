@@ -23,24 +23,26 @@
 			<div id="navbar-cover"></div>
 			<div class="side-menu-main side-menu">
 				<ul>
-					<li><a href="{% url 'main:index' %}"><i class="far fa-home"></i>&ensp;Home</a></li>
-					<li><a href="{% url 'main:membership' %}"><i class="far fa-star"></i>&ensp;Membership</a></li>
-					<li><a href="{% url 'events:news' %}"><i class="far fa-newspaper"></i>&ensp;News</a></li>
-					<li><a href="javascript:void(0)" class="additional-menu-trigger" data-target="side-menu-about"><i class="far fa-building"></i>&ensp;About Us&emsp;<i class="fal fa-chevron-right"></i></a></li>
-					<li><a href="javascript:void(0)" class="additional-menu-trigger" data-target="side-menu-docs"><i class="far fa-books"></i>&ensp;Documents&emsp;<i class="fal fa-chevron-right"></i></a></li>
-					<li><a href="{% url 'main:contacts' %}"><i class="far fa-envelope"></i>&ensp;Contacts</a></li>
+					<li><a href="{% url 'main:index' %}">Home</a></li>
+					<li><a href="{% url 'main:membership' %}">Membership</a></li>
+					<li><a href="{% url 'events:news' %}">News</a></li>
+					<li><a href="{% url 'events:news' %}">Events</a></li>
+					<li><a href="javascript:void(0)" class="additional-menu-trigger" data-target="side-menu-about">About Us&emsp;<i class="fal fa-chevron-right"></i></a></li>
+					<li><a href="javascript:void(0)" class="additional-menu-trigger" data-target="side-menu-docs">Documents&emsp;<i class="fal fa-chevron-right"></i></a></li>
+					<li><a href="{% url 'main:contacts' %}">Contacts</a></li>
 				</ul>
 			</div>
 			<div class="side-menu-additional side-menu" id="side-menu-about">
 				<ul>
-					<li><a href="{% url 'main:team' %}"><i class="far fa-screen-users"></i>&ensp;Our Team</a></li>
-					<li><a href="{% url 'main:about' %}"><i class="far fa-industry-windows"></i>&ensp;Industry</a></li>
+					<li><a href="{% url 'main:team' %}">Our Team</a></li>
+					<li><a href="{% url 'main:about' %}">Industry</a></li>
+					<li><a href="{% url 'main:subsidiary' %}">Subsidiary</a></li>
 				</ul>
 			</div>
 			<div class="side-menu-additional side-menu" id="side-menu-docs">
 				<ul>
-					<li><a href="{% url 'main:gallery' %}"><i class="far fa-rectangle-vertical-history"></i>&ensp;Gallery</a></li>
-					<li><a href="{% url 'main:library' %}"><i class="far fa-book-copy"></i>&ensp;Library</a></li>
+					<li><a href="{% url 'main:gallery' %}">Gallery</a></li>
+					<li><a href="{% url 'main:library' %}">Library</a></li>
 				</ul>
 			</div>
 			<div class="bookmark">
@@ -49,7 +51,7 @@
 		</nav>
 		<div class="intro">
 			<div class="intro-image">
-				<img src="{% static 'img/membership-intro.png' %}" alt="Membership">
+				<img src="{% static 'img/membership-intro.jpg' %}" alt="Membership">
 			</div>
 			<div class="intro-header">
 				<h1>The Heart Of The Textile Industry</h1>
@@ -97,50 +99,6 @@
 				</div>
 			</div>
 		</div>
-		<div class="chess-container">
-			<h3>Additional Services</h3>
-			<div>
-				<strong>The Agency for Advertising and Marketing of Textile Products</strong>
-				<p>TPMA is a modern, dynamically developing company specializing in organizing and holding exhibition and exposition events, promoting domestic enterprises in the international arena, establishing and expanding trade and investment cooperation, presenting the production and export potential of a domestic enterprise, concluding relevant contracts with potential foreign partners.</p>
-				<span>TPMAs allow businesses to:</span>
-				<ul>
-					<li>introduce a new enterprise to the market;</li>
-					<li>to acquaint visitors of the exhibition with the range and range of services provided;</li>
-					<li>conduct a demonstration of new machinery and equipment;</li>
-					<li>ensure a positive perception of the company's products;</li>
-					<li>increase sales;</li>
-					<li>establish new business contacts, find partners, clients or sponsors;</li>
-					<li>conclude profitable contracts;</li>
-					<li>improve the image of the brand and the company as a whole.</li>
-				</ul>
-			</div>
-			<div>
-				<img src="{% static 'img/tpma.jpg' %}" alt="TPMA">
-			</div>
-		</div>
-		<div class="chess-container-alt">
-			<div>
-				<img src="{% static 'img/sharq.jpg' %}" alt="Sharq Liboslar">
-			</div>
-			<div>
-				<strong>LLC "Eastern Clothing Design Center"</strong>
-				<p>“Sharq liboslari Dizayn Markazi” LLC is one of the leading enterprises working in the development and production of fashionable clothes, operating under the Uztekstilprom Association.</p>
-				<span>The main tasks of Sharq liboslari Dizayn Markazi LLC are:</span>
-				<ul>
-					<li>introduction of advanced modeling of light industry products, taking into account the growing needs and requirements of the population;</li>
-					<li>study of the latest trends in world fashion;</li>
-					<li>conducting marketing research of external and internal product markets;</li>
-					<li>establishing cooperation with well-known world centers, studying their best practices;</li>
-					<li>development of the Uzbek fashion industry and support for local designers;</li>
-					<li>creation of seasonal collections of clothes of various assortments based on the national identity and mentality of the population;</li>
-					<li>implementation of consulting activities;</li>
-					<li>development of a description of the technical conditions of models;</li>
-					<li>development of patterns;</li>
-					<li>regular updating of the developed models taking into account market conditions, creation of competitive models;</li>
-					<li>organization of demonstrations of models by local and foreign fashion designers, conferences, exhibitions, methodical seminars and master classes.</li>
-				</ul>
-			</div>
-		</div>
 		<div class="export-benefits">
 			<h3 align="center">Export Benefits</h3>
 			<p>In order to expand the country's export potential, provide state support to exporting organizations, as well as stimulate an increase in the production of competitive export products, from January 1, 2019, legal entities with a share of exports in total revenue from the sale of goods (works, services) of more than 15%, including including through a commission agent (attorney), reduce the taxable base for:</p>
@@ -166,18 +124,30 @@
 			</div>
 		</div>
 		<div class="useful-links">
-			<div class="link-card">
-				<i class="far fa-memo-circle-info"></i><br>
-				<strong>How to Become Member</strong>
-				<p>Documents that must be submitted for admission of the enterprise to full members of the Association in accordance with paragraph 3 of the Procedure approved by the Minutes of the meeting of the Uztekstilprom Association dated April 19, 2019.</p>
-				<a href="{% url 'main:instruction' %}"><span class="fal fa-bookmark"></span>&ensp;Read More</a>
-			</div>
-			<div class="link-card">
-				<i class="far fa-list"></i><br>
-				<strong>List of enterprises in the Association</strong>
-				<p>Documents that must be submitted for admission of the enterprise to full members of the Association in accordance with paragraph 3 of the Procedure approved by the Minutes of the meeting of the Uztekstilprom Association dated April 19, 2019.</p>
-				<a href="{% url 'main:partners' %}"><span class="fal fa-bookmark"></span>&ensp;Open List</a>
-			</div>
+			<a href="{% url 'main:instruction' %}">
+				<div class="link-card">
+					<i class="far fa-memo-circle-info"></i><br>
+					<strong>How to Become Member</strong>
+				</div>
+			</a>
+			<a href="{% url 'main:members' %}">
+				<div class="link-card">
+					<i class="far fa-list"></i><br>
+					<strong>List of enterprises in the Association</strong>
+				</div>
+			</a>
+			<a href="{% url 'main:partners' %}">
+				<div class="link-card">
+					<i class="far fa-handshake"></i><br>
+					<strong>List of Partners</strong>
+				</div>
+			</a>
+			<a href="{% url 'main:subsidiary' %}">
+				<div class="link-card">
+					<i class="far fa-building"></i><br>
+					<strong>List of Subsidiary</strong>
+				</div>
+			</a>
 		</div>
 		<section id="footer">
 			<div class="mail-subscribe">

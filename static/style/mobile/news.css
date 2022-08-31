@@ -49,6 +49,9 @@
 	font-size: 1.2vh;
 	line-height: 2.3vh;
 }
+.news-card-latest .news-card-body{
+	padding: 4vh 6vw;
+}
 
 .article-container{
 	padding-top: 15vh;

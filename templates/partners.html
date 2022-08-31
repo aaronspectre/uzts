@@ -3,10 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>UZTS | Members & Partners</title>
+	<title>UZTS | Partners</title>
 
 	{% load static %}
-	{% load filters %}
 	<link rel="icon" href="{% static 'img/logo.svg' %}">
 
 	<link rel="stylesheet" href="{% static 'style/general.css' %}">
@@ -24,34 +23,6 @@
 </head>
 <body>
 	<div class="main">
-		<nav id="navbar">
-			<div id="navbar-cover"></div>
-			<div class="side-menu-main side-menu">
-				<ul>
-					<li><a href="{% url 'main:index' %}"><i class="far fa-home"></i>&ensp;Home</a></li>
-					<li><a href="{% url 'main:membership' %}"><i class="far fa-star"></i>&ensp;Membership</a></li>
-					<li><a href="{% url 'events:news' %}"><i class="far fa-newspaper"></i>&ensp;News</a></li>
-					<li><a href="javascript:void(0)" class="additional-menu-trigger" data-target="side-menu-about"><i class="far fa-building"></i>&ensp;About Us&emsp;<i class="fal fa-chevron-right"></i></a></li>
-					<li><a href="javascript:void(0)" class="additional-menu-trigger" data-target="side-menu-docs"><i class="far fa-books"></i>&ensp;Documents&emsp;<i class="fal fa-chevron-right"></i></a></li>
-					<li><a href="{% url 'main:contacts' %}"><i class="far fa-envelope"></i>&ensp;Contacts</a></li>
-				</ul>
-			</div>
-			<div class="side-menu-additional side-menu" id="side-menu-about">
-				<ul>
-					<li><a href="{% url 'main:team' %}"><i class="far fa-screen-users"></i>&ensp;Our Team</a></li>
-					<li><a href="{% url 'main:about' %}"><i class="far fa-industry-windows"></i>&ensp;Industry</a></li>
-				</ul>
-			</div>
-			<div class="side-menu-additional side-menu" id="side-menu-docs">
-				<ul>
-					<li><a href="{% url 'main:gallery' %}"><i class="far fa-rectangle-vertical-history"></i>&ensp;Gallery</a></li>
-					<li><a href="{% url 'main:library' %}"><i class="far fa-book-copy"></i>&ensp;Library</a></li>
-				</ul>
-			</div>
-			<div class="bookmark">
-				<button id="side-menu-button">MENU</button>
-			</div>
-		</nav>
 		<div class="top-nav">
 			<a href="{% url 'main:index' %}">Home</a>
 			<a href="{% url 'events:news' %}">News</a>
@@ -68,15 +39,15 @@
 			<div class="partners-cards">
 				<div class="partners-card">
 					<div class="partners-card-caption">
-						<span>Oeko-Tex Standard 100 - is an international testing and certification system for textile products that limits the use of certain chemicals in production of textile goods</span>
-					</div>
-					<img src="{% static 'img/partner-1.png' %}" alt="OEKO-TEX">
-				</div>
-				<div class="partners-card">
-					<div class="partners-card-caption">
 						<span>International Textile Manufacturers Federation (ITMF) is an international forum for the world's textile industries, dedicated to keeping the world-wide membership constantly informed through surveys, studies and publications</span>
 					</div>
 					<img src="{% static 'img/partner-2.png' %}" alt="ITMF">
+				</div>
+				<div class="partners-card">
+					<div class="partners-card-caption">
+						<span>Oeko-Tex Standard 100 - is an international testing and certification system for textile products that limits the use of certain chemicals in production of textile goods</span>
+					</div>
+					<img src="{% static 'img/partner-1.png' %}" alt="OEKO-TEX">
 				</div>
 				<div class="partners-card">
 					<div class="partners-card-caption">
@@ -156,48 +127,6 @@
 					</div>
 					<img src="{% static 'img/partner-15.png' %}" alt="CITI">
 				</div>
-			</div>
-		</div>
-		<div class="special-partners">
-			<div class="special-partners-card">
-				<p><strong>UZTEXTILE<br>EXPORT</strong><br><small>FOREIGN TRADE<br>COMPANY</small></p>
-			</div>
-			<div class="special-partners-card">
-				<p><strong>MARKETING<br>AND<br>PROMOTION<br>AGENCY</strong></p>
-			</div>
-			<div class="special-partners-card">
-				<p><strong>UZTEXTILE<br>BROCK</strong><br><small>RAW MATERIALS<br>PURCHASING</small></p>
-			</div>
-			<div class="special-partners-card">
-				<p><strong>SHARQ<br>LIBOSLARI</strong><br><small>DESIGN AND<br>FASHION CENTER</small></p>
-			</div>
-			<div class="special-partners-card">
-				<p><strong>YENGIL<br>SANOAT<br>QURILISH</strong><br><small>DESIGN AND<br>CONSTRUCTION</small></p>
-			</div>
-			<div class="special-partners-card">
-				<p><strong>REGIONAL<br>BRANCHES<br>ACROSS<br>UZBEKISTAN</strong></p>
-			</div>
-		</div>
-
-		<div class="members-list">
-			<h2>Members List</h2>
-			<div class="table-container">
-				<table>
-					<tr>
-						<th>№</th>
-						<th>TIN</th>
-						<th>Company Legal Name</th>
-						<th>Region</th>
-					</tr>
-					{% for company in '1'|read %}
-					<tr>
-						<td>{{company.3}}</td>
-						<td>{{company.1}}</td>
-						<td>{{company.0}}</td>
-						<td>{{company.2}}</td>
-					</tr>
-					{% endfor %}
-				</table>
 			</div>
 		</div>
 

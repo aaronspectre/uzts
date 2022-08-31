@@ -78,7 +78,7 @@ play_button.addEventListener('click', event => {
 
 
 
-let count_state = true
+let count_state = false
 var stat_cards = document.querySelectorAll('.stat-card strong')
 var stat_cards_percent = Array()
 
@@ -136,3 +136,7 @@ function slide(direction){
 		tape.style.transform = `translateX(-${shift}%)`
 	}
 }
+
+swiper = setInterval(()=>{
+	slide('right')
+}, 10000)

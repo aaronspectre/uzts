@@ -7,7 +7,8 @@ urlpatterns = [
 	path('', views.index, name = 'index'),
 	path('distribution', views.distribution, name = 'distribution'),
 	path('about-us', views.about, name = 'about'),
-	path('team', views.team, name = 'team'),
+	path('about-us/team', views.team, name = 'team'),
+	path('about-us/subsidiary', views.subsidiary, name = 'subsidiary'),
 	path('contacts', views.contacts, name = 'contacts'),
 	path('contacts/mail', views.mail, name = 'mail'),
 	path('gallery', views.gallery, name = 'gallery'),
@@ -17,4 +18,5 @@ urlpatterns = [
 	path('membership/application/save', views.apply, name = 'apply'),
 	path('membership/instruction', views.instruction, name = 'instruction'),
 	path('membership/partners', views.partners, name = 'partners'),
+	path('membership/members', views.members, name = 'members'),
 ]

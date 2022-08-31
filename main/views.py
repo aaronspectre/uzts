@@ -32,6 +32,13 @@ def partners(request):
 
 
 @decorators.detector
+def members(request):
+	if request.session['mobile']:
+		return render(request, 'mobile/members.html')
+	return render(request, 'members.html')
+
+
+@decorators.detector
 def about(request):
 	if request.session['mobile']:
 		return render(request, 'mobile/about.html')
@@ -43,6 +50,13 @@ def team(request):
 	if request.session['mobile']:
 		return render(request, 'mobile/team.html')
 	return render(request, 'team.html')
+
+
+@decorators.detector
+def subsidiary(request):
+	if request.session['mobile']:
+		return render(request, 'mobile/subsidiary.html')
+	return render(request, 'subsidiary.html')
 
 
 @decorators.detector

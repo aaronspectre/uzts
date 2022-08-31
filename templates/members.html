@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>UZTS | List of enterprises in the Association</title>
+
+	{% load static %}
+	{% load filters %}
+	<link rel="icon" href="{% static 'img/logo.svg' %}">
+
+	<link rel="stylesheet" href="{% static 'style/general.css' %}">
+	<link rel="stylesheet" href="{% static 'style/partners.css' %}">
+
+	<link href="https://kit-pro.fontawesome.com/releases/v6.0.0/css/pro.min.css" rel="stylesheet">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+	<script src="https://unpkg.com/@popperjs/core@2"></script>
+
+	<style>
+		.bookmark button{
+			color: black !important;
+			border-right: 2px solid black !important;
+		}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<div class="top-nav">
+			<a href="{% url 'main:membership' %}">Join Us</a>
+			<a href="{% url 'events:news' %}">News</a>
+			<a href="{% url 'main:index' %}"><img src="{% static 'img/logo.svg' %}" alt="UZTS"></a>
+			<a href="{% url 'main:about' %}">About Us</a>
+			<a href="{% url 'main:contacts' %}">Contacts</a>
+		</div>
+		<div class="members-list">
+			<h2 align="center">Members List</h2>
+			<form class="members-form">
+				<div>
+					<label for="type">Production Type</label>
+					<select name="type" id="type">
+						<option value="Spinning Mill">Spinning Mill</option>
+						<option value="Weawing">Weawing</option>
+						<option value="Dying finishing">Dying finishing</option>
+						<option value="Ready Garment">Ready Garment</option>
+						<option value="Hosiery">Hosiery</option>
+						<option value="Home Textile">Home Textile</option>
+						<option value="Jeans">Jeans</option>
+						<option value="Fabric">Fabric</option>
+						<option value="Contton Textile">Contton Textile</option>
+					</select>
+				</div>
+				<div>
+					<label for="type">Production</label>
+					<select name="type" id="type">
+						<option value="Spinning Mill">Spinning Mill</option>
+						<option value="Weawing">Weawing</option>
+						<option value="Dying finishing">Dying finishing</option>
+						<option value="Ready Garment">Ready Garment</option>
+						<option value="Hosiery">Hosiery</option>
+						<option value="Home Textile">Home Textile</option>
+						<option value="Jeans">Jeans</option>
+						<option value="Fabric">Fabric</option>
+						<option value="Contton Textile">Contton Textile</option>
+					</select>
+				</div>
+			</form>
+			<br>
+			<div class="table-container">
+				<table>
+					<tr>
+						<th>№</th>
+						<th>TIN</th>
+						<th>Company Legal Name</th>
+						<th>Region</th>
+					</tr>
+					{% for company in '1'|read %}
+					<tr>
+						<td>{{company.3}}</td>
+						<td>{{company.1}}</td>
+						<td>{{company.0}}</td>
+						<td>{{company.2}}</td>
+					</tr>
+					{% endfor %}
+				</table>
+			</div>
+		</div>
+		<section id="footer">
+			<div class="mail-subscribe">
+				<form class="mail-form" action="{% url 'main:distribution' %}" method="post">
+					{% csrf_token %}
+					<h3>Don't miss latest news in Textile Industry</h3>
+					<div class="form-group">
+						<input name="email" type="email" placeholder="Email">
+					</div>
+					<div class="form-group">
+						<button><i class="fal fa-envelope"></i>&ensp;Subscribe</button>
+					</div>
+				</form>
+			</div>
+			<div class="footer-container">
+				<a href="{% url 'main:index' %}"><img src="{% static 'img/logo-white.svg' %}" alt="uzts"></a>
+				<div class="socials-container">
+					<a href="https://www.instagram.com/uzts.uz"><i class="fab fa-instagram-square"></i></a>
+					<a href="https://t.me/uztsuz"><i class="fab fa-telegram"></i></a>
+					<a href="https://www.facebook.com/uzts.uz"><i class="fab fa-facebook"></i></a>
+					<a href="https://www.youtube.com/channel/UCUBZc6CcYylKO6TyijZkKTw" style="padding: 1vh 1.3vh;"><i class="fab fa-youtube"></i></a>
+					<a href="https://t.me/certified_textile"><i class="fab fa-telegram"></i></a>
+				</div>
+				<p>© 2022 - Uzbekistan Textile and Garment Industry Association</p>
+			</div>
+		</section>
+	</div>
+</body>
+<script src="{% static 'script/membership.js' %}"></script>
+<script> window.interdeal = { "sitekey": "90ba7c838621de6bb8b87cd606d8038c", "Position": "Right", "Menulang": "EN", "domains": { "js": "https://cdn.equalweb.com/", "acc": "https://access.equalweb.com/" }, "btnStyle": { "vPosition": [ "90%", null ], "scale": [ "0.4", "0.4" ], "color": { "main": "#000000", "second": "#ffffff" }, "icon": { "type": 11, "shape": "circle", "outline": true } } }; (function(doc, head, body){ var coreCall = doc.createElement('script'); coreCall.src = 'https://cdn.equalweb.com/core/4.3.7/accessibility.js'; coreCall.defer = true; coreCall.integrity = 'sha512-hGa5HZtFkT1M7+tUDtU/cbw6AG0ORz3oblztCoTZ/z2qPyr7dgwH3zoT8qpgj21MgcRsMFLD6NNKePGvVks3Ig=='; coreCall.crossOrigin = 'anonymous'; coreCall.setAttribute('data-cfasync', true ); body? body.appendChild(coreCall) : head.appendChild(coreCall); })(document, document.head, document.body); </script>
+</html>

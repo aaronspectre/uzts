@@ -26,23 +26,25 @@
 			<div id="navbar-cover"></div>
 			<div class="side-menu-main side-menu">
 				<ul>
-					<li><a href="{% url 'main:membership' %}"><i class="far fa-star"></i>&ensp;Membership</a></li>
-					<li><a href="{% url 'events:news' %}"><i class="far fa-newspaper"></i>&ensp;News</a></li>
-					<li><a href="javascript:void(0)" class="additional-menu-trigger" data-target="side-menu-about"><i class="far fa-building"></i>&ensp;About Us&emsp;<i class="fal fa-chevron-right"></i></a></li>
-					<li><a href="javascript:void(0)" class="additional-menu-trigger" data-target="side-menu-docs"><i class="far fa-books"></i>&ensp;Documents&emsp;<i class="fal fa-chevron-right"></i></a></li>
-					<li><a href="{% url 'main:contacts' %}"><i class="far fa-envelope"></i>&ensp;Contacts</a></li>
+					<li><a href="{% url 'main:membership' %}">Membership</a></li>
+					<li><a href="{% url 'events:news' %}">News</a></li>
+					<li><a href="{% url 'events:news' %}">Events</a></li>
+					<li><a href="javascript:void(0)" class="additional-menu-trigger" data-target="side-menu-about">About Us&emsp;<i class="fal fa-chevron-right"></i></a></li>
+					<li><a href="javascript:void(0)" class="additional-menu-trigger" data-target="side-menu-docs">Documents&emsp;<i class="fal fa-chevron-right"></i></a></li>
+					<li><a href="{% url 'main:contacts' %}">Contacts</a></li>
 				</ul>
 			</div>
 			<div class="side-menu-additional side-menu" id="side-menu-about">
 				<ul>
-					<li><a href="{% url 'main:team' %}"><i class="far fa-screen-users"></i>&ensp;Our Team</a></li>
-					<li><a href="{% url 'main:about' %}"><i class="far fa-industry-windows"></i>&ensp;Industry</a></li>
+					<li><a href="{% url 'main:team' %}">Our Team</a></li>
+					<li><a href="{% url 'main:about' %}">Industry</a></li>
+					<li><a href="{% url 'main:subsidiary' %}">Subsidiary</a></li>
 				</ul>
 			</div>
 			<div class="side-menu-additional side-menu" id="side-menu-docs">
 				<ul>
-					<li><a href="{% url 'main:gallery' %}"><i class="far fa-rectangle-vertical-history"></i>&ensp;Gallery</a></li>
-					<li><a href="{% url 'main:library' %}"><i class="far fa-book-copy"></i>&ensp;Library</a></li>
+					<li><a href="{% url 'main:gallery' %}">Gallery</a></li>
+					<li><a href="{% url 'main:library' %}">Library</a></li>
 				</ul>
 			</div>
 			<div class="bookmark">
@@ -58,51 +60,70 @@
 		</div>
 
 		<section id="about">
-			<div class="about-main">
-				<div class="about-text-container">
+			<div class="main-section">
+				<div class="main-section-text">
 					<h4><b>ABOUT US</b></h4>
 					<h2>Uzbekistan Textile Industry</h2>
 					<p>The range of our activities includes establishing and expanding relationships with other nations in the fields of textile and sewing production, organizing and holding forums, conferences, seminars, round tables, training sessions, and exhibitions with participation of international organizations, major brands and retailers, as well as foreign experts, specialists, and speakers for business representatives. Additionally, the association is working to expand the practice of introducing international standards at enterprises, and organizes training for their employees in the field of standardization and certification.</p><br>
-					<a href="{% url 'main:about' %}"><i class="fal fa-bookmark"></i>&ensp;Read More</a>
+					<div class="main-section-links">
+						<a href="{% url 'main:about' %}"><i class="fal fa-bookmark"></i>&ensp;Read More</a>
+						<a href="{% url 'main:about' %}"><i class="fal fa-screen-users"></i>&ensp;Our Team</a>
+					</div>
 				</div>
 				<div class="model-container">
 					<model-viewer bounds="tight" enable-pan src="{% static 'model/cotton.glb' %}" ar ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral" shadow-intensity="1"></model-viewer>
 				</div>
 			</div>
-			<div class="about-slider-container">
-				<div class="about-slider">
-					<div class="about-slider">
-						<div class="slider-tape" id="tape">
-							{% for new in news %}
-								<div class="slider-slide">
-									<div class="slider-controls">
-										<button onclick="slide('left')" style="text-align: left;"><i class="far fa-chevron-left"></i></button>
-										<button onclick="slide('right')" style="text-align: right;"><i class="far fa-chevron-right"></i></button>
-									</div>
-									<div class="slider-caption">
-										<div class="slider-caption-text">
-											<a href="{% url 'events:view' new.id %}"><h4>{{new.title}}</h4></a>
-										</div>
-									</div>
-									<img src="{{new.preview.url}}" alt="{{new.title}}">
+		</section>
+
+		<section id="news">
+			<h1 align="center">Latest News</h1>
+			<div class="slider-container">
+				<div class="slider">
+					<div class="slider-tape" id="tape">
+						{% for new in news %}
+							<div class="slider-slide">
+								<div class="slider-controls">
+									<button onclick="slide('left')" style="text-align: left;"><i class="far fa-chevron-left"></i></button>
+									<button onclick="slide('right')" style="text-align: right;"><i class="far fa-chevron-right"></i></button>
 								</div>
-							{% endfor %}
-						</div>
+								<div class="slider-caption">
+									<div class="slider-caption-text">
+										<a href="{% url 'events:view' new.id %}"><h4>{{new.title}}</h4></a>
+									</div>
+								</div>
+								<img src="{{new.preview.url}}" alt="{{new.title}}">
+							</div>
+						{% endfor %}
 					</div>
 				</div>
 			</div>
+			<div class="video-gallery">
+				<div class="video-container">
+					<iframe width="560" height="315"  src="https://www.youtube-nocookie.com/embed/0Lzafr5wcaM?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="video-container">
+					<iframe width="560" height="315"  src="https://www.youtube-nocookie.com/embed/rFHXfOT0Twc?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="video-container">
+					<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/mVWJc40omvA?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
 		</section>
+
 		<section id="statistics">
-			<div class="statistics-container">
-				<div class="chart-container">
+			<div class="main-section left-prior">
+				<div class="main-section-image">
 					<img src="{% static 'img/chart.jpg' %}">
 				</div>
-				<div class="chart-text">
+				<div class="main-section-text">
 					<h4><b>STATISTICS</b></h4>
 					<h2>Product Indicators</h2>
 					<p>World Bank October 2017 Report «Doing Business 2018» shows 13 points growth of Uzbekistan ranking within one year up to 74, and in 2020 to 69. Uzbekistan was in the top 10 countries within 2017-2019 for improving business environment, especially in business registration, obtaining of credit, economic growth, safety, etc.</p><br>
-					<a href="{% url 'main:partners' %}"><i class="far fa-handshake"></i>&ensp; Partners</a>
-					<a href="{% url 'main:membership' %}"><i class="far fa-truck"></i>&ensp; Export</a>
+					<div class="main-section-links">
+						<a href="{% url 'main:partners' %}"><i class="far fa-handshake"></i>&ensp; Partners</a>
+						<a href="{% url 'main:membership' %}"><i class="far fa-truck"></i>&ensp; Export</a>
+					</div>
 				</div>
 			</div>
 			<div class="stat-cards">
@@ -158,6 +179,7 @@
 				</div>
 			</div>
 		</section>
+
 		<section id="additional-statistics">
 			<div class="separator-container">
 				<div>
@@ -168,26 +190,30 @@
 				</div>
 			</div>
 		</section>
+
 		<section id="membership">
-			<div class="membership-container">
-				<div class="membership-text">
+			<div class="main-section right-prior">
+				<div class="main-section-text">
 					<h4><b>WE GROW WITH YOU</b></h4>
 					<h2>Membership</h2>
 					<p>As a member of the Uztekstilprom Association, the enterprise has the opportunity to receive assistance in finding and establishing contacts with foreign partners, in promoting their products, in obtaining visas, international certificates and standards, as well as in participating in international exhibitions on preferential terms.</p><br>
-					<a href="{% url 'main:application' %}"><i class="fal fa-user-plus"></i>&ensp;Join Us</a>
-					<a href="{% url 'main:membership' %}"><i class="fal fa-list-check"></i>&ensp;Benefits</a>
+					<div class="main-section-links">
+						<a href="{% url 'main:members' %}"><i class="fal fa-list"></i>&ensp;Members List</a>
+						<a href="{% url 'main:membership' %}"><i class="fal fa-list-check"></i>&ensp;Benefits</a>
+					</div>
 				</div>
-				<div class="membership-image">
+				<div class="main-section-image">
 					<img src="{% static 'img/membership.jpg' %}" alt="">
 				</div>
 			</div>
 		</section>
+
 		<section id="promotion">
-			<div class="promotion-container">
-				<div class="promotion-image">
+			<div class="main-section left-prior">
+				<div class="main-section-image">
 					<img src="{% static 'img/gallery_23.jpg' %}" alt="">
 				</div>
-				<div class="promotion-text">
+				<div class="main-section-text">
 					<h4><b>SERVICES</b></h4>
 					<h2>Work with Us</h2>
 					<p>The Association, together with international organizations, conducts various trainings and seminars in the country and abroad for employees of enterprises, where they receive the latest information on innovative technologies in the industry, the requirements and proposals of foreign companies.</p><br>
