@@ -8,8 +8,17 @@ from main import decorators
 
 @decorators.detector
 def news(request):
-	latest = Event.objects.all().order_by('-date')[0]
-	events = Event.objects.all().order_by('-date')[1:]
+	latest = Event.objects.filter(event = False).order_by('-date')[0]
+	events = Event.objects.filter(event = False).order_by('-date')[1:]
+	if request.session['mobile']:
+		return render(request, 'mobile/news.html', {'events': events, 'latest': latest})
+	return render(request, 'news.html', {'events': events, 'latest': latest})
+
+
+@decorators.detector
+def events(request):
+	latest = Event.objects.filter(event = True).order_by('-date')[0]
+	events = Event.objects.filter(event = True).order_by('-date')[1:]
 	if request.session['mobile']:
 		return render(request, 'mobile/news.html', {'events': events, 'latest': latest})
 	return render(request, 'news.html', {'events': events, 'latest': latest})
@@ -24,7 +33,7 @@ def event(request, id):
 
 
 def editor(request):
-	if request.session['mobile']:
+	if request.session['mobile'] or request.user.is_anonymous:
 		return HttpResponseRedirect(reverse('main:index'))
 	return render(request, 'editor.html')
 
@@ -35,6 +44,7 @@ def upload(request):
 	event.spoiler = request.POST['spoiler']
 	event.preview = request.FILES['preview']
 	event.announcement = True if 'announce' in request.POST else False
+	event.event = True if 'isevent' in request.POST else False
 	event.image_cover = True if 'cover' in request.POST else False
 
 	content = Content()
@@ -44,11 +54,12 @@ def upload(request):
 
 
 	for key, value in request.POST.items():
-		if 'spoiler' in key or 'main-title' in key or 'sequence' in key or 'csrfmiddlewaretoken' in key:
+		if key in ('spoiler', 'main-title', 'sequence', 'csrfmiddlewaretoken', 'cover', 'isevent', 'announce'):
 			continue
 
 
 		ttype = key.split('-')[0]
+		print(key)
 		index = int(key.split('-')[1])
 		if 'heading' in ttype:
 			content.sequence[index] = ttype

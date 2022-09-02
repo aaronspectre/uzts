@@ -26,6 +26,7 @@ class Event(models.Model):
 	spoiler = models.CharField(max_length = 500)
 	announcement = models.BooleanField(default = False)
 	image_cover = models.BooleanField(default = True)
+	event = models.BooleanField(default = False)
 	content = models.ForeignKey(Content, on_delete = models.CASCADE)
 
 	def __str__(self):

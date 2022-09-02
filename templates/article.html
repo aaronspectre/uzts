@@ -24,24 +24,26 @@
 			<div id="navbar-cover"></div>
 			<div class="side-menu-main side-menu">
 				<ul>
-					<li><a href="{% url 'main:index' %}"><i class="far fa-home"></i>&ensp;Home</a></li>
-					<li><a href="{% url 'main:membership' %}"><i class="far fa-star"></i>&ensp;Membership</a></li>
-					<li><a href="{% url 'events:news' %}"><i class="far fa-newspaper"></i>&ensp;News</a></li>
-					<li><a href="javascript:void(0)" class="additional-menu-trigger" data-target="side-menu-about"><i class="far fa-building"></i>&ensp;About Us&emsp;<i class="fal fa-chevron-right"></i></a></li>
-					<li><a href="javascript:void(0)" class="additional-menu-trigger" data-target="side-menu-docs"><i class="far fa-books"></i>&ensp;Documents&emsp;<i class="fal fa-chevron-right"></i></a></li>
-					<li><a href="{% url 'main:contacts' %}"><i class="far fa-envelope"></i>&ensp;Contacts</a></li>
+					<li><a href="{% url 'main:index' %}">Home</a></li>
+					<li><a href="{% url 'main:membership' %}">Membership</a></li>
+					<li><a href="{% url 'events:news' %}">News</a></li>
+					<li><a href="{% url 'events:events' %}">Events</a></li>
+					<li><a href="javascript:void(0)" class="additional-menu-trigger" data-target="side-menu-about">About Us&emsp;<i class="fal fa-chevron-right"></i></a></li>
+					<li><a href="javascript:void(0)" class="additional-menu-trigger" data-target="side-menu-docs">Documents&emsp;<i class="fal fa-chevron-right"></i></a></li>
+					<li><a href="{% url 'main:contacts' %}">Contacts</a></li>
 				</ul>
 			</div>
 			<div class="side-menu-additional side-menu" id="side-menu-about">
 				<ul>
-					<li><a href="{% url 'main:team' %}"><i class="far fa-screen-users"></i>&ensp;Our Team</a></li>
-					<li><a href="{% url 'main:about' %}"><i class="far fa-industry-windows"></i>&ensp;Industry</a></li>
+					<li><a href="{% url 'main:team' %}">Our Team</a></li>
+					<li><a href="{% url 'main:about' %}">Industry</a></li>
+					<li><a href="{% url 'main:subsidiary' %}">Subsidiary</a></li>
 				</ul>
 			</div>
 			<div class="side-menu-additional side-menu" id="side-menu-docs">
 				<ul>
-					<li><a href="{% url 'main:gallery' %}"><i class="far fa-rectangle-vertical-history"></i>&ensp;Gallery</a></li>
-					<li><a href="{% url 'main:library' %}"><i class="far fa-book-copy"></i>&ensp;Library</a></li>
+					<li><a href="{% url 'main:gallery' %}">Gallery</a></li>
+					<li><a href="{% url 'main:library' %}">Library</a></li>
 				</ul>
 			</div>
 			<div class="bookmark">
