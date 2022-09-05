@@ -53,13 +53,6 @@ def team(request):
 
 
 @decorators.detector
-def subsidiary(request):
-	if request.session['mobile']:
-		return render(request, 'mobile/subsidiary.html')
-	return render(request, 'subsidiary.html')
-
-
-@decorators.detector
 def contacts(request):
 	if request.session['mobile']:
 		return render(request, 'mobile/contact.html')

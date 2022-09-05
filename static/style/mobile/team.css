@@ -11,7 +11,23 @@
 }
 .team-home-main-credentials{
 	margin-top: 3vh;
+	padding-bottom: 3vh;
+}
+.team-home-main-buttons{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 5vw;
 	padding-bottom: 5vh;
+}
+.team-home-main-buttons a{
+	text-decoration: none;
+	color: black;
+	background: white;
+	border-radius: 1vh;
+	text-align: center;
+	border: 1px solid black;
+	border-radius: 1vh;
+	padding: 1.5vh 0;
 }
 .team-card{
 	padding: 0 6vw;

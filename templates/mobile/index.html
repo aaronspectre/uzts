@@ -70,6 +70,7 @@
 			</div>
 		</div>
 		<div class="latest-event">
+			<h2 class="section-header">LATEST EVENT</h2>
 			<img src="{{event.preview}}" alt="{{event.title}}">
 			<small>{{event.date | date:"d F"}}</small>
 			<a href="{% url 'events:view' event.id %}"><p>{{event.title}} &ensp;<i class="fal fa-circle-arrow-right"></i></p></a>

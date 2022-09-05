@@ -1,0 +1,61 @@
+{% extends 'mobile/index.html' %}
+
+{% block title %}UZTS | Membership{% endblock %}
+
+{% load static %}
+{% load filters %}
+
+
+{% block content %}
+	<div class="member-list">
+		<h3 class="section-header">Members List</h3>
+		<form class="members-form">
+			<div>
+				<label for="#production-type">Production Type</label>
+				<select name="production-type" id="production-type">
+					<option value="Spinning Mill">Spinning Mill</option>
+					<option value="Weawing">Weawing</option>
+					<option value="Dying finishing">Dying finishing</option>
+					<option value="Ready Garment">Ready Garment</option>
+					<option value="Hosiery">Hosiery</option>
+					<option value="Home Textile">Home Textile</option>
+					<option value="Jeans">Jeans</option>
+					<option value="Fabric">Fabric</option>
+					<option value="Contton Textile">Contton Textile</option>
+				</select>
+			</div>
+			<div>
+				<label for="#production-type">Production Type</label>
+				<select name="production-type" id="production-type">
+					<option value="Spinning Mill">Spinning Mill</option>
+					<option value="Weawing">Weawing</option>
+					<option value="Dying finishing">Dying finishing</option>
+					<option value="Ready Garment">Ready Garment</option>
+					<option value="Hosiery">Hosiery</option>
+					<option value="Home Textile">Home Textile</option>
+					<option value="Jeans">Jeans</option>
+					<option value="Fabric">Fabric</option>
+					<option value="Contton Textile">Contton Textile</option>
+				</select>
+			</div>
+		</form>
+		<div class="table-container">
+			<table>
+				<tr>
+					<th>№</th>
+					<th>TIN</th>
+					<th>Company Legal Name</th>
+					<th>Region</th>
+				</tr>
+				{% for company in '1'|read %}
+				<tr>
+					<td>{{company.3}}</td>
+					<td>{{company.1}}</td>
+					<td>{{company.0}}</td>
+					<td>{{company.2}}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		</div>
+	</div>
+{% endblock %}

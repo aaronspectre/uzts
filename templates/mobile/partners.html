@@ -2,7 +2,6 @@
 
 {% block title %}{% endblock %}
 {% load static %}
-{% load filters %}
 
 {% block content %}
 	<div class="partners-main">
@@ -110,50 +109,6 @@
 					</div>
 				</div>
 				<div class="swiper-pagination"></div>
-			</div>
-		</div>
-
-		<h3 class="section-header">Special Partners</h3>
-		<div class="special-partners">
-			<div class="special-partners-card">
-				<p><strong>UZTEXTILE<br>EXPORT</strong><br><small>FOREIGN TRADE<br>COMPANY</small></p>
-			</div>
-			<div class="special-partners-card">
-				<p><strong>MARKETING<br>AND<br>PROMOTION<br>AGENCY</strong></p>
-			</div>
-			<div class="special-partners-card">
-				<p><strong>UZTEXTILE<br>BROCK</strong><br><small>RAW MATERIALS<br>PURCHASING</small></p>
-			</div>
-			<div class="special-partners-card">
-				<p><strong>SHARQ<br>LIBOSLARI</strong><br><small>DESIGN AND<br>FASHION CENTER</small></p>
-			</div>
-			<div class="special-partners-card">
-				<p><strong>YENGIL<br>SANOAT<br>QURILISH</strong><br><small>DESIGN AND<br>CONSTRUCTION</small></p>
-			</div>
-			<div class="special-partners-card">
-				<p><strong>REGIONAL<br>BRANCHES<br>ACROSS<br>UZBEKISTAN</strong></p>
-			</div>
-		</div>
-
-		<div class="member-list">
-			<h3 class="section-header">Members List</h3>
-			<div class="table-container">
-				<table>
-					<tr>
-						<th>№</th>
-						<th>TIN</th>
-						<th>Company Legal Name</th>
-						<th>Region</th>
-					</tr>
-					{% for company in '1'|read %}
-					<tr>
-						<td>{{company.3}}</td>
-						<td>{{company.1}}</td>
-						<td>{{company.0}}</td>
-						<td>{{company.2}}</td>
-					</tr>
-					{% endfor %}
-				</table>
 			</div>
 		</div>
 	</div>

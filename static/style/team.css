@@ -146,16 +146,16 @@
 	transition: .9s;
 }
 .team-card:hover h2{
-	transform: translateY(0);
+	transform: translateY(8vh);
 }
 .team-card:hover span{
-	transform: translateY(0);
+	transform: translateY(8vh);
 }
 .team-card:hover .team-card-caption-details{
-	transform: translateY(0);
+	transform: translateY(6vh);
 }
 .team-card:hover .team-card-caption-office{
-	transform: translateY(0);
+	transform: translateY(8vh);
 }
 .team-card-caption-details{
 	margin-top: 8vh;
