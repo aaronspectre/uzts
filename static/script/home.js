@@ -78,10 +78,6 @@ play_button.addEventListener('click', event => {
 
 
 
-let count_state = false
-var stat_cards = document.querySelectorAll('.stat-card strong')
-var stat_cards_percent = Array()
-
 function counter(card) {
 	for (var i = Number(card.textContent) - 1; i >= 0; i--) {
 		card.textContent = Number(card.textContent) + 1
@@ -92,7 +88,7 @@ function counter(card) {
 
 window.addEventListener('scroll', event => {
 	if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
-		top_menu.style.background = '#203239'
+		top_menu.style.background = '#121212'
 		side_menu_button.style.borderRightColor = '#2C3333'
 		side_menu_button.style.color = '#2C3333'
 	}
@@ -100,17 +96,6 @@ window.addEventListener('scroll', event => {
 		top_menu.style.background = 'transparent'
 		side_menu_button.style.borderRightColor = 'white'
 		side_menu_button.style.color = 'white'
-	}
-
-	if(count_state){
-		if (document.body.scrollTop > 2100 || document.documentElement.scrollTop > 2100) {
-			count_state = false
-			timer = setInterval(()=>{
-				for (var i = 0; i < stat_cards.length; i++) {
-					// counter(stat_cards[i])
-				}
-			}, 100)
-		}
 	}
 })
 

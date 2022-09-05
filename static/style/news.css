@@ -175,7 +175,7 @@
 }
 
 #footer{
-	background: #203239;
+	background: #121212;
 	display: grid;
 	grid-template-columns: 1fr 1.5fr;
 	padding: 5vh 5vw;
@@ -197,7 +197,6 @@
 	width: 100%;
 	padding: 2vh;
 	border: 2px solid white;
-	border-radius: 1vh;
 	font-size: 2vh;
 	transition: none;
 }
@@ -211,16 +210,15 @@
 	font-size: 2vh;
 	width: 100%;
 	text-decoration: none;
-	color: #C4DFAA;
+	color: #F5F5F5;
 	text-align: center;
-	border: 2px solid #C4DFAA;
+	border: 2px solid #F5F5F5;
 	padding: 2vh;
-	border-bottom: 5px solid #C4DFAA;
-	border-radius: 1vh;
+	border-bottom: 5px solid #F5F5F5;
 }
 .form-group button:hover{
-	background: #C4DFAA;
-	color: #203239;
+	background: #F5F5F5;
+	color: #121212;
 }
 .footer-container{
 	padding: 0 0 0 5vw;
@@ -236,8 +234,8 @@
 .socials-container a{
 	font-size: 3vh;
 	text-decoration: none;
-	color: #203239;
-	background: #C4DFAA;
+	color: #121212;
+	background: #F5F5F5;
 	margin-left: 1vw;
 	padding: 1vh 1.5vh;
 	border-radius: 100%;
