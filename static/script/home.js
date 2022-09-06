@@ -125,3 +125,10 @@ function slide(direction){
 swiper = setInterval(()=>{
 	slide('right')
 }, 10000)
+
+
+window.onload = event => {
+	node = document.createElement('source')
+	node.setAttribute('src', '/static/video/home.mov')
+	document.getElementById('home-video').appendChild(node)
+}

@@ -157,6 +157,7 @@
 	background: white;
 	border: 2px solid black;
 	border-bottom: 5px solid black;
+	height: 100%;
 }
 .offer-card-head{
 	display: flex;
@@ -180,7 +181,7 @@
 	font-size: 2vh;
 }
 .chess-container{
-	margin-top: 40vh;
+	margin-top: 50vh;
 	padding: 0 10vw;
 	display: grid;
 	grid-template-columns: 1fr 1fr;

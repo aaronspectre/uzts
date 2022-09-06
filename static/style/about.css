@@ -144,7 +144,6 @@ p{
 	padding-right: 5vw;
 }
 .image-container-society img{
-	border-radius: 1vh;
 	height: 100%;
 	width: 100%;
 	object-fit: cover;
@@ -184,7 +183,6 @@ p{
 	padding-left: 10vw;
 }
 .image-container-clients img{
-	border-radius: 1vh;
 	height: 100%;
 	width: 100%;
 	object-fit: cover;
